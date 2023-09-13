@@ -47,7 +47,7 @@
     <header class="container-fluid header">
       <div class="row">
         <nav class="navbar navbar-expand-lg bg-body">
-          <div class="container-fluid my-auto">
+          <div class="container-fluid my-auto d-none d-lg-flex">
               <a class="navbar-brand col-3" href="{% url 'home' %}">
                 <span><img src=></span>
                 <h2>Nature Heals</h2>
@@ -55,11 +55,11 @@
               </a>
 
               
-            <form class="d-flex col-4" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="col-4" role="search">
+                <input class="form-control me-2" type="text" name="search" placeholder="Search products" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-
+          
             <ul class="navbar-nav my-auto justify-content-end col-3">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Wishlist</a>
@@ -119,6 +119,16 @@
            </div>
 
         </nav>
+      </div>
+
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              {% include 'includes/mobile-top-header.html' %}
+              {% include 'includes/main-nav.html' %}
+          </nav>                
       </div>
     </header>
     {% endblock %}

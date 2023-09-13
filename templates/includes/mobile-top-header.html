@@ -1,0 +1,78 @@
+<ul>
+    <li class="list-inline-item">
+        <a class="navbar-brand col-3 d-block d-lg-none justify-content-start" href="{% url 'home' %}">
+          <span><img src=></span>
+          <h2>Nature Heals</h2>
+          <p><small>Cosmetics and Essential Oils</small></p>
+        </a>
+    </li>
+
+    <li class="list-inline-item">
+
+    
+      <form class="col-4" role="search">
+          <input class="form-control me-2" type="text" name="search" placeholder="Search products" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </li>
+
+      <ul class="navbar-nav my-auto justify-content-end col-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Wishlist</a>
+        </li>
+        
+        <li class="nav-item dropdown text-center" role="button">
+
+          <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div><i class="fa-solid fa-user"></i></div>
+            Account
+          </a>
+
+        
+          <ul class="dropdown-menu">
+              {% if reques.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                  <li class="btn btn-success">
+                    <a class="dropdown-item list-inline-item" href="#">Product Management </a>
+                  </li>
+                {% endif %}
+                <li class="btn btn-success">
+                  <a class="dropdown-item list-inline-item" href="#">Logout</a>
+                </li>
+              {% else %}              
+                <li class="btn btn-success">
+                  <a class="dropdown-item list-inline-item" href="#">Sign in </a>
+                </li>
+                <li>
+                  <p class="dropdown-item">New customer?</p>
+                    <a class="dropdown-item" href="#">Create an Account </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                {% endif %}
+          </ul>
+        </li>
+
+      <li class="nav-item text-center">                 
+        <a class="nav-link" href="#"> 
+          <div><i class="fa-solid fa-basket-shopping list-inline-item"></i></div>
+              <p>
+                    <small>
+                      {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                      {% else %}
+                        £0.00
+                      {% endif %}
+                    </small>  
+              </p>
+    
+          </a>
+            </li>
+      </ul>
+
+
+     </div>
+
+</ul>
+
