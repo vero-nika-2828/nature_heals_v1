@@ -44,7 +44,7 @@
 
 
     {% block page_header %}
-    <header class="container-fluid header">
+    <header class="container-fluid header sticky-top">
       <div class="row">
         <nav class="navbar navbar-expand-lg bg-body">
           <div class="container-fluid my-auto d-none d-lg-flex">
@@ -55,16 +55,19 @@
               </a>
 
               
-            <form class="col-4" role="search">
+            <form class="col-4"  method="GET" action="#">
+              <div class="input-group w-100">
                 <input class="form-control me-2" type="text" name="search" placeholder="Search products" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="input-group-append">
+                  <button class="form-control btn btn-outline-success" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+              </div>
+
             </form>
           
             <ul class="navbar-nav my-auto justify-content-end col-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Wishlist</a>
-              </li>
-              
               <li class="nav-item dropdown text-center" role="button">
 
                 <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
