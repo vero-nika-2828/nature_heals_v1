@@ -27,6 +27,8 @@ class Subcategory(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(
         max_length=254)
+    category = models.ForeignKey(
+        Category, null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.name
@@ -67,5 +69,9 @@ class Product(models.Model):
     in_stock = models.BooleanField(default=True)
     featured = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.name
 
+    def get_friendly_name(self):
+        return self.friendly_name
  
