@@ -1,0 +1,93 @@
+[
+  {
+    "pk": 1,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "immunity_boosters",
+      "friendly_name": "Immunity boosters",
+      "category": 1
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "anti-inflammatory",
+      "friendly_name": "Anti-inflammatory",
+      "category": 1
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "inner_comfort_enhancers",
+      "friendly_name": "Inner Comfort Enhancers",
+      "category": 1
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "Memory and concentration boosters",
+      "friendly_name": "Memory & Concentration Boosters",
+      "category": 1
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "essential_oils",
+      "friendly_name": "Essential oils",
+      "category": 2
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "candles",
+      "friendly_name": "Candles",
+      "category": 2
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "dry_skin",
+      "friendly_name": "Dry Skin",
+      "category": 3
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "oily_skin",
+      "friendly_name": "Oily Skin",
+      "category": 3
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "mixed skin",
+      "friendly_name": "Mixed skin",
+      "category": 3
+    }
+  },
+
+  {
+    "pk": 10,
+    "model": "products.subcategory",
+    "fields": {
+      "name": "sensitive_skin",
+      "friendly_name": "Sensitive Skin",
+      "category": 3
+    }
+  }
+]
