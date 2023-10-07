@@ -13,6 +13,12 @@ class Category(models.Model):
     friendly_name = models.CharField(
         max_length=254)
 
+    class Meta:
+        """
+        Update name to match correct plumar form
+        """
+        verbose_name = "Categories"
+
     def __str__(self):
         return self.name
 
@@ -29,6 +35,12 @@ class Subcategory(models.Model):
         max_length=254)
     category = models.ForeignKey(
         Category, null=True, blank=True, on_delete=models.SET_NULL)
+
+    class Meta:
+        """
+        Update name to match correct plumar form
+        """
+        verbose_name = "Subcategories"
 
     def __str__(self):
         return self.name
