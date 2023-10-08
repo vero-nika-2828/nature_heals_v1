@@ -1,9 +1,35 @@
 from django.contrib import admin
 from .models import Product, Category, Subcategory
 
-# Register your models here.
+# Register your models
 
 
-admin.site.register(Product)
-admin.site.register(Category)
-admin.site.register(Subcategory)
+class ProductsAdmin(admin.ModelAdmin):
+    display = {
+        'name',
+        'sku',
+        'category',
+        'subategory',
+        'price',
+        'image',
+        'description',
+    }
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    display = {
+        'name',
+        'friendly_name',
+    }
+
+
+class SubcategoryAdmin(admin.ModelAdmin):
+    display = {
+        'name',
+        'friendly_name',
+    }
+
+
+admin.site.register(Product, ProductsAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Subcategory, SubcategoryAdmin)

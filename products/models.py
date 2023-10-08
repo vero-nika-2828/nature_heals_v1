@@ -17,7 +17,7 @@ class Category(models.Model):
         """
         Update name to match correct plumar form
         """
-        verbose_name = "Categories"
+        verbose_name = "Categorie"
 
     def __str__(self):
         return self.name
@@ -40,7 +40,7 @@ class Subcategory(models.Model):
         """
         Update name to match correct plumar form
         """
-        verbose_name = "Subcategories"
+        verbose_name = "Subcategorie"
 
     def __str__(self):
         return self.name
@@ -86,4 +86,3 @@ class Product(models.Model):
 
     def get_friendly_name(self):
         return self.friendly_name
- 
