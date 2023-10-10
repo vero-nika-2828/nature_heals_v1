@@ -20,7 +20,7 @@ def all_products(request):
             if not search_word:
                 messages.error(request, "Did you enter a searh word?")
                 return redirect(reverse('products'))
-
+            # Search specification
             queries = Q(
                 name__icontains=search_word) | Q(
                     description__icontains=search_word) | Q(
@@ -31,6 +31,6 @@ def all_products(request):
 
     context = {
         "products": products,
-        "seach_word": search_word,
+        "search_word": search_word,
     }
     return render(request, 'products/products.html', context)
