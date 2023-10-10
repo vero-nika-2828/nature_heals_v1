@@ -7,10 +7,10 @@
             </a>
             <!--Option 1 Sub Options-->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">By price</a></li>
-              <li><a class="dropdown-item" href="#">By size</a></li>
-              <li><a class="dropdown-item" href="#">By category</a></li>
-              <li><a class="dropdown-item" href="#">All products</a></li>
+              <li><a class="dropdown-item" href="#">By Price</a></li>
+              <li><a class="dropdown-item" href="#">By Size</a></li>
+              <li><a class="dropdown-item" href="#">By Category</a></li>
+              <li><a class="dropdown-item" href="#">All Products</a></li>
             </ul>
           </li>
 
@@ -21,10 +21,10 @@
             </a>
             <!--Option 2 Sub Options-->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Imunity boosters</a></li>
-              <li><a class="dropdown-item" href="#">Anti-inflammatory</a></li>
-              <li><a class="dropdown-item" href="#">Inner comfort enhancers</a></li>
-              <li><a class="dropdown-item" href="#">Memory and concentration boosters</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=imunity_boosters">Immunity Boosters</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=anti-infammatory">Anti-inflammatory</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=inner_comfort_enhancers">Inner Comfort Enhancers</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=memory&ampconcentration_boosters">Memory &amp; Concentration Boosters</a></li>
             </ul>
           </li>
 
@@ -35,8 +35,8 @@
             </a>
             <!--Option 3 Sub Options-->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Essential Oils</a></li>
-              <li><a class="dropdown-item" href="#">Candles</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=essential_oils">Essential Oils</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=candles">Candles</a></li>
             </ul>
           </li>
 
@@ -47,10 +47,10 @@
             </a>
             <!--Option 4 Sub Options-->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Oily skin</a></li>
-              <li><a class="dropdown-item" href="#">Dry skin</a></li>
-              <li><a class="dropdown-item" href="#">Mixed skin</a></li>
-              <li><a class="dropdown-item" href="#">Sensitive skin</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=oily_skin">Oily Skin</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=dry_skin">Dry Skin</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=mixed_skin">Mixed Skin</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=sensitive_skin">Sensitive Skin</a></li>
             </ul>
           </li>
 
