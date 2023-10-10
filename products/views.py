@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product
+from .models import Product, Subcategory
 
 
 def all_products(request):
@@ -11,8 +11,13 @@ def all_products(request):
     # Retrieve Product model data
     products = Product.objects.all()
     search_word = None
+    subcategory = None
 
     if request.GET:
+        if 'subcategory' in request.GET:
+            subcategories = request.GET['subcategory'].split(',')
+            products = products.filter(subcategory__name__in=subcategories)
+
         if 'search' in request.GET:
             # Get the term entered in the search bar
             search_word = request.GET['search']

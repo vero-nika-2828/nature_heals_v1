@@ -1,11 +1,11 @@
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="navbar-nav mx-auto ">
-          <!--Option 1-->
+          <!--Main nav menu-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               All products
             </a>
-            <!--Option 1 Sub Options-->
+            <!--Sort option-->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="#">By Price</a></li>
               <li><a class="dropdown-item" href="#">By Size</a></li>
@@ -14,38 +14,38 @@
             </ul>
           </li>
 
-          <!--Option 2-->
+          <!--Subcategory Dropdown 1-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Herbal Remedies
             </a>
-            <!--Option 2 Sub Options-->
+            <!--Subcategory  Dropdown 1 Options-->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=imunity_boosters">Immunity Boosters</a></li>
-              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=anti-infammatory">Anti-inflammatory</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=anti-inflammatory">Anti-inflammatory</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=inner_comfort_enhancers">Inner Comfort Enhancers</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=memory&ampconcentration_boosters">Memory &amp; Concentration Boosters</a></li>
             </ul>
           </li>
 
-          <!--Option 3-->
+          <!--Subcategory Dropdown 2-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Aromatherapy
             </a>
-            <!--Option 3 Sub Options-->
+            <!--Subcategory 2 Options-->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=essential_oils">Essential Oils</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=candles">Candles</a></li>
             </ul>
           </li>
 
-           <!--Option 4-->
+           <!--Subcategory Dropdown 3-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Skin Care
             </a>
-            <!--Option 4 Sub Options-->
+            <!--Subcategory Dropdown 3 Options-->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=oily_skin">Oily Skin</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=dry_skin">Dry Skin</a></li>
