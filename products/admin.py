@@ -22,6 +22,8 @@ class CategoryAdmin(admin.ModelAdmin):
         'friendly_name',
     }
 
+    ordering = ('name',)
+
 
 class SubcategoryAdmin(admin.ModelAdmin):
     display = {

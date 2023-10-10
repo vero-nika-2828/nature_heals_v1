@@ -1,7 +1,13 @@
 from django.shortcuts import render
+from .models import Product
 
 
-def products(request):
-    """Returns products page"""
+def all_products(request):
+    """Return products page and display all products, search and sort results"""
 
-    return render(request, 'products/product.html')
+    products = Product.objects.all()
+
+    context = {
+        "products": products,
+    }
+    return render(request, 'products/products.html', context)
