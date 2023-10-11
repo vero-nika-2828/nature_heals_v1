@@ -12,12 +12,26 @@ def all_products(request):
     products = Product.objects.all()
     search_word = None
     subcategories = None
+    sort = None
+    direction = None
 
     if request.GET:
         if 'subcategory' in request.GET:
             subcategories = request.GET['subcategory'].split(',')
             products = products.filter(subcategory__name__in=subcategories)
             subcategories = Subcategory.objects.filter(name__in=subcategories)
+
+        if 'sort' in request.GET:          
+            sort_preference = request.GET['sort']
+            sort = sort_preference
+            if sort_preference == 'name':
+                sort_preference == 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sort_preference = f'-{sort_preference}'
+            products = products.order_by(sort_preference)
 
         if 'search' in request.GET:
             # Get the term entered in the search bar
@@ -34,11 +48,13 @@ def all_products(request):
                             healing_properties__icontains=search_word)
 
             products = products.filter(queries)
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
         'search_word': search_word,
         'selected_subcategories': subcategories,
+        'current_sorting': current_sorting,
 
     }
     return render(request, 'products/products.html', context)
