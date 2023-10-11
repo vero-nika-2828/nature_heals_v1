@@ -7,9 +7,9 @@
             </a>
             <!--Sort option-->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">By Price</a></li>
-              <li><a class="dropdown-item" href="#">By Size</a></li>
-              <li><a class="dropdown-item" href="#">By Category</a></li>
+              <li><a class="dropdown-item" href="{% url 'products'%}?sort=price&direction=asc">By Price</a></li>
+              <li><a class="dropdown-item" href="{% url 'products'%}?sort=size&direction=asc">By Size</a></li>
+              <li><a class="dropdown-item" href="{% url 'products'%}?sort=category&direction=asc">By Category</a></li>
               <li><a class="dropdown-item" href="#">All Products</a></li>
             </ul>
           </li>
@@ -24,7 +24,7 @@
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=imunity_boosters">Immunity Boosters</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=anti-inflammatory">Anti-inflammatory</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=inner_comfort_enhancers">Inner Comfort Enhancers</a></li>
-              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=memory&ampconcentration_boosters">Memory &amp; Concentration Boosters</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=memory_concentration_boosters">Memory &amp; Concentration Boosters</a></li>
             </ul>
           </li>
 

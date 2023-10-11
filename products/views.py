@@ -11,12 +11,13 @@ def all_products(request):
     # Retrieve Product model data
     products = Product.objects.all()
     search_word = None
-    subcategory = None
+    subcategories = None
 
     if request.GET:
         if 'subcategory' in request.GET:
             subcategories = request.GET['subcategory'].split(',')
             products = products.filter(subcategory__name__in=subcategories)
+            subcategories = Subcategory.objects.filter(name__in=subcategories)
 
         if 'search' in request.GET:
             # Get the term entered in the search bar
@@ -35,7 +36,9 @@ def all_products(request):
             products = products.filter(queries)
 
     context = {
-        "products": products,
-        "search_word": search_word,
+        'products': products,
+        'search_word': search_word,
+        'selected_subcategories': subcategories,
+
     }
     return render(request, 'products/products.html', context)
