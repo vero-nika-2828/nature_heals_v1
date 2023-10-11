@@ -17,16 +17,20 @@ def all_products(request):
 
     if request.GET:
         if 'subcategory' in request.GET:
+            # Filter products for selected subcategories
             subcategories = request.GET['subcategory'].split(',')
             products = products.filter(subcategory__name__in=subcategories)
             subcategories = Subcategory.objects.filter(name__in=subcategories)
 
-        if 'sort' in request.GET:          
+        if 'sort' in request.GET:
+            # Sort the producutcs per specified criteria
             sort_preference = request.GET['sort']
             sort = sort_preference
             if sort_preference == 'name':
                 sort_preference == 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
+            if sort_preference == 'category':
+                sort_preference = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -48,6 +52,7 @@ def all_products(request):
                             healing_properties__icontains=search_word)
 
             products = products.filter(queries)
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
