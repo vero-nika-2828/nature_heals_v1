@@ -7,13 +7,16 @@
 
     <div class="container-fluid container-max-width h-100 pink-300">
         <div class="row">
+            <!--Cards with product information-->
             {% for product in products %}
             <div class="col-md-3">
                  <div class="card card-outline">
                         <img src="/media/{{product.image}}" class="card-img-top" alt="{{product.image}}">
                         <div class="card-body">
-                        <h5 class="card-title">{{product.friendly_name}} <br>{{product.size}}</h5>
-                        <p class="card-text">{Some quick example text to build on the card title and make up the bulk of the card's content.}</p>
+                        <h5 class="card-title">{{product.friendly_name|title}} <br>{{product.size}}</h5>
+                        <p class="card-text">Star rating placeholder</p>
+                        <!--<p class="card-text">{{product.healing_properties.capitalize}}</p>-->
+                        <h5>£{{product.price}}</h5>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                 </div>           

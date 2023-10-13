@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+    <div class="container-fluid container-max-width h-100 pink-300">
+        <div class="row">
+            <div class="col-md-3">
+                 <div class="card card-outline">
+                        <img src="/media/{{product.image}}" class="card-img-top" alt="{{product.image}}">
+                        <div class="card-body">
+                        <h5 class="card-title">{{product.friendly_name|title}} <br>{{product.size}}</h5>
+                        <p class="card-text">Star rating placeholder</p>
+                        <!--<p class="card-text">{{product.healing_properties.capitalize}}</p>-->
+                        <h5>£{{product.price}}</h5>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>           
+            </div>
+            
+    
+        </div>
+
+        <div >
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <!--Product Image-->
+                        <div class=" col-sm12 col-md6">
+                            <img src="#"  class="card-img-top" alt="#">                    
+                        </div>
+    
+                        <!--Product details section-->
+                        <div class="col-sm12 col-md6">
+                            <div class="row">
+                                <div class="card-body col s12 m12">
+                                    <h5 class="card-title">product.friendly_name|title <br>product.size</h5>
+                                    <p class="card-text"><span>Review stars</span> Review count  (write a review button?)</p>
+                                    <br>
+
+                                    <p class="card-text"> Product description</p>
+                                    <br>
+                                    
+                                    <p class="card-text"> Price</p>
+                                    <br>
+                                    
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                Add here a box with the healing powers (aka healing benefits)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+
+            <div class="row">
+                Add here the drop dowons with 
+            </div>
+    </div>
+
+{% endblock %}
