@@ -17,7 +17,7 @@
                         <p class="card-text">Star rating placeholder</p>
                         <!--<p class="card-text">{{product.healing_properties.capitalize}}</p>-->
                         <h5>£{{product.price}}</h5>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="{% url 'product_details' product.id %}" class="btn btn-primary">Go somewhere</a>
                         </div>
                 </div>           
             </div>
