@@ -6,7 +6,7 @@ from .models import Product, Subcategory
 
 def all_products(request):
     """
-    Return products page and display all products, search and sort results
+    Display products page and display all products, search and sort results
     """
     # Retrieve Product model data
     products = Product.objects.all()
@@ -66,7 +66,9 @@ def all_products(request):
 
 
 def product_details(request, product_id):
-
+    """
+    Display individual product page
+    """
     product = get_object_or_404(Product, pk=product_id)
 
     context = {

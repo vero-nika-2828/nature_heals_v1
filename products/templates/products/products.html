@@ -11,7 +11,11 @@
             {% for product in products %}
             <div class="col-md-2">
                  <div class="card card-outline">
+                    {% if product.image %}
                         <img src="/media/{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}">
+                    {% else %}
+                        <img src="/media/noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
+                    {% endif %}
                         <div class="card-body">
                         <h5 class="card-title">{{product.friendly_name|title}} <br>{{product.size}}</h5>
                         <p class="card-text">Star rating placeholder</p>
