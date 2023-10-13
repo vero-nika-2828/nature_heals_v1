@@ -13,18 +13,20 @@
             </div>
         </div>
 
-    </div>
-
-
-    <div class="row">
-        <div class="col">
-            {% if bag_items %}
-                <div></div>
-            {% else %}
-                <p>Your bag is empty.</p>
-                <a href="{% url 'products' %}" class="btn">Return</a>
-            {% endif %}
+        <div class="row">
+            <div class="col">
+                {% if bag_items %}
+                    <div></div>
+                {% else %}
+                    <p>Your bag is empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-primary">Continue shopping</a>
+                {% endif %}
+            </div>
         </div>
+
     </div>
+
+
+
 
 {% endblock %}
