@@ -11,6 +11,12 @@
 }
 
 
+.quantity-conatainer{
+  background-color: #C8DDD2;
+  border-radius: 10px;
+
+}
+
 
 @media (min-width: 1300px) {
     .container-max-width {

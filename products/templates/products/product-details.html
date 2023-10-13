@@ -10,7 +10,11 @@
         <div class="row justify-content-center">
            <!--Product image-->
            <div class="col-sm-12 col-md-6 ">
-               <img src="/media/{{product.image}}"  alt="{{product.friendly_name}}">
+                {% if product.image %}
+                    <img src="/media/{{product.image}}"  alt="{{product.friendly_name}}">
+                {% else %}
+                    <img src="/media/noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
+                {% endif %}
            </div>
 
             <!--Product details-->
@@ -21,8 +25,12 @@
                <p>{{product.description}}</p>
                <p><span>Price: </span>£{{product.price}}</p> 
                
-                <div>
-                  input fields here 
+                <div class="container quantity-conatainer ps-0 ">
+                    <label for="quantity">Quantity</label>
+                    <div class="input-group mb-3 w-50">
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="99" class="form-control col-md-2"  aria-label="quantity" aria-describedby="basic-addon2">
+                        <span id="quantity"> <button type="submit" class="btn btn-primary">Submit</button></span>
+                      </div>
                </div>
 
                <div class="row">
