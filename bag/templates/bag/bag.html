@@ -10,13 +10,18 @@
             <div class="col">
                 <h1>This is your shopping baaaaaaaaaaaaaaaaaaaaaag </h1>
                 <p>Buy a lot of stuff</p>
+                <div>
+                    
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                    <div></div>
+                    <div>
+                        {{ bag_items }}
+                    </div>
                 {% else %}
                     <p>Your bag is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-primary">Continue shopping</a>
