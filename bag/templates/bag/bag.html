@@ -30,18 +30,30 @@
                               </tr>
                             </thead>
                             <tbody>
-                            {% for item in bag_items %}
-                              <tr>
-                                <td>
-                                  <img class="image-fluid w-100 h-100" src="/media/{{ item.product.image }}">
-                                </div>
-                                </td>
-                                <td>{{ item.product.friendly_name }} {{ item.product.size }} <br> {{item.product.sku |upper}}</td>
-                                <td>{{ item.product.price }}</td>
-                                <td>{{ item.quantity }}</td>
-                                <td>£ {{item.product.price }}</td>
-                              </tr>
-                            {% endfor %}
+                                {% for item in bag_items %}
+                                <tr>
+                                    <td>
+                                    <img class="image-fluid w-100 h-100" src="/media/{{ item.product.image }}">
+                                    </div>
+                                    </td>
+                                    <td>{{ item.product.friendly_name }} {{ item.product.size }} <br> <span> {{item.product.sku |upper}}</span></td>
+                                    <td>{{ item.product.price }}</td>
+                                    <td>{{ item.quantity }}</td>
+                                    <td>£ {{item.product.price }}</td>
+                                </tr>
+                                {% endfor %}
+
+                                <tr>
+                                    <td colspan="5" class="text-end">
+                                        <h6>Bag Total: £{{ total|floatformat:2 }}</h6>
+                                        <h6>Delivery: £{{ delivery|floatformat:2}}</h6>
+                                        <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h4>
+                                        {% if free_delivery_delta > 0%}
+                                            <P>Spend £{{ free_delivery_delta }} more for free delivery</P>
+                                        {% endif %}
+
+                                    </td>
+                                </tr>
                             </tbody>
                           </table>
                     </div>
