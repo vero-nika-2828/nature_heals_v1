@@ -21,6 +21,22 @@
 
 }
 
+.quantity-input{
+  border: none;
+  width: max-content;
+}
+
+.add2bag-btn{
+  border-radius: 25px;
+}
+
+.input-group-wrapper{
+  background-color: #ffff;
+  border-radius: 25px;
+}
+
+
+
 .continue-btn{
   box-shadow: 0px 0px 2px 2px #508a7b;
   color: #106c09;
