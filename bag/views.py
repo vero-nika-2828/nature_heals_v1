@@ -8,7 +8,7 @@ def shopping_bag(request):
 
 
 def add_to_bag(request, item_id):
-    """ 
+    """
     Add the product to the shopping bag.
     Increment quantities of slected products
     """
