@@ -8,8 +8,7 @@
     <div class="container h-100 pink-300">
         <div class="row">
             <div class="col">
-                <h1>This is your shopping baaaaaaaaaaaaaaaaaaaaaag </h1>
-                <p>Buy a lot of stuff</p>
+                <h1>Your bag </h1>
                 <div>
                     
                 </div>
@@ -20,7 +19,31 @@
             <div class="col">
                 {% if bag_items %}
                     <div>
-                        {{ bag_items }}
+                        <table class="table">
+                            <thead>
+                              <tr>              
+                                <th scope="col">Product Information</th>
+                                <th scope="col"></th>
+                                <th scope="col">Unit Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Subtotal</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            {% for item in bag_items %}
+                              <tr>
+                                <td>
+                                  <img class="image-fluid w-100 h-100" src="/media/{{ item.product.image }}">
+                                </div>
+                                </td>
+                                <td>{{ item.product.friendly_name }} {{ item.product.size }} <br> {{item.product.sku |upper}}</td>
+                                <td>{{ item.product.price }}</td>
+                                <td>{{ item.quantity }}</td>
+                                <td>£ {{item.product.price }}</td>
+                              </tr>
+                            {% endfor %}
+                            </tbody>
+                          </table>
                     </div>
                 {% else %}
                     <p>Your bag is empty.</p>
