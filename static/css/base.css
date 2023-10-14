@@ -5,6 +5,10 @@
 
 }
 
+.navbar{
+  --bs-navbar-padding-y: 0;
+}
+
 .card-outline{
   box-shadow: 0 0 8px 8px lightgray;
   border: none;
