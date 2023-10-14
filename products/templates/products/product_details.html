@@ -5,11 +5,11 @@
 
 {% block content %}
 
-    <div class="container">
+    <div class="container ">
         <!--Project details view-->
         <div class="row justify-content-center">
            <!--Product image-->
-           <div class="col-sm-12 col-md-6 ">
+           <div class="col-sm-12 col-md-6">
                 {% if product.image %}
                     <img src="/media/{{product.image}}"  alt="{{product.friendly_name}}">
                 {% else %}
@@ -31,21 +31,21 @@
                         <div class="row ms-1 mb-3 input-group-container">
                             <div class="input-group input-group-wrapper w-50 mb-3 justify-content-center align-items-center">
                                 <div class="input-group-prepend">
-                                    <button class="btn decrement-qty" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <div class="btn decrement-qty" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                         <i class="fa-solid fa-minus"></i>
-                                    </button>
+                                    </div>
                                 </div>
 
-                                <input type="number" class="form-control text-center quantity-input" id="quantity" name="quantity"  value="1" min="1" max="99 " data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" aria-describedby="emailHelp">
+                                <input type="number" class="form-control text-center quantity-input qty_input" id="quantity" name="quantity"  value="1" min="1" max="99 " data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" aria-describedby="emailHelp">
                            
                                 <div class="input-group-append">
-                                    <button class="btn increment-qty" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <div  class="btn increment-qty" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                         <i class="fa-solid fa-plus"></i>
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-50">
-                                <button type="submit" class="btn btn-primary add2bag-btn block w-100">Add to Bag</button>
+                                <button class="btn btn-primary add2bag-btn block w-100">Add to Bag</button>
                             </div>
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -59,15 +59,14 @@
                     
            </div>
  
-            </div>
+        </div>
 
 
     </div>
 
+{% endblock %}
 
-
-
-
-
-
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
