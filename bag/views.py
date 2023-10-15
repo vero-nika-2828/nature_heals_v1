@@ -25,3 +25,21 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def edit_bag(request, item_id):
+    """
+    Change the product product quantity in shopping bag.
+   
+    """
+
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    if quantity > 0:
+        bag[item_id] += quantity
+    else:
+        bag.pop
+
+    request.session['bag'] = bag
+    return redirect(redirect_url)
