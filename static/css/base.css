@@ -44,6 +44,13 @@
 .input-group-wrapper{
   background-color: #ffff;
   border-radius: 25px;
+  
+}
+
+.bag-input-group-wrapper{
+  background-color: #ffff;
+  border-radius: 25px;
+  border: 2px solid #093d05;
 }
 
 .input-group-container{
@@ -51,6 +58,10 @@
   line-height: 50px;
 }
 
+.bag-input-group-container{
+  padding-left: 20%;
+
+}
 
 .continue-btn{
   box-shadow: 0px 0px 2px 2px #508a7b;

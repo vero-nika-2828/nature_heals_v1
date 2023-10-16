@@ -30,7 +30,6 @@ def add_to_bag(request, item_id):
 def edit_bag(request, item_id):
     """
     Change the product product quantity in shopping bag.
-   
     """
 
     quantity = int(request.POST.get('quantity'))
