@@ -38,7 +38,9 @@
                                     </td>
                                     <td>{{ item.product.friendly_name }} {{ item.product.size }} <br> <span> {{item.product.sku |upper}}</span></td>
                                     <td>{{ item.product.price }}</td>
-                                    <td>{{ item.quantity }}</td>
+                                    <td>
+                                       {% include '../inlcudes/quantity_form.html' %}
+                                    </td>
                                     <td>£ {{item.product.price }}</td>
                                 </tr>
                                 {% endfor %}

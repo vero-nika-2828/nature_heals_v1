@@ -71,8 +71,11 @@ def product_details(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
 
+    healing_properties_list = product.healing_properties.split(",")
+
     context = {
         'product': product,
+        'healing_properties_list': healing_properties_list,
     }
 
     return render(request, 'products/product_details.html', context)
