@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 
 def shopping_bag(request):
@@ -33,6 +33,7 @@ def edit_bag(request, item_id):
     """
 
     quantity = int(request.POST.get('quantity'))
+    
     bag = request.session.get('bag', {})
 
     if quantity > 0:
@@ -41,4 +42,4 @@ def edit_bag(request, item_id):
         bag.pop
 
     request.session['bag'] = bag
-    return redirect(redirect_url)
+    return redirect(reverse('bag'))

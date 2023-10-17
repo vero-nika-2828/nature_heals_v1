@@ -85,7 +85,7 @@
                 </a>
 
                 <!--Account menu options--> 
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu py-2 px-2">
                     {% if reques.user.is_authenticated %}
                       {% if request.user.is_superuser %}
                         <li class="btn btn-success">
@@ -96,16 +96,14 @@
                         <a class="dropdown-item list-inline-item" href="#">Logout</a>
                       </li>
                     {% else %}              
-                      <li class="btn btn-success">
+                      <li class="btn btn-success w-100 ">
                         <a class="dropdown-item list-inline-item" href="#">Sign in </a>
                       </li>
-                      <li>
+                      <li class="justify-content-center">
                         <p class="dropdown-item">New customer?</p>
-                          <a class="dropdown-item" href="#">Create an Account </a>
+                        <a class="dropdown-item" href="#">Create an Account </a>
                       </li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
+
                       {% endif %}
                 </ul>
               </li>

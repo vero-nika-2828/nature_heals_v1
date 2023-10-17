@@ -40,7 +40,7 @@
                                     <td>{{ item.product.price }}</td>
                                     <td>
                                       <div>
-                                        {% include 'bag/quantity_form.html' %}
+                                        {% include 'bag/includes/quantity_form.html' %}
                                         
                                       </div>
                                     </td>
@@ -72,10 +72,12 @@
                 <h5>Summary</h5>
             </div>
         </div>
-
     </div>
 
+{% endblock %}
 
-
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 
 {% endblock %}
