@@ -1,4 +1,4 @@
-<form class="form" action="{% url 'edit_bag' item.item_id %}" method="POST">
+<form class="form update-form" action="{% url 'edit_bag' item.item_id %}" method="POST">
     {% csrf_token %}
     <div class="row ms-1 mb-3 bag-input-group-container">
         <div class="input-group bag-input-group-wrapper w-50 mb-3 justify-content-center align-items-center">
@@ -19,3 +19,6 @@
     </div>
     <input type="hidden" name="redirect_url" value="{{ request.path }}">
   </form>
+
+    <a class="update-item float-right"><small>Update</small></a>
+    <a class="remove-item" id="remove_{{ item.item_id }}"><small>Remove</small></a>

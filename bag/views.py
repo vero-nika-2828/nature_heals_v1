@@ -33,7 +33,7 @@ def edit_bag(request, item_id):
     """
 
     quantity = int(request.POST.get('quantity'))
-    
+
     bag = request.session.get('bag', {})
 
     if quantity > 0:
