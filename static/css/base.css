@@ -77,6 +77,15 @@
   font-weight: bold;
 }
 
+.message-container{
+  /*position: fixed;
+  top: 120px;*/
+  height:500px;
+  background-color: red;
+  color:white;
+  font-weight: bolder;
+}
+
 @media (min-width: 768px) {
   .product-details-img img{
     max-height: 40rem;
