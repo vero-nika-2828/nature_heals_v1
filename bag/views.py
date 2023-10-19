@@ -39,7 +39,20 @@ def edit_bag(request, item_id):
     if quantity > 0:
         bag[item_id] += quantity
     else:
-        bag.pop
+        bag.pop(item_id)
 
     request.session['bag'] = bag
     return redirect(reverse('bag'))
+
+
+def remove_bag_item(request, item_id):
+    product = get_object_or_404(Product, pk=item_id)
+
+    try:
+        bag.pop(item_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except EXCEPTION as e:
+        return HttpResponse(status=500)
