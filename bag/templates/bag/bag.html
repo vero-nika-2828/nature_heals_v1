@@ -37,14 +37,14 @@
                                     </div>
                                     </td>
                                     <td>{{ item.product.friendly_name }} {{ item.product.size }} <br> <span> {{item.product.sku |upper}}</span></td>
-                                    <td>{{ item.product.price | calc_subtotal:item.quantity }}</td>
+                                    <td>{{ item.product.price }}</td>
                                     <td>
                                       <div>
                                         {% include 'bag/quantity_form.html' %}
                                         
                                       </div>
                                     </td>
-                                    <td>£ {{item.product.price }}</td>
+                                    <td>£ {{item.product.price | calc_subtotal:item.quantity }}</td>
                                 </tr>
                                 {% endfor %}
 
