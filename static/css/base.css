@@ -94,6 +94,7 @@
 .toast{
   height: 300px;
   background-color: aqua;
+
 }
 
 @media (min-width: 768px) {
