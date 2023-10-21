@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Subcategory
+from .models import Product, Subcategory, Category
 
 
 def all_products(request):
@@ -55,11 +55,14 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    category_list = Category.objects.all()
+
     context = {
         'products': products,
         'search_word': search_word,
         'selected_subcategories': subcategories,
         'current_sorting': current_sorting,
+        'category_list': category_list,
 
     }
     return render(request, 'products/products.html', context)
