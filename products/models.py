@@ -15,7 +15,7 @@ class Category(models.Model):
 
     class Meta:
         """
-        Update name to match correct plumar form
+        Update name to match correct plural form
         """
         verbose_name = "Categorie"
 
@@ -38,7 +38,7 @@ class Subcategory(models.Model):
 
     class Meta:
         """
-        Update name to match correct plumar form
+        Update name to match correct plural form
         """
         verbose_name = "Subcategorie"
 
