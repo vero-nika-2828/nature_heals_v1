@@ -31,6 +31,31 @@ class Order(models.Model):
     grand_total = models.DecimalField(
         max_digits=12, decimal_places=2, null=False, default=0)
 
-    def _generate_order_number(self):
- 
+    def __str__(self):
+        return self.order_number
 
+
+class OrderLineItem(models.Model):
+    order = models.ForeignKey(
+        Order,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE,
+        related_name='lineitems')
+    product = models.ForeignKey(
+        Product,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE)
+    quantity = models.IntegerField(
+        null=False,
+        blank=False, default=0)
+    lineitem_total = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        null=False,
+        blank=False,
+        editable=False)
+
+    def __str__(self):
+        return self.order
