@@ -6,7 +6,7 @@ class CheckoutConfig(AppConfig):
     name = 'checkout'
 
     """
-    Override ready method to import signals and 
+    Override ready method to import signals and
     Call update total model each time  line item is deleted or saved
     """
 
