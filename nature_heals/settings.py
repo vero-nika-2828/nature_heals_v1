@@ -60,6 +60,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'nature_heals.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -77,6 +80,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'bag.contexts.bag_contents',
             ],
+            'builtins': [
+                'crispy_form.templatetags.crispy_form_tags'
+                'crispy_form.templatetags.crispy_form_fields'
+            ]
         },
     },
 ]
