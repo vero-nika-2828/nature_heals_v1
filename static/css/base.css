@@ -14,6 +14,18 @@
   border: none;
 }
 
+.all-products-card img{
+  min-height: 15rem;
+  max-height: 15rem;
+  object-fit: contain;
+}
+
+/*.all-products-card .card-body{
+  min-height: 15rem;
+  max-height: fit-content;
+
+}*/
+
 .product-details-img img{
   width: 100%;
   max-height: 25rem;

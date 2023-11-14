@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fj5&b2*lw+_yq-)odqf@reag%@l&svhx$$@qhuycl)$=4)b07t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-veronika282-natureheals-fi0c1mfjyu6.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['8000-veronika282-natureheals-2dp854eh6xv.ws-eu106.gitpod.io']
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+
 ]
 
 MIDDLEWARE = [
@@ -81,8 +82,8 @@ TEMPLATES = [
                 'bag.contexts.bag_contents',
             ],
             'builtins': [
-                'crispy_form.templatetags.crispy_form_tags'
-                'crispy_form.templatetags.crispy_form_fields'
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field'
             ]
         },
     },
