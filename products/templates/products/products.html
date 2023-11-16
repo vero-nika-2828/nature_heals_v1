@@ -16,7 +16,7 @@
             </div>
             <!--Cards with product information-->
             {% for product in products %}
-            <div class="col-md-4 col-lg-2">
+            <div class="col-sm-6 col-md-4 col-lg-2">
                  <div class="all-products-card card card-outline justify-content-center">
                     {% if product.image %}
                         <img src="/media/{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}">
