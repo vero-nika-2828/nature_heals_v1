@@ -17,6 +17,29 @@
         </div>
 
         <div class="row">
+            <div class="col-md-2 order-lg-last">
+                {% for item in bag_items %}
+                <div class="row">
+                    <div class="col-2 mb-1">
+                        <a href="{% url 'product_details' item.product.id %}">
+                            {% if item.product.image %}
+                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.friendly_name }}">
+                            {% else %}
+                            <img src="/media/noimage.JPG" class="card-img-top" alt="{{ item.product.friendly_name}}">">
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="col-7">
+                        <p class="my-0"><strong>{{ item.product.friendly_name }}</strong></p>
+                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+
             <div class="col-md-10">
                     <p>Please fill out the form below to complete your order</p>
                     <form action="{% url 'checkout' %}" method="POST" id="payment-form">
