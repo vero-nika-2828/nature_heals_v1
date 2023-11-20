@@ -114,6 +114,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
