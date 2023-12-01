@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container h-100 pink-300">
+        <div class="row">
+            <div class="col">
+                <h1>Thank you</h1>
+                <hr>
+                <p>Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-7"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-7 text-right">
+            <a href="{% url 'products' %}?subcategory=imunity_boosters" class="btn btn-black rounded-0 my-2">
+                <span class="icon mr-2">
+                    <i class="fas fa-gifts"></i>
+                </span>
+                <span class="text-uppercase"> Set to show immunity boosters but could be new arrivals or most popular (e.g. Now check out the latest deals!) </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
