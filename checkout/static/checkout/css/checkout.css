@@ -35,3 +35,16 @@
     color: #000;
     border: 1px solid #000;
 }
+
+.checkout-confirmation-box{
+  padding: 0
+}
+
+.checkout-top-box{
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.light-green-background{
+  background-color: #C8DDD2;
+}
