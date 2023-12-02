@@ -29,6 +29,7 @@ class OrderForm(forms.ModelForm):
         self.fields['full_name'].widget.attrs['autofocus'] = True
         # Customize fields
         for field in self.fields:
+            # Exclude country from the required fields
             if field != 'country':
             # Add asterisk to required fields
                 if self.fields[field].required:
