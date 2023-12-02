@@ -17,26 +17,26 @@ class OrderForm(forms.ModelForm):
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
-            'phone_number': 'Phone Number',
-            'country': 'Country',
-            'postcode': 'Postal Code',
-            'town_or_city': 'Town or City',
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
-            'county': 'County',
+            'town_or_city': 'Town or City',
+            'county': 'County', 
+            'postcode': 'Postal Code',
+            'phone_number': 'Phone Number',
         }
 
         # Place cursor in full name field when page loads
         self.fields['full_name'].widget.attrs['autofocus'] = True
         # Customize fields
         for field in self.fields:
+            if field != 'country':
             # Add asterisk to required fields
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                # Add placeholder name
-                placeholder = placeholders[field]
-            # Other fields customization
-            self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-            self.fields[field].label = False
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    # Add placeholder name
+                    placeholder = placeholders[field]
+                # Other fields customization
+                self.fields[field].widget.attrs['placeholder'] = placeholder
+                self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+                self.fields[field].label = False
