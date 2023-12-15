@@ -42,6 +42,8 @@ class OrderAdmin(admin.ModelAdmin):
         'county', 'delivery_cost',
         'order_total',
         'grand_total',
+        'original_bag',
+        'stripe_pid',
     )
 
     # Show only selected key columns in the order list
