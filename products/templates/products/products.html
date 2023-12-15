@@ -19,7 +19,10 @@
             <div class="col-sm-6 col-md-4 col-lg-2">
                  <div class="all-products-card card card-outline h-100 justify-content-center ">
                     {% if product.image %}
-                        <img src="/media/{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}">
+                        <div>
+                            <a href="{% url 'product_details' product.id %}" class="float-end"><i class="fa-regular fa-heart"></i></a>
+                            <a href="{% url 'product_details' product.id %}" class="float-end"><img src="/media/{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}"></a>    
+                        </div>  
                     {% else %}
                         <img src="/media/noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
                     {% endif %}
