@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Subcategory, Category
+from profiles.models import UserProfile
+from wishlist.models import Wishlist
 
 
 def all_products(request):
@@ -57,12 +59,18 @@ def all_products(request):
 
     category_list = Category.objects.all()
 
+    wishlist = None
+    if request.user.is_authenticated:
+        user = get_object_or_404(UserProfile, user=request.user)
+        wishlist = Wishlist.objects.filter(user_profile=user)
+
     context = {
         'products': products,
         'search_word': search_word,
         'selected_subcategories': subcategories,
         'current_sorting': current_sorting,
         'category_list': category_list,
+        'wishlist': wishlist,
 
     }
     return render(request, 'products/products.html', context)

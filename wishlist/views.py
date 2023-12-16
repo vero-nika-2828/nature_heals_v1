@@ -21,8 +21,5 @@ def wishlist(request):
         'wishlist': wishlist,
 
     }
-    print(user)
-    print(wishlist)
-        
-
+      
     return render(request, template, context)
