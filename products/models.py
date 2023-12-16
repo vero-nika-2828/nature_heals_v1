@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Category(models.Model):
     """
@@ -20,7 +18,7 @@ class Category(models.Model):
         verbose_name = "Categorie"
 
     def __str__(self):
-        return self.name
+        return self.friendly_name
 
     def get_friendly_name(self):
         return self.friendly_name
@@ -43,7 +41,7 @@ class Subcategory(models.Model):
         verbose_name = "Subcategorie"
 
     def __str__(self):
-        return self.name
+        return self.friendly_name
 
     def get_friendly_name(self):
         return self.friendly_name
@@ -82,7 +80,7 @@ class Product(models.Model):
     featured = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.name
+        return self.friendly_name
 
     def get_friendly_name(self):
         return self.friendly_name
