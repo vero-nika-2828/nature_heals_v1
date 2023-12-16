@@ -5,14 +5,36 @@
 
 {% block content %}
 
-    <div class="container h-100 pink-300">
+    <div class="container-fluid container-max-width h-100 pink-300">
         <div class="row">
-            <div class="col">
-                <h1>Explore natural products </h1>
-                <div class="btn btn-primary">FUNGUJE T</div>
+            <!--Cards with product information-->
+            {% for wish in wishlist %}
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                 <div class="all-products-card card card-outline h-100 justify-content-center ">
+                    {% if wish.product.image %}
+                        <div>
+                            {% if wishlist %}
+                                <a href="{% url 'product_details' wish.product.id %}" class="float-end"><i class="fa-solid fa-heart"></i></a>
+                            {% else %}
+                                <a href="{% url 'product_details' wish.product.id %}" class="float-end"><i class="fa-regular fa-heart"></i></a>
+                            {% endif %}
+                                <a href="{% url 'product_details' wish.product.id %}" class="float-end"><img src="/media/{{wish.product.image}}" class="card-img-top" alt="{{wish.product.friendly_name}}"></a>    
+                            
+                        </div>  
+                    {% else %}
+                        <img src="/media/noimage.JPG" class="card-img-top" alt="{{wish.product.friendly_name}}">
+                    {% endif %}
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{wish.product.friendly_name|title}} <br>{{wish.product.size}}</h5>
+                            <p class="card-text">Star rating placeholder</p>
+                            <!--<p class="card-text">{{product.healing_properties.capitalize}}</p>-->
+                            <p>£{{wish.product.price}}</p>
+                            <a href="{% url 'product_details' wish.product.id %}" class="btn btn-primary w-100 col-6">View product</a>
+                        </div>
+                </div>           
             </div>
+            {% endfor %}
         </div>
-
     </div>
 
 {% endblock %}
