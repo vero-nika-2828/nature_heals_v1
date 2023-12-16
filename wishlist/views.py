@@ -23,3 +23,33 @@ def wishlist(request):
     }
       
     return render(request, template, context)
+
+
+def add_to_wishlist(request, product_id):
+    """
+    Add products to the wishlist
+    """
+
+    user = get_object_or_404(UserProfile, user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+
+    # check whether the product is already in wishlist
+    existing_wish_item = Wishlist.objects.filter(user_profile=user, product=product)
+    
+    # add the product to wishlist if not yet added
+    if existing_wish_item:
+        # message.info(request, f'{product.name} is already in your wishlist!')
+        return redirect(reverse('products'))
+    else:
+        Wishlist.objects.create(
+            user_profile=user,
+            product=product,
+    )
+
+    #message.success(
+    #    request, f'{product.friendly_name} has been added to your wishlist!'
+    #)
+
+        return redirect(reverse('products'))
+ 
+

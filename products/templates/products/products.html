@@ -25,7 +25,8 @@
                                 {% if product.id == wish.product.id %}
                                 <a href="{% url 'product_details' product.id %}" class="float-end"><i class="fa-solid fa-heart"></i></a>
                                 {% else %}
-                                <a href="{% url 'product_details' product.id %}" class="float-end"><i class="fa-regular fa-heart"></i></a>
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-end"><i class="fa-regular fa-heart"></i></a>
+                                
                                 {% endif %}
                             {% endfor %}
                             <a href="{% url 'product_details' product.id %}" class="float-end"><img src="/media/{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}"></a>    
