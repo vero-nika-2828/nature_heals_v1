@@ -38,7 +38,7 @@ def add_to_wishlist(request, product_id):
     
     # add the product to wishlist if not yet added
     if existing_wish_item:
-        # message.info(request, f'{product.name} is already in your wishlist!')
+        messages.info(request, f'{product.friendly_name} is already in your wishlist!')
         return redirect(reverse('products'))
     else:
         Wishlist.objects.create(
@@ -46,10 +46,7 @@ def add_to_wishlist(request, product_id):
             product=product,
     )
 
-    #message.success(
-    #    request, f'{product.friendly_name} has been added to your wishlist!'
-    #)
-
+        messages.success(request, f'{product.friendly_name} has been added to your wishlist!')
         return redirect(reverse('products'))
  
 
