@@ -1,8 +1,6 @@
 from django.contrib import admin
 from .models import Product, Category, Subcategory
 
-# Register your models
-
 
 class ProductsAdmin(admin.ModelAdmin):
     display = {

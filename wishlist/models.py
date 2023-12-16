@@ -8,7 +8,7 @@ class Wishlist(models.Model):
     Wishlist model to show products shortlisted by user
     """
 
-    wishlist_username = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     def __str__(self):
