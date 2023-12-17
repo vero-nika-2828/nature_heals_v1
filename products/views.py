@@ -64,6 +64,8 @@ def all_products(request):
         user = get_object_or_404(UserProfile, user=request.user)
         wishlist = Wishlist.objects.filter(user_profile=user)
 
+    wishlist_count = Wishlist.objects.count()
+
     context = {
         'products': products,
         'search_word': search_word,
@@ -71,8 +73,10 @@ def all_products(request):
         'current_sorting': current_sorting,
         'category_list': category_list,
         'wishlist': wishlist,
+        'wishlist_count':wishlist_count,
 
     }
+    print(wishlist)
     return render(request, 'products/products.html', context)
 
 

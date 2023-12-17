@@ -20,15 +20,18 @@
                  <div class="all-products-card card card-outline h-100 justify-content-center ">
                     {% if product.image %}
                         <div>
+                            {% if product.id not in wishlist %}
+                            <a href="{% url 'add_to_wishlist' product.id %}" class="float-end"><i class="fa-regular fa-heart"></i></a>
+                            {% endif %}
+
                             {% for wish in wishlist %}
-                                     <!--loop over data in the wihslist and if the wishlisted product matched the prodcut id display filled heart-->
+                                <!--loop over data in the wihslist and if the wishlisted product matched the prodcut id display filled heart-->
                                 {% if product.id == wish.product.id %}
-                                <a href="{% url 'product_details' product.id %}" class="float-end"><i class="fa-solid fa-heart"></i></a>
-                                {% else %}
-                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-end"><i class="fa-regular fa-heart"></i></a>
-                                
+                                    <a href="{% url 'remove_from_wishlist' product.id %}" class="float-end"><i class="fa-solid fa-heart"></i></a>
                                 {% endif %}
-                            {% endfor %}
+                             {% endfor %}    
+                            
+
                             <a href="{% url 'product_details' product.id %}" class="float-end"><img src="/media/{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}"></a>    
                         </div>  
                     {% else %}

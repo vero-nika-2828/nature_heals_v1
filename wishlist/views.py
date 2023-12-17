@@ -36,7 +36,7 @@ def add_to_wishlist(request, product_id):
     # check whether the product is already in wishlist
     existing_wish_item = Wishlist.objects.filter(user_profile=user, product=product)
     
-    # add the product to wishlist if not yet added
+    # add a product to wishlist if not yet added
     if existing_wish_item:
         messages.info(request, f'{product.friendly_name} is already in your wishlist!')
         return redirect(reverse('products'))
@@ -50,3 +50,16 @@ def add_to_wishlist(request, product_id):
         return redirect(reverse('products'))
  
 
+def remove_from_wishlist(request, product_id):
+    """
+    Remove products from the wishlist
+    """
+
+    user = get_object_or_404(UserProfile, user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+
+    wishlist_count = Wishlist.objects.count()
+
+    Wishlist.objects.filter(user_profile=user, product=product).delete()
+
+    return redirect(reverse('products'))
