@@ -12,6 +12,10 @@ def wishlist(request):
     """
     Display my_wishlist page with the items selected by the user
     """
+    if not request.user.is_authenticated:
+        messages.error(request,'Sorry, you need to be logged in to add your Wishlist.')
+        return redirect(reverse('account_login'))
+    
     user = get_object_or_404(UserProfile, user=request.user)
     wishlist = Wishlist.objects.filter(user_profile=user)
 
