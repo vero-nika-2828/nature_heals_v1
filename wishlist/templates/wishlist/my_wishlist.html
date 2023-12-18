@@ -13,16 +13,26 @@
                  <div class="all-products-card card card-outline h-100 justify-content-center ">
                     {% if wish.product.image %}
                         <div>
-                            {% if wishlist %}
-                                <a href="{% url 'product_details' wish.product.id %}" class="float-end"><i class="fa-solid fa-heart"></i></a>
-                            {% else %}
-                                <a href="{% url 'product_details' wish.product.id %}" class="float-end"><i class="fa-regular fa-heart"></i></a>
-                            {% endif %}
-                                <a href="{% url 'product_details' wish.product.id %}" class="float-end"><img src="/media/{{wish.product.image}}" class="card-img-top" alt="{{wish.product.friendly_name}}"></a>    
-                            
+                            {% if product.id not in wishlist_product_list or not request.user.is_authenticated %}
+                                <a href="{% url 'add_to_wishlist' wish.product.id %}" class="float-end item-name"><i class="fa-regular fa-heart" alt="add"></i></i></a>
+                             {% else %}                          
+                                <a href="{% url 'remove_from_wishlist' wish.product.id %}" class="float-end"><i class="fa-solid fa-heart" alt="remove"></i></a>
+                             {% endif %}
+
+                            <a href="{% url 'product_details' wish.product.id %}" class="float-end"><img src="/media/{{wish.product.image}}" class="card-img-top" alt="{{wish.product.friendly_name}}"></a>
+      
                         </div>  
                     {% else %}
-                        <img src="/media/noimage.JPG" class="card-img-top" alt="{{wish.product.friendly_name}}">
+                    <div>
+                        {% if product.id not in wishlist_product_list or not request.user.is_authenticated %}
+                            <a href="{% url 'add_to_wishlist' wish.product.id %}" class="float-end item-name"><i class="fa-regular fa-heart" alt="add"></i></i></a>
+                        {% else %}                          
+                             <a href="{% url 'remove_from_wishlist' wish.product.id %}" class="float-end"><i class="fa-solid fa-heart" alt="remove"></i></a>
+                        {% endif %}
+                        
+                        <a href="{% url 'product_details' wish.product.id %}" class="float-end"><img src="/media/noimage.JPG" class="card-img-top" alt="{{wish.product.friendly_name}}"></a>
+                            
+                    </div>
                     {% endif %}
                         <div class="card-body text-center">
                             <h5 class="card-title">{{wish.product.friendly_name|title}} <br>{{wish.product.size}}</h5>

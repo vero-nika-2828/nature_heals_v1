@@ -69,4 +69,11 @@ def remove_from_wishlist(request, product_id):
 
     Wishlist.objects.filter(user_profile=user, product=product).delete()
 
-    return redirect(reverse('products'))
+    previous_url = request.META.get('HTTP_REFERER')
+    previous_url_link = [x for x in previous_url]
+    final_url = previous_url_link[-9]+previous_url_link[-8]+previous_url_link[-7]+previous_url_link[-6]+previous_url_link[-5]+previous_url_link[-4]+previous_url_link[-3]+previous_url_link[-2]
+
+    if final_url == 'products':
+       return redirect(reverse('products'))
+    else:
+       return redirect(reverse('wishlist'))
