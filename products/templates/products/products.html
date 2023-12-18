@@ -20,8 +20,8 @@
                  <div class="all-products-card card card-outline h-100 justify-content-center ">
                     {% if product.image %}
                         <div>
-    
-                            {% if product.id not in wishlist_product_list %}
+          
+                            {% if product.id not in wishlist_product_list or not request.user.is_authenticated %}
                                 <a href="{% url 'add_to_wishlist' product.id %}" class="float-end item-name"><i class="fa-regular fa-heart" alt="add"></i></i></a>
                             {% else %}
                                 

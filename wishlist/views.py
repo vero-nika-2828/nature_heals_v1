@@ -13,7 +13,7 @@ def wishlist(request):
     Display my_wishlist page with the items selected by the user
     """
     if not request.user.is_authenticated:
-        messages.error(request,'Sorry, you need to be logged in to add your Wishlist.')
+        messages.error(request,'Log in to add your Wishlist.')
         return redirect(reverse('account_login'))
     
     user = get_object_or_404(UserProfile, user=request.user)
@@ -33,6 +33,9 @@ def add_to_wishlist(request, product_id):
     """
     Add products to the wishlist
     """
+    if not request.user.is_authenticated:
+        messages.error(request,'Log in to add your Wishlist.')
+        return redirect(reverse('products'))
 
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)

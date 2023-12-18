@@ -60,15 +60,14 @@ def all_products(request):
     category_list = Category.objects.all()
 
     wishlist = None
+    wishlist_product = None
+    wishlist_product_list = None
     
     if request.user.is_authenticated:
         user = get_object_or_404(UserProfile, user=request.user)
         wishlist = Wishlist.objects.filter(user_profile=user)
         wishlist_product = wishlist.values_list('product')
         wishlist_product_list = [x[0] for x in wishlist.values_list('product')]
-        #for x in wishlist_product:
-           # wishlist_product_list.append(x)
-           # print(wishlist_product_list)
 
     wishlist_count = Wishlist.objects.count()
 
@@ -80,9 +79,8 @@ def all_products(request):
         'category_list': category_list,
         'wishlist_count':wishlist_count,
         'wishlist_product_list': wishlist_product_list,
-
     }
-    # print(wishlist_product)
+
     return render(request, 'products/products.html', context)
 
 
