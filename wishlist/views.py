@@ -13,7 +13,7 @@ def wishlist(request):
     Display my_wishlist page with the items selected by the user
     """
     if not request.user.is_authenticated:
-        messages.error(request,'Log in to add your Wishlist.')
+        messages.error(request,'Log in to add to your Wishlist.')
         return redirect(reverse('account_login'))
     
     user = get_object_or_404(UserProfile, user=request.user)
@@ -69,9 +69,11 @@ def remove_from_wishlist(request, product_id):
 
     Wishlist.objects.filter(user_profile=user, product=product).delete()
 
+    # get the value for the return redirect from the  referer URL
     previous_url = request.META.get('HTTP_REFERER')
     previous_url_link = [x for x in previous_url]
     final_url = previous_url_link[-9]+previous_url_link[-8]+previous_url_link[-7]+previous_url_link[-6]+previous_url_link[-5]+previous_url_link[-4]+previous_url_link[-3]+previous_url_link[-2]
+
 
     if final_url == 'products':
        return redirect(reverse('products'))
