@@ -5,7 +5,7 @@ from products.models import Product
 
 class Wishlist(models.Model):
     """
-    Wishlist model to show products shortlisted by user
+    Wishlist model to show products shortlisted by a user
     """
 
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
