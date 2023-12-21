@@ -6,6 +6,7 @@ from profiles.models import UserProfile
 from wishlist.models import Wishlist
 from reviews.models import Review
 from reviews.forms import ReviewForm
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -133,5 +134,13 @@ def product_details(request, product_id):
     return render(request, 'products/product_details.html', context)
 
 
+
 def add_product(request):
-    return render(request, 'products/add_product.html')
+    """Add a product to the site"""
+    form = ProductForm(request.POST, request.FILES)
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'products/add_product.html', context)
