@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Product, Subcategory, Category
 from profiles.models import UserProfile
@@ -134,13 +135,31 @@ def product_details(request, product_id):
     return render(request, 'products/product_details.html', context)
 
 
-
+@login_required()
 def add_product(request):
     """Add a product to the site"""
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can add products.')
+        return redirect(reverse('home'))
+
     form = ProductForm(request.POST, request.FILES)
+
+    if request.method == 'POST':
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Product has been added succesfully!')
+            return redirect(reverse('product_details', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add product. \
+                Please validate the form and try again.')
+    else:
+        form = ProductForm()
+
+    template = 'products/add_product.html'
 
     context = {
         'form': form,
     }
 
-    return render(request, 'products/add_product.html', context)
+    return render(request, template, context)
