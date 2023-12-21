@@ -5,6 +5,7 @@ from .models import Product, Subcategory, Category
 from profiles.models import UserProfile
 from wishlist.models import Wishlist
 from reviews.models import Review
+from reviews.forms import ReviewForm
 
 
 def all_products(request):
@@ -93,17 +94,36 @@ def product_details(request, product_id):
     Display individual product page
     """
     product = get_object_or_404(Product, pk=product_id)
+    user_profile = get_object_or_404(UserProfile, user=request.user)
 
     healing_properties_list = product.healing_properties.split(",")
     
     reviews=None
     reviews = Review.objects.all()
 
+    
+    review_form = ReviewForm(request.POST)
+    
+    if request.method == "POST":
+        if review_form.is_valid():
+            reviews.create(
+                user_profile=user_profile,
+                product=product,
+                review=request.POST.get('review'),
+                review_date=request.POST.get('review_date'),
+            )
+            
+            return redirect(reverse('product_details', args=[product_id]))
+      
+        else:
+            review_form = ReviewForm()
+
 
     context = {
         'product': product,
         'healing_properties_list': healing_properties_list,
         'reviews':reviews,
+        'review_form': review_form,
     }
 
     return render(request, 'products/product_details.html', context)

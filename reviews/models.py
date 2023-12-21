@@ -16,3 +16,5 @@ class Review(models.Model):
 
     def __str__(self):
         return f'{self.user_profile}"s review'
+
+        
