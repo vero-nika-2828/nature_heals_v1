@@ -4,6 +4,7 @@ from django.db.models import Q
 from .models import Product, Subcategory, Category
 from profiles.models import UserProfile
 from wishlist.models import Wishlist
+from reviews.models import Review
 
 
 def all_products(request):
@@ -71,6 +72,7 @@ def all_products(request):
 
     wishlist_count = Wishlist.objects.count()
 
+
     context = {
         'products': products,
         'search_word': search_word,
@@ -84,6 +86,8 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+
+
 def product_details(request, product_id):
     """
     Display individual product page
@@ -91,10 +95,15 @@ def product_details(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     healing_properties_list = product.healing_properties.split(",")
+    
+    reviews=None
+    reviews = Review.objects.all()
+
 
     context = {
         'product': product,
         'healing_properties_list': healing_properties_list,
+        'reviews':reviews,
     }
 
     return render(request, 'products/product_details.html', context)
