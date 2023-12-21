@@ -97,7 +97,9 @@ def product_details(request, product_id):
     user_profile = get_object_or_404(UserProfile, user=request.user)
 
     healing_properties_list = product.healing_properties.split(",")
-    
+
+
+    product_reviews = Review.objects.filter(product=product_id)
     reviews=None
     reviews = Review.objects.all()
 
@@ -123,6 +125,7 @@ def product_details(request, product_id):
         'product': product,
         'healing_properties_list': healing_properties_list,
         'reviews':reviews,
+        'product_reviews': product_reviews,
         'review_form': review_form,
     }
 

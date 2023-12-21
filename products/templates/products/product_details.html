@@ -75,13 +75,13 @@
             <div class="col-sm-12 col-md-6">
                 <h2> Customer reviews</h2>
                 
-                <div>
-                    {% for product in products %}
+                <div>            
+                    {% for review in product_reviews %}
                         <p>{{review.user_profile}}</p>
                         <p>{{review.review}}</p>
                         <p>{{review.review_date}}</p>
-                    {% empty %}
-                        <p>Be the first one to review this item</p>
+                    {%empty%}
+                        <p>Add your review and help others to decide</p>
                     {% endfor %}   
                 </div>
             </div>
