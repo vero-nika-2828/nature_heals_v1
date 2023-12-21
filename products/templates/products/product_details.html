@@ -75,6 +75,7 @@
             <div class="col-sm-12 col-md-6">
                 <h2> Customer reviews</h2>
                 
+                <!--Show reviews-->
                 <div>            
                     {% for review in product_reviews %}
                         <p>{{review.user_profile}}</p>
@@ -86,6 +87,7 @@
                 </div>
             </div>
 
+            <!--Add reviews form-->
             <div class="row justify-content-center">
                 <form action="{% url 'product_details' product.id %}" method="POST" id="add_review">
                     {% csrf_token %}

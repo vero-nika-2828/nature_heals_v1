@@ -110,7 +110,7 @@
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
                         <li class="btn btn-success">
-                          <a class="dropdown-item list-inline-item" href="#">Product Management </a>
+                          <a class="dropdown-item list-inline-item" href="{% url 'add_product' %}">Add product </a>
                         </li>
                       {% endif %}
                       <li class="btn btn-success">

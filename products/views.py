@@ -61,6 +61,7 @@ def all_products(request):
 
     category_list = Category.objects.all()
 
+    # Fill the heart icon to wishlisted products
     wishlist = None
     wishlist_product = None
     wishlist_product_list = None
@@ -98,12 +99,12 @@ def product_details(request, product_id):
 
     healing_properties_list = product.healing_properties.split(",")
 
-
+    # Display product review
     product_reviews = Review.objects.filter(product=product_id)
     reviews=None
     reviews = Review.objects.all()
 
-    
+    # Add product review 
     review_form = ReviewForm(request.POST)
     
     if request.method == "POST":
@@ -130,3 +131,7 @@ def product_details(request, product_id):
     }
 
     return render(request, 'products/product_details.html', context)
+
+
+def add_product(request):
+    return render(request, 'products/add_product.html')
