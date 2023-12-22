@@ -166,9 +166,13 @@ def add_product(request):
 
 
 
-
+@login_required()
 def edit_product(request, product_id):
 
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can add products.')
+        return redirect(reverse('home'))
+    
     product = get_object_or_404(Product, pk=product_id)
     form = ProductForm(request.POST, request.FILES, instance=product)
 
@@ -193,3 +197,6 @@ def edit_product(request, product_id):
         'product': product,
     }
     return render(request, template, context)
+
+
+
