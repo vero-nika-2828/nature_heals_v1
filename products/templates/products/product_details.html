@@ -57,6 +57,11 @@
                 </div> 
 
                 <div>
+                    <a href="{% url 'edit_product' %}" class="btn continue-btn w-100 "><strong>Continue shopping</strong></a>
+                 </div> 
+                
+
+                <div>
                     <ul>
                         {% for healing_property in healing_properties_list %}
                             <li>{{ healing_property }}</li>

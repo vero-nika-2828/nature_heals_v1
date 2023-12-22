@@ -163,3 +163,10 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
+
+
+def edit_product(request):
+    template = 'products/edit_product.html'
+    return render(request, template)
+

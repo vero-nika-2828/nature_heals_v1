@@ -7,7 +7,7 @@
             <!--Add product form-->
             <div class="col-sm-12 col-md-6 offset-md-3">
                  <div class="all-products-card card card-outline h-100 justify-content-center ">
-                    <form action="{% url 'add_product'%}" method="POST" id="add_review">
+                    <form action="{% url 'edit_product'%}" method="POST" id="edit_review">
                         {% csrf_token %}
                         {% for field in form %}
                             {% if field.name != image %}
@@ -16,7 +16,7 @@
                                 {{field}}
                             {% endif %}
                         {% endfor %}
-                        <button class="form-control btn btn-outline-success" type="submit">Add Product</button>
+                        <button class="form-control btn btn-outline-success" type="submit">Edit Product</button>
                    </form>
                     
     </div>
