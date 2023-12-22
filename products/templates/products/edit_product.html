@@ -7,7 +7,7 @@
             <!--Add product form-->
             <div class="col-sm-12 col-md-6 offset-md-3">
                  <div class="all-products-card card card-outline h-100 justify-content-center ">
-                    <form action="{% url 'edit_product'%}" method="POST" id="edit_review">
+                    <form action="{% url 'edit_product' product.id %}" method="POST" id="edit_review">
                         {% csrf_token %}
                         {% for field in form %}
                             {% if field.name != image %}
