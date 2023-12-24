@@ -1,9 +1,24 @@
+.search-input{
+  border: 1px solid #06651b;
+  margin-right:0!important;
+  color: #06651b;
+} 
+
+.search-button{
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  color: white;
+  background-color:#06651b ;
+}
+
+
 .announcement-banner{
   height: 2rem;
   background-color: #093d05;
   color:#ffff;
 
 }
+
 
 .navbar{
   --bs-navbar-padding-y: 0;
