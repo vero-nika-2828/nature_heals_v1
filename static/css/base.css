@@ -1,14 +1,35 @@
+/*Navbar styling*/
+.navbar-background{
+  background-color: #06651b;
+}
+
 .search-input{
-  border: 1px solid #06651b;
+  border: 1px solid white;
   margin-right:0!important;
   color: #06651b;
 } 
 
+.navbar{
+  --bs-navbar-padding-y: 0;
+}
+
+
+.nav-link{
+  color: white;
+}
+
+.nav-link:hover{
+  background-color: white;
+  color:#093d05;
+}
+
+
 .search-button{
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  color: white;
-  background-color:#06651b ;
+  color: #06651b;
+  font-weight: bolder;
+  background-color:white;
 }
 
 .banner{
@@ -30,9 +51,7 @@
 }
 
 
-.navbar{
-  --bs-navbar-padding-y: 0;
-}
+
 
 .card-outline{
   /*box-shadow: 0 0 8px 8px lightgray;*/
