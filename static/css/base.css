@@ -18,18 +18,16 @@
 }
 
 .nav-link:hover{
-  background-color: white;
+  background-color: #C8DDD2;
   color:#06651b;
 
 }
 
-.nav-link a:active{
-  /*background-color: white;
-  color:#06651b;*/
-  text-decoration: underline;
-  color: white;
-}
+.nav-link:focus{
+  background-color:  #C8DDD2;
+  color:#06651b;
 
+}
 
 .navbar-toggler{
   border:none;
@@ -42,9 +40,11 @@
 
 .dropdown-menu{
   --bs-dropdown-spacer: 0;
-  --bs-dropdown-border-color: #C8DDD2;
+  --bs-dropdown-padding-y: 0;
+  --bs-dropdown-border-color: none;
   --bs-dropdown-border-radius: 0;
-  background-color: #C8DDD2;
+  background-color:  #C8DDD2;
+
 }
 
 
