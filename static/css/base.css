@@ -81,11 +81,26 @@
   height:60vh;
 }
 
+.text-box{
+  position: relative;
+  bottom: 0;
+  margin-top: 55%;  
+  margin-left: 13%;
+  background-color: rgba(147,68,25, 0.2);
+  padding: 1rem;
+
+}
+
+.text-box h1{
+  font-weight: 700;
+}
+
 .hero-image{
   background:  url("/media/hero_image3.jpeg") no-repeat center center;
   height: 60vh;
   background-size: cover;
   width: 100%;
+  position: relative;
 }
 
 .announcement-banner{
