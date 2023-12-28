@@ -67,6 +67,16 @@
   border:none;
 }
 
+.back-to-top{
+  height: 50px;
+  text-decoration: none;
+}
+
+.btn-top-icon{
+  font-size: 35px;
+  color: #06651b;
+}
+
 
 /*Text styling*/
 .white-text{
@@ -133,6 +143,11 @@
   background-color: #093d05;
   color:#ffff;
 
+}
+
+.popular-products-box{
+  background-color: #e6efe8;
+  padding-top: 20px;
 }
 
 /*Product cards styling*/

@@ -3,8 +3,8 @@
 
 {% block content %}
 
-    <div class="container-fluid h-100 margin-bottom">
-        <div class="row banner margin-bottom">
+    <div class="container-fluid h-100">
+        <div class="row banner">
             <div class="col-12 hero-image d-felx">
                 <div class="text-center text-box">
                     <h1 class="text-center">Surrender to <br><small>the healing power of </small><br> Nature </h1>
@@ -13,10 +13,10 @@
             </div>
         </div>
 
-        <div class="row margin-bottom">
-            <div class="col text-center margin-bottom ">
+        <div class="row margin-bottom popular-products-box">
+            <div class="col text-center margin-bottom">
                 <h2>Popular products</h2>
-                <div class="btn btn-primary">shop now</div>
+                <div class="btn btn-primary">View ALL Products</div>
             </div>
         </div>
 
@@ -40,4 +40,20 @@
 
     </div>
 
+    <div class="float-end me-2 mb-3 back-to-top">
+        <a class="btn-top">
+            <i class="btn-top-icon fa-solid fa-circle-up"></i>
+        </a>
+    </div>
+
+{% endblock %}
+
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script>
+        $('.btn-top').click(function(e) {
+            window.scrollTo(0,0);
+        });
+    </script>
 {% endblock %}

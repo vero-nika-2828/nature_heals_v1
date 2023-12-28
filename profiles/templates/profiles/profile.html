@@ -64,10 +64,22 @@
             </div>
         </div>
         {{ profile }}
+    </div>
+    
+    <div class="float-end me-2 mb-3 back-to-top">
+        <a class="btn-top">
+            <i class="btn-top-icon fa-solid fa-circle-up"></i>
+        </a>
+    </div>
 
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
+    <script>
+        $('.btn-top').click(function(e) {
+            window.scrollTo(0,0);
+        });
+    </script>
     <script src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}

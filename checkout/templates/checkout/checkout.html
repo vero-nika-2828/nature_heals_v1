@@ -113,6 +113,13 @@
 
         </div>
     </div>
+
+    <div class="float-end me-2 mb-3 back-to-top">
+        <a class="btn-top">
+            <i class="btn-top-icon fa-solid fa-circle-up"></i>
+        </a>
+    </div>
+
     <div id="loading-overlay">
         <h1 class="text-light logo-font loading-spinner">
             <span class="icon">
@@ -127,6 +134,12 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
+    <script>
+        $('.btn-top').click(function(e) {
+            window.scrollTo(0,0);
+        });
+    </script>
+    
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
