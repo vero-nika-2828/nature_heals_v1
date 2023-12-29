@@ -215,6 +215,7 @@ def delete_product(request, product_id):
 def edit_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
     product = Product.objects.filter(review=review)
+    product_id =product[0].id
 
     review_form = ReviewForm(request.POST, request.FILES, instance=review)
    
@@ -234,7 +235,7 @@ def edit_review(request, review_id):
         'review_form': review_form,
         
     }
-
+    print(product_id)
     return redirect(reverse('products'),context)
 
 
