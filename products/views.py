@@ -240,5 +240,13 @@ def edit_review(request, review_id):
 
 
 
-
-     
+def delete_review(request, review_id):
+    """Delete specific review"""
+    review = get_object_or_404(Review, pk=review_id)
+    product = Product.objects.filter(review=review)
+    product_id =product[0].id
+    
+    review.delete()  
+    
+    messages.success(request, f'Review deleted!')
+    return redirect(reverse('product_details', args=[product_id]))
