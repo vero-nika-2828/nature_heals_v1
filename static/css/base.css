@@ -1,3 +1,10 @@
+/*Body styling*/
+h2{
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+
 /*Navbar styling*/
 .navbar-background{
   background-color: #06651b;
@@ -152,17 +159,25 @@
 
 /*Product cards styling*/
 .card-outline{
-  /*box-shadow: 0 0 8px 8px lightgray;*/
+  box-shadow: 0 0 8px 8px #C8DDD2;
   border: none;
   margin: 0 2rem;
 }
 
+.card-outline:hover{
+  box-shadow: 0 0 8px 8px #06651b;
+}
+
+.all-products-card{
+  margin: 0 10px;
+}
+
 .all-products-card img{
   width: 100%;
-  height: 25vh;
+  height: 200px;
   object-fit: cover;
- 
 }
+
 .image-div{
   position: relative;
 }
@@ -175,6 +190,7 @@
 
 .wishlist-toggle i{
   font-size:25px;
+  color: #508a7b;
 }
 
 .product-details-img img{
@@ -279,6 +295,14 @@
 }
 
 @media (min-width: 768px) {
+  .products-view{
+    margin: 0 3rem;
+  }
+  .product-container{
+    padding: 0 15px 50px 15px;
+    margin-bottom: 0;
+  }
+
   .product-details-img img{
     max-height: 40rem;
   }
@@ -292,6 +316,11 @@
 
 }
 
+@media (min-width: 992px) {
+  .products-view{
+    margin: 0 5rem;
+  }
+}
 
 @media (min-width: 1300px) {
     .container-max-width {
