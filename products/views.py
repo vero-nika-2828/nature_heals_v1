@@ -211,3 +211,33 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+def edit_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    product = Product.objects.filter(review=review)
+
+    review_form = ReviewForm(request.POST, request.FILES, instance=review)
+   
+    if request.method == 'POST':
+        review = get_object_or_404(Review, pk=review_id)
+        product = Product.objects.filter(review=review)
+        review_form = ReviewForm(request.POST, request.FILES, instance=review)
+
+        if review_form.is_valid():
+            review_form.save()
+            messages.success(request, f'Successfully updated review.')
+            return redirect(reverse('products'))
+    else:
+        review_form = ReviewForm(instance=review)
+
+    context={
+        'review_form': review_form,
+        
+    }
+
+    return redirect(reverse('products'),context)
+
+
+
+
+     

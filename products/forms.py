@@ -42,7 +42,7 @@ class CategoryForm(forms.ModelForm):
 
 class SubcategoryForm(forms.ModelForm):
     """
-    Category form to enable adding categories
+    Subcategory form to enable adding subcategories
     """
 
     class Meta:
@@ -78,6 +78,9 @@ class SubcategoryForm(forms.ModelForm):
 
 
 class ProductForm(forms.ModelForm):
+    """
+    Produc form to enable adding products
+    """
     class Meta:
         model = Product
         fields = '__all__'

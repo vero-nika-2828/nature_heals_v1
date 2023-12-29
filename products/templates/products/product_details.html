@@ -112,12 +112,49 @@
                 <!--Show reviews-->
                 <div>            
                     {% for review in product_reviews %}
+                    <div>
                         <p>{{review.user_profile}}</p>
                         <p>{{review.review}}</p>
                         <p>{{review.review_date}}</p>
+                        <p>{{review.id}}</p>
+                        
+                        <div>
+                            <span>
+
+                                <!-- Edit Review modal trigger -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2-{{ product.id }}">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </button>
+                    
+                                <!-- Edit Review Modal -->
+                                <div class="modal fade" id="modal2-{{ product.id }}" tabindex="-1" aria-labelledby="editReviewModal" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="editReviewtModal">Edit review</h5>
+                            
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="{% url 'edit_review' review.id %}" method="POST" id="edit_review">
+                                                        {% csrf_token %}
+                                                        {{ review_form |crispy }}
+
+                                                    <button class="form-control btn btn-outline-success" type="submit">Edit Review</button>
+                                            </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+
+                            <span><a><i class="fa-solid fa-xmark"></i></i></a></span>
+                        </div>
+                    </div>
                     {%empty%}
                         <p>Add your review and help others to decide</p>
                     {% endfor %}   
+                    
                 </div>
             </div>
 
