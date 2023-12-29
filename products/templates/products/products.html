@@ -16,24 +16,24 @@
             </div>
             <!--Cards with product information-->
             {% for product in products %}
-            <div class="col-sm-6 col-md-4 col-lg-2 margin-bottom-20px">
+            <div class="col-sm-6 col-md-4 col-lg-2">
                  <div class="all-products-card card h-100 justify-content-center">
                     {% if product.image %}
-                        <div>
+                        <div class="image-div">
                             {% if product.id not in wishlist_product_list or not request.user.is_authenticated %}
-                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-end item-name"><i class="fa-regular fa-heart" alt="add"></i></i></a>
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-end wishlist-toggle"><i class="fa-regular fa-heart" alt="add"></i></i></a>
                             {% else %}
-                                <a href="{% url 'remove_from_wishlist' product.id %}" class="float-end"><i class="fa-solid fa-heart" alt="remove"></i></a>
+                                <a href="{% url 'remove_from_wishlist' product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart" alt="remove"></i></a>
                             {% endif %}
 
                             <img src="/media/{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}">  
                         </div>  
                     {% else %}
-                        <div>
+                        <div class="image-div">
                             {% if product.id not in wishlist_product_list or not request.user.is_authenticated %}
-                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-end item-name"><i class="fa-regular fa-heart" alt="add"></i></i></a>
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-self-end wishlist-toggle"><i class="fa-regular fa-heart" alt="add"></i></i></a>
                             {% else %}
-                                <a href="{% url 'remove_from_wishlist' product.id %}" class="float-end"><i class="fa-solid fa-heart" alt="remove"></i></a>
+                                <a href="{% url 'remove_from_wishlist' product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart" alt="remove"></i></a>
                             {% endif %}
                         
                             <img src="/media/noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
