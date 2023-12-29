@@ -226,8 +226,8 @@ def edit_review(request, review_id):
 
         if review_form.is_valid():
             review_form.save()
-            messages.success(request, f'Successfully updated review.')
-            return redirect(reverse('products'))
+            messages.success(request, f'Review updated successfully.')
+            return redirect(reverse('product_details', args=[product_id]))
     else:
         review_form = ReviewForm(instance=review)
 
@@ -235,8 +235,8 @@ def edit_review(request, review_id):
         'review_form': review_form,
         
     }
-    print(product_id)
-    return redirect(reverse('products'),context)
+   
+    return redirect(reverse('product_details', args=[product_id]))
 
 
 
