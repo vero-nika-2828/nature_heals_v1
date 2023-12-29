@@ -137,7 +137,9 @@ def product_details(request, product_id):
 
 @login_required()
 def add_product(request):
-    """Add a product to the site"""
+    """
+    Add a product to the site
+    """
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can add products.')
@@ -169,7 +171,9 @@ def add_product(request):
 
 @login_required()
 def edit_product(request, product_id):
-
+    """
+    View to enable admin to edit product
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can add products.')
         return redirect(reverse('home'))
@@ -202,7 +206,9 @@ def edit_product(request, product_id):
 
 @login_required()
 def delete_product(request, product_id):
-
+    """
+    View to enable admin to delete product
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can delete products.')
         return redirect(reverse('home'))
@@ -213,6 +219,15 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 def edit_review(request, review_id):
+    """
+    View to enable admin or author to edit review
+    """
+    if not request.user.is_authenticated:
+        messages.error(request,
+                       'Sorry, you need to be logged in to add a review.')
+        return redirect(reverse('account_login'))
+   
+
     review = get_object_or_404(Review, pk=review_id)
     product = Product.objects.filter(review=review)
     product_id =product[0].id
@@ -240,8 +255,16 @@ def edit_review(request, review_id):
 
 
 
-def delete_review(request, review_id):
-    """Delete specific review"""
+def delete_review(request, review_id): 
+    """
+    View to enable admin or author to edit review
+    """
+    if not request.user.is_authenticated:
+        messages.error(request,
+                       'Sorry, you need to be logged in to add a review.')
+        return redirect(reverse('account_login'))
+
+
     review = get_object_or_404(Review, pk=review_id)
     product = Product.objects.filter(review=review)
     product_id =product[0].id
