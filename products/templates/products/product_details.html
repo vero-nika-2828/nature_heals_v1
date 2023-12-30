@@ -7,7 +7,7 @@
 
     <div class="container ">
         <!--Project details view-->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center margin-top">
            <!--Product image-->
            <div class="product-details-img col-sm-12 col-md-6">
                 {% if product.image %}
@@ -103,15 +103,19 @@
  
         </div>
 
+        <!--Information dropdowns-->
+        <div class="row"></div>
+
         <!--Reviews-->
         <div class="row">
             <div class="col-sm-12 col-md-6">
+       
                 <h2> Customer reviews</h2>
                 
                 <!--Show reviews-->
-                <div>            
+                <div class="col-12">            
                     {% for review in product_reviews %}
-                    <div>
+                    <div class="row">
                         <p>{{review.user_profile}}</p>
                         <p>{{review.review}}</p>
                         <p>{{review.review_date}}</p>
@@ -146,7 +150,7 @@
                                     </div>
                                 </div>
                             </span>
-
+                            
                             <span>
                             
                             <!-- Delete Product modal trigger -->
@@ -183,19 +187,20 @@
                     {%empty%}
                         <p>Add your review and help others to decide</p>
                     {% endfor %}   
-                    
                 </div>
+          
             </div>
 
             <!--Add reviews form-->
-            <div class="row justify-content-center">
-                <form action="{% url 'product_details' product.id %}" method="POST" id="add_review">
+            <div class="col-sm-12 col-md-6 justify-content-center">
+                <form action="{% url 'product_details' product.id %}" method="POST" id="add_review" class="col-sm-12">
                     {% csrf_token %}
                     {{ review_form |crispy }}
 
-                    <button class="form-control btn btn-outline-success" type="submit">Add Review</button>
+                    <button class="form-control btn main-btn" type="submit">Add Review</button>
                </form>
             </div>
+      
             
         </div>
 
