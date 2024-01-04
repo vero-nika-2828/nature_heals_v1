@@ -91,6 +91,7 @@ h2{
 }
 
 
+
 /*Search bar styling*/
 .search-input{
   border: 1px solid white;
@@ -111,6 +112,23 @@ h2{
   color: white;
 }
 
+
+/* Account dropdown styling*/
+.account-menu{
+  --bs-dropdown-spacer: -20px;
+}
+
+/*Login, Register, Logout styling*/
+.allauth-form-inner-content{
+  margin-top: 60px;
+  padding: 2rem;
+  box-shadow: 0 0 20px 15px #C8DDD2;
+  border: #C8DDD2;
+}
+
+.textinput{
+  margin-bottom: 20px;
+}
 
 /*Home page styling*/
 .banner{
@@ -232,8 +250,14 @@ h2{
 .continue-btn{
   box-shadow: 0px 0px 2px 2px #508a7b;
   color: #106c09;
-  margin-bottom: 20px;
-} 
+ } 
+
+.continue-btn:hover{
+  background-color: #06651b;
+  box-shadow: 0px 0px 2px 2px #06651b;
+  color: white;
+
+ } 
 
 .btn{
   font-weight: bolder;
@@ -250,6 +274,12 @@ h2{
   color: #06651b;
 }
 
+.btn-danger:hover{
+  background-color: white;
+  color: red;
+}
+
+/*Form styling*/
 .input-group-wrapper{
   background-color: #ffff;
   border-radius: 25px;
@@ -304,11 +334,19 @@ h2{
 }
 
 .margin-bottom-20px{
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .margin-top{
   margin-top: 30px;
+}
+
+.margin-top-20px{
+  margin-top: 20px;
+}
+
+.no-margin-right{
+  margin-right: 0;
 }
 
 .price{

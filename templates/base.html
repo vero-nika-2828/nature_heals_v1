@@ -106,24 +106,23 @@
                 </a>
 
                 <!--Account menu options--> 
-                <ul class="dropdown-menu py-2 px-2">
+                <ul class="dropdown-menu py-2 px-2 account-menu">
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
                         <li class="btn btn-success">
                           <a class="dropdown-item list-inline-item" href="{% url 'add_product' %}">Add product </a>
                         </li>
                       {% endif %}
-                      <li class="btn btn-success">
+                      <li class="justify-content-center">
                         <a class="dropdown-item list-inline-item" href="{% url 'account_logout' %}">Logout</a>
                         <a class="dropdown-item list-inline-item" href="{% url 'profile' %}">Profile</a>
                       </li>
                     {% else %}              
-                      <li class="btn btn-success w-100 ">
+                      <li class="justify-content-center">
                         <a class="dropdown-item list-inline-item" href="{% url 'account_login' %}"> Login </a>
                       </li>
-                      <li class="justify-content-center text-center">
-                        <p>New customer?</p>
-                        <a class="dropdown-item" href="{% url 'account_signup' %}">Create an Account </a>
+                      <li class="justify-content-center">
+                        <a class="dropdown-item" href="{% url 'account_signup' %}">Register </a>
                       </li>
 
                       {% endif %}
