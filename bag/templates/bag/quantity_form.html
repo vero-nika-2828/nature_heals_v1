@@ -1,7 +1,7 @@
-<form class="form update-form" action="{% url 'edit_bag' item.item_id %}" method="POST">
+<form class="form update-form quantity-form-margin" action="{% url 'edit_bag' item.item_id %}" method="POST">
     {% csrf_token %}
     <div class="row ms-1 mb-3 bag-input-group-container">
-        <div class="input-group bag-input-group-wrapper w-100 mb-3 justify-content-center align-items-center">
+        <div class="input-group bag-input-group-wrapper w-100 mb-3 justify-content-center align-items-center bag-quantity-input">
             <div class="input-group-prepend">
                 <button class="btn decrement-qty" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                     <i class="fa-solid fa-minus"></i>

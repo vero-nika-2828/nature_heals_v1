@@ -237,6 +237,11 @@
   color: #021d08;
 }
 
+.price{
+  font-size: 25px;
+  font-weight: bold;
+}
+
 /*Button styling*/
 
 .add2bag-btn{
@@ -307,8 +312,6 @@
 
 }
 
-
-
 .highlighted-text{
   font-size: x-large;
   font-weight: bold;
@@ -354,10 +357,6 @@
   margin-right: 0;
 }
 
-.price{
-  font-size: 25px;
-  font-weight: bold;
-}
 
 @media (min-width: 768px) {
   .products-view{
@@ -385,6 +384,20 @@
   .products-view{
     margin: 0 5rem;
   }
+  
+  .bag-quantity-input{
+    padding: 0 30px;  
+  }
+}
+
+@media (min-width: 1200px) {
+  .bag-quantity-input{
+    padding: initial;  
+  }
+
+  .quantity-form-margin{
+    margin-right: 20px;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -393,18 +406,20 @@
     }
   }
 
-  @media (max-width: 332px) {
+@media (max-width: 332px) {
     
-    .input-group-amount{
-      width: 100%!important;
-    }
-
-    .add-product-button{
-      width: 100%!important;
-      padding: 0;
-    }
-
-    .small-device-margin{
-      margin-right: 0.25rem!important;
-    }
+  .input-group-amount{
+    width: 100%!important;
   }
+
+  .add-product-button{
+    width: 100%!important;
+    padding: 0;
+  }
+
+  .small-device-margin{
+    margin-right: 0.25rem!important;
+  }
+  }
+
+
