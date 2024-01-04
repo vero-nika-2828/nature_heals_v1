@@ -227,8 +227,14 @@
   width: max-content;
 }
 
-.accordion-body{
+.accordion-button{
   background-color: #C8DDD2;
+  color: #021d08;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #C8DDD2;
+  color: #021d08;
 }
 
 /*Button styling*/
