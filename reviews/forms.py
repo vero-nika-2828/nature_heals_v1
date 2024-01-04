@@ -9,9 +9,9 @@ class ReviewForm(forms.ModelForm):
 
         review = forms.CharField(
             widget=forms.Textarea(attrs={
-                            'rows': '6',
+                            'rows': '4',
                             'placeholder': 'Write your review here'})
-    )
+        )
 
     def __init__(self, *args, **kwargs):
         # Call default django form

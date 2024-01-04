@@ -109,7 +109,7 @@
                 <ul class="dropdown-menu py-2 px-2 account-menu">
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
-                        <li class="btn btn-success">
+                        <li class="justify-content-center">
                           <a class="dropdown-item list-inline-item" href="{% url 'add_product' %}">Add product </a>
                         </li>
                       {% endif %}

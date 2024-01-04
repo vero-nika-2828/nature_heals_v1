@@ -227,10 +227,6 @@ def edit_review(request, review_id):
                        'Sorry, you need to be logged in to add a review.')
         return redirect(reverse('account_login'))
    
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can delete products.')
-        return redirect(reverse('home'))
-
 
     review = get_object_or_404(Review, pk=review_id)
     product = Product.objects.filter(review=review)
