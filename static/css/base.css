@@ -1,10 +1,3 @@
-/*Body styling*/
-h2{
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
-
-
 /*Navbar styling*/
 .navbar-background{
   background-color: #06651b;
@@ -211,6 +204,8 @@ h2{
   color: #508a7b;
 }
 
+
+/*Product details page styling*/
 .product-details-img img{
   width: 100%;
   max-height: 25rem;
@@ -230,6 +225,10 @@ h2{
 .quantity-input{
   border: none;
   width: max-content;
+}
+
+.accordion-body{
+  background-color: #C8DDD2;
 }
 
 /*Button styling*/

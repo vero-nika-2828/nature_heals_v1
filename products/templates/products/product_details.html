@@ -66,7 +66,7 @@
                     Delete Product
                 </button>
                 
-                <!-- Product Modal -->
+                <!-- Delete Product Modal -->
                 <div class="modal fade" id="modal-{{ product.id }}" tabindex="-1" aria-labelledby="deleteProductModal" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
@@ -88,29 +88,73 @@
                     </div>
                 </div>
              </div>
-
-                <div>
-                    <ul>
-                        {% for healing_property in healing_properties_list %}
-                            <li>{{ healing_property }}</li>
-                        {% endfor %}
-                       
-                    </div>
-                 </divul> 
-    
                     
            </div>
  
         </div>
 
         <!--Information dropdowns-->
-        <div class="row"></div>
+        <div class="row margin-bottom">
+            <h3>More about the product</h3>
+            <div class="col-sm-12 col-md-6">
+                <!--Healing properties list-->
+                <div>
+                    <ul>
+                        {% for healing_property in healing_properties_list %}
+                            <li>{{ healing_property }}</li>
+                        {% endfor %}
+                       
+                    </ul>
+                </div> 
+            </div>
+
+            <!--Accordion with product information-->
+            <div class="accordion col-sm-12 col-md-6" id="product-info">
+                <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <strong>Ingredients</strong> 
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#product-info">
+                        <div class="accordion-body">
+                            {{product.full_ingredients}}
+                      </div>
+                    </div>
+                </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <strong>Herbal components</strong>
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#product-info">
+                        <div class="accordion-body">
+                            {{product.herbal_ingredients}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <strong>Vitamins and Minerals</strong>
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#product-info">
+                        <div class="accordion-body">
+                            {{product.vitamins_minerals}}
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
 
         <!--Reviews-->
-        <div class="row">
+        <div class="row margin-top">
             <div class="col-sm-12 col-md-6">
        
-                <h2> Customer reviews</h2>
+                <h3> Customer reviews</h3>
                 
                 <!--Show reviews-->
                 <div class="col-12">            
