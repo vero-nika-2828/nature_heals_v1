@@ -97,8 +97,6 @@ def product_details(request, product_id):
     Display individual product page
     """
     product = get_object_or_404(Product, pk=product_id)
-    user_profile = get_object_or_404(UserProfile, user=request.user)
-
     healing_properties_list = product.healing_properties.split(",")
 
     # Display product review
@@ -110,6 +108,7 @@ def product_details(request, product_id):
     review_form = ReviewForm(request.POST)
     
     if request.method == "POST":
+        user_profile = get_object_or_404(UserProfile, user=request.user)
         if review_form.is_valid():
             reviews.create(
                 user_profile=user_profile,
