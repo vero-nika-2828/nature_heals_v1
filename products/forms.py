@@ -1,4 +1,5 @@
 from django import forms
+from django.http import request, HttpRequest
 from .widgets import CustomClearableFileInput
 from .models import Category, Subcategory, Product
 
@@ -95,9 +96,14 @@ class ProductForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
+        subcategories =Subategory.objects.all()
+        
+
         friendly_names = [ (c.id, c.get_friendly_name()) for c in categories]
+        friendly_names_subcategory = [ (s.id, s.get_friendly_name()) for s in subcategories]
 
         self.fields['category'].choices = friendly_names
+        self.fields['subcategory'].choices = friendly_names_subcategory
 
 
         self.fields['friendly_name'].widget.attrs['autofocus'] = True

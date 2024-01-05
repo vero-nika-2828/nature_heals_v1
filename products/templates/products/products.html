@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
-
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
 
 {% block content %}
-
-    <div class="container-fluid container-max-width h-100 pink-300 margin-top">
+    <div class="container-fluid container-max-width h-100 margin-top">
         <h2 class="text-center">All products</h2>
         <div class="row products-view">
             <!--Cards with product information-->

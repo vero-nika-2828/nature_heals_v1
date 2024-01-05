@@ -1,3 +1,13 @@
+body{
+  height: calc(100vh-164px);
+  background-color: black;
+  padding-top: 274px;
+}
+
+.logo-image{
+  height: 100px;
+}
+
 /*Navbar styling*/
 .navbar-background{
   background-color: #06651b;
@@ -331,6 +341,7 @@
   max-width: 250px;
   background-color: white;
   border-radius: 0;
+  position: absolute;
 }
 
 .toast-capper {
@@ -352,7 +363,8 @@
 }
 
 .arrow-green {
-  border-bottom-color: #0f5520 !important;
+  border-bottom-color: #198754 !important;
+  --bs-bg-opacity: 0.5
 }
 
 .arrow-red {
@@ -364,7 +376,7 @@
 }
 
 .arrow-muted-green {
-  border-bottom-color: #6c9c79 !important;
+  border-bottom-color: #508a7b !important;
 }
 
 .bag-notification-wrapper {
