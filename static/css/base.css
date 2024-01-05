@@ -1,5 +1,5 @@
 body{
-  padding-top: 80px;
+  padding-top: 92px;
 }
 
 .logo-image{
@@ -9,6 +9,7 @@ body{
 
 .logo-image-small{
   height: 50px;
+  margin-right: -60px;
 }
 
 /*Navbar styling*/
@@ -90,6 +91,10 @@ body{
   color: #0B6532;
 }
 
+/*Mobile Navbar*/
+.mobile-navbar{
+  margin-bottom: -5px;
+}
 
 /*Text styling*/
 .white-text{
@@ -495,7 +500,10 @@ body{
   }
 
 @media (max-width: 332px) {
-    
+  .logo-image-small{
+    height: 30px;
+  }
+
   .input-group-amount{
     width: 100%!important;
   }
