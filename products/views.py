@@ -145,7 +145,6 @@ def add_product(request):
         return redirect(reverse('home'))
 
     form = ProductForm(request.POST, request.FILES)
- 
 
     if request.method == 'POST':
         if form.is_valid():

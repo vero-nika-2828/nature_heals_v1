@@ -1,24 +1,23 @@
 <!--Logo for Mobile view-->
 <div id="brand-mobile" class="d-flex d-lg-none">
   <a class="navbar-brand col-3 white-text" href="{% url 'home' %}">
-    <span><img src="" alt=""></span>
-    <h2>Nature Heals</h2>
-    <p><small>Cosmetics and Essential Oils</small></p>
+    <span><img class="logo-image-small" src="/media/logo_nature_heals_small.jpg" alt="nature heals logo"></span>
+
   </a>
 
 </div>
 
-<!--Search bar for Mobile view-->
-<ul>
+<!--Navbar for Mobile view-->
+<ul class="margin-right">
   <li class="list-inline-item">
     <a class="nav-link d-block d-lg-none" href="#" id="mobile-search" data-bs-toggle="dropdown" aria-haspopup="true"
       aria-expanded="false">
       <div class="text-center">
         <div><i class="fas fa-search fa-lg" aria-hidden="true"></i></div>
-        <p class="my-0">Search</p>
       </div>
     </a>
-      
+    
+    <!--Search bar for Mobile view-->
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
       <form class="form" method="GET" action="{% url 'products' %}">
         <div class="input-group w-100">
@@ -31,28 +30,28 @@
 
         <!--Account for Mobile view-->
         <li class="list-inline-item dropdown text-center" >
-          <a class="nav-link dropdown-toggle d-block d-lg-none" href="#"  data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link btn d-block d-lg-none" href="#"  data-bs-toggle="dropdown" aria-expanded="false">
           <div><i class="fa-solid fa-user"></i></div>
           </a>
 
         
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu margin-right">
               {% if reques.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                  <li class="btn btn-success">
-                    <a class="dropdown-item list-inline-item" href="#">Product Management </a>
+                  <li class="list-inline-item text-center">
+                    <a class="dropdown-item list-inline-item" href="{% url 'add_product' %}">Product Management </a>
                   </li>
                 {% endif %}
-                <li class="btn btn-success">
-                  <a class="dropdown-item list-inline-item" href="#">Logout</a>
+                <li class="list-inline-item text-center">
+                  <a class="dropdown-item list-inline-item" href="{% url 'profile' %}">Profile</a>
+                  <a class="dropdown-item list-inline-item" href="{% url 'account_logout' %}">Logout</a>
                 </li>
               {% else %}              
-                <li class="btn btn-success">
-                  <a class="dropdown-item list-inline-item" href="#">Sign in </a>
+                <li class="list-inline-item text-center">
+                  <a class="dropdown-item list-inline-item" href="{% url 'account_login' %}">Login </a>
                 </li>
                 <li>
-                  <p class="dropdown-item">New customer?</p>
-                    <a class="dropdown-item" href="#">Create an Account </a>
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register </a>
                 </li>
                 <li>
                   <hr class="dropdown-divider">
@@ -67,16 +66,7 @@
       <li class="list-inline-item text-center">                 
         <a class="nav-link d-block d-lg-none" href="{% url 'bag' %}"> 
           <div><i class="fa-sharp fa-solid fa-bag-shopping"></i></i></div>
-              <p>
-                    <small>
-                      {% if grand_total %}
-                        £{{ grand_total|floatformat:2 }}
-                      {% else %}
-                        £0.00
-                      {% endif %}
-                    </small>  
-              </p>
-          </a>
+        </a>
       </li>
 </ul>
 

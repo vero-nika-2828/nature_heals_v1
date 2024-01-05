@@ -1,20 +1,23 @@
 body{
-  height: calc(100vh-164px);
-  background-color: black;
-  padding-top: 274px;
+  padding-top: 80px;
 }
 
 .logo-image{
   height: 100px;
+  margin-left: -45px;
+}
+
+.logo-image-small{
+  height: 50px;
 }
 
 /*Navbar styling*/
 .navbar-background{
-  background-color: #06651b;
+  background-color: #0B6532;
 }
 
 .navbar{
-  background-color: #06651b!important;
+  background-color: #0B6532!important;
 }
 
 
@@ -84,7 +87,7 @@ body{
 
 .btn-top-icon{
   font-size: 35px;
-  color: #06651b;
+  color: #0B6532;
 }
 
 
@@ -99,19 +102,19 @@ body{
 .search-input{
   border: 1px solid white;
   margin-right:0!important;
-  color: #06651b;
+  color: #0B6532;
 } 
 .search-button{
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border: 1px solid white;
-  color: #06651b;
+  color: #0B6532;
   font-weight: bolder;
   background-color:white;
 }
 
 .search-btn-mobile{
-  background-color: #06651b;
+  background-color: #0B6532;
   color: white;
 }
 
@@ -160,7 +163,7 @@ body{
 }
 
 .text-box .btn{
-  background-color:#06651b;
+  background-color:#0B6532;
   color: white;
   border:none;
 
@@ -186,7 +189,7 @@ body{
 }
 
 .card-outline:hover{
-  box-shadow: 0 0 8px 8px #06651b;
+  box-shadow: 0 0 8px 8px #0B6532;
 }
 
 .all-products-card{
@@ -211,7 +214,7 @@ body{
 
 .wishlist-toggle i{
   font-size:25px;
-  color: #508a7b;
+  color: #0B6532;
 }
 
 
@@ -257,24 +260,24 @@ body{
 .add2bag-btn{
   border-radius: 25px;
   height: 50px;
-  border: #06651b;
-  background-color: #06651b;
+  border: #0B6532;
+  background-color: #0B6532;
 }
 
 .add2bag-btn:hover{
-  border: 1px solid #06651b;
+  border: 1px solid #0B6532;
   background-color: white;
-  color: #06651b;
+  color: #0B6532;
 }
 
 .continue-btn{
   box-shadow: 0px 0px 2px 2px #508a7b;
-  color: #106c09;
+  color: #0B6532;
  } 
 
 .continue-btn:hover{
-  background-color: #06651b;
-  box-shadow: 0px 0px 2px 2px #06651b;
+  background-color: #0B6532;
+  box-shadow: 0px 0px 2px 2px #0B6532;
   color: white;
 
  } 
@@ -284,14 +287,14 @@ body{
 }
 
 .main-btn{
-  background-color: #508a7b;
+  background-color: #0B6532;
   color:white;
 }
 
 .main-btn:hover{
-  border: 1px solid #06651b;
+  border: 1px solid #0B6532;
   background-color: white;
-  color: #06651b;
+  color: #0B6532;
 }
 
 .btn-danger:hover{
@@ -329,7 +332,7 @@ body{
 
 .message-container{
   position: fixed;
-  top: 130px;
+  top: 90px;
   right: 20px;
   z-index: 999999;
   font-weight: bolder;
@@ -397,7 +400,7 @@ body{
   object-fit: cover;
 }
 
-/* Margins*/
+/* Margins and padding*/
 .margin-bottom{
   margin-bottom: 30px;
 }
@@ -418,6 +421,18 @@ body{
   margin-right: 0;
 }
 
+.margin-right{
+  margin-right: 20px;
+}
+
+
+.extra-padding{
+  padding-top: 30px;
+}
+
+.padding-right-20px{
+  padding-right: 20px;
+}
 
 @media (min-width: 768px) {
   .products-view{
@@ -442,6 +457,18 @@ body{
 }
 
 @media (min-width: 992px) {
+  body{
+    padding-top: 182px;
+  }
+
+  .message-container{
+
+    top: 100px;
+    right: 30px;
+
+  }
+  
+
   .products-view{
     margin: 0 5rem;
   }
