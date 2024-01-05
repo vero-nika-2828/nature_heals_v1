@@ -31,7 +31,7 @@
                                 {% for item in bag_items %}
                                 <tr>
                                     <td class="w-25">
-                                    <img class="image-fluid w-100 " src="/media/{{ item.product.image }}">
+                                    <img class="image-fluid w-100 bag-image" src="/media/{{ item.product.image }}">
                                     </div>
                                     </td>
                                     <td>{{ item.product.friendly_name }} {{ item.product.size }} <br> <span> {{item.product.sku |upper}}</span></td>
@@ -56,7 +56,7 @@
                                         {% endif %}
 
                                         <a href="{% url 'products' %}" class="btn continue-btn w-25 col-sm-6"><strong>Continue Shopping</strong></a>
-                                        <a href="{% url 'checkout' %}" class="btn continue-btn w-25 "><strong>Secure Checkout</strong></a>
+                                        <a href="{% url 'checkout' %}" class="btn main-btn w-25 "><strong>Secure Checkout</strong></a>
 
                                     </td>
                                 </tr>

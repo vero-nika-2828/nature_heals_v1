@@ -318,25 +318,74 @@
 }
 
 .message-container{
-  /*position: fixed;
-  top: 120px;*/
-  height:500px;
-  background-color: red;
-  color:white;
+  position: fixed;
+  top: 130px;
+  right: 20px;
+  z-index: 999999;
   font-weight: bolder;
+  min-width: 250px;
 }
 
-.test{
-  height: 600px;
-  background-color: red;
-}
 
 .toast{
-  height: 300px;
-  background-color: aqua;
-
+  max-width: 250px;
+  background-color: white;
+  border-radius: 0;
 }
 
+.toast-capper {
+  height: 6px;
+  
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+}
+
+.arrow-green {
+  border-bottom-color: #0f5520 !important;
+}
+
+.arrow-red {
+  border-bottom-color: #990b16 !important;
+}
+
+.arrow-warning {
+  border-bottom-color: #ffc107 !important;
+}
+
+.arrow-muted-green {
+  border-bottom-color: #6c9c79 !important;
+}
+
+.bag-notification-wrapper {
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* Checkout and bag image styling*/
+.checkout-image{
+  height: 80px;
+  object-fit: cover;
+}
+
+.bag-image{
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Margins*/
 .margin-bottom{
   margin-bottom: 30px;
 }

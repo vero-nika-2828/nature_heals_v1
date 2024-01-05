@@ -9,7 +9,7 @@
 
 {% block content %}
 
-    <div class="container h-100 pink-300">
+    <div class="container h-100">
         <div class="row">
             <div class="col">
                 <h1>Checkout </h1>
@@ -17,16 +17,16 @@
         </div>
 
         <div class="row">
-            <div class="col-md-2 order-lg-last">
-                <p> Order Summary ({{ product_count }})</p>
+            <div class="col-md-6 order-lg-last">
+                <p><strong> Order Summary ({{ product_count }})</strong></p>
                 {% for item in bag_items %}
                 <div class="row">
                     <div class="col-2 mb-1">
                         <a href="{% url 'product_details' item.product.id %}">
                             {% if item.product.image %}
-                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.friendly_name }}">
+                                <img class="w-100 checkout-image" src="{{ item.product.image.url }}" alt="{{ item.product.friendly_name }}">
                             {% else %}
-                            <img src="/media/noimage.JPG" class="card-img-top" alt="{{ item.product.friendly_name}}">">
+                            <img src="/media/noimage.JPG" class="card-img-top checkout-image" alt="{{ item.product.friendly_name}}">">
                             {% endif %}
                         </a>
                     </div>
@@ -41,18 +41,18 @@
             {% endfor %}
             </div>
 
-            <div class="col-md-10">
+            <div class="col-md-6">
                     <p>Please fill out the form below to complete your order</p>
                     <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                         {% csrf_token %}
-                        <fieldset class="rounded px-3 mb-5">
-                            <legend class="fieldset-label small ">Details</legend>
+                        <fieldset class="rounded px-3 mb-5 ">
+                            <legend class="fieldset-label small px-2 w-auto ">Details</legend>
                             {{ order_form.full_name | as_crispy_field }}
                             {{ order_form.email | as_crispy_field }}
                         </fieldset>
 
                         <fieldset class="rounded px-3 mb-5">
-                            <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                            <legend class="fieldset-label small px-2 w-auto">Delivery</legend>
                             {{ order_form.phone_number | as_crispy_field }}
                             {{ order_form.country | as_crispy_field }}
                             {{ order_form.postcode | as_crispy_field }}
@@ -86,14 +86,14 @@
                         </fieldset>
 
                         
-                    <div class="submit-button text-right mt-5 mb-2">                    
+                    <div class="submit-button text-right mt-5 mb-2 ms-3">                    
                         <a href="{% url 'bag' %}" class="btn continue-btn">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Return to Bag</span>
 						</a>
-						<button id="submit-button" class="btn add2bag-btn ">
+						<button id="submit-button" class="btn main-btn ">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
