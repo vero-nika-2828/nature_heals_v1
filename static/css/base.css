@@ -443,6 +443,10 @@ body{
 
 
 /* Checkout and bag image styling*/
+.checkout-page-padding{
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .checkout-image-container{
   min-width: 80px;
@@ -470,11 +474,17 @@ body{
 }
 
 .checkout-summary-box{
-
+  min-height: 200px;
+  min-width: 225px;
   box-shadow: 0 0 4px 4px #C8DDD2 inset;
   border-radius: 25px;
   padding: 2rem;
 }
+
+.checkout-bottom-margin{
+  margin-bottom: 50px;
+}
+
 
 
 /* Margins and padding*/
@@ -549,6 +559,10 @@ body{
   .hero-image{
     justify-content: start;
   }
+  
+  .checkout-bottom-margin{
+    margin-bottom: 0;
+  }
 
 }
 
@@ -583,7 +597,6 @@ body{
   .bag-quantity-input{
     padding: 0 30px;  
   }
-
 
 }
 
