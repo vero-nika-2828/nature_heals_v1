@@ -2,15 +2,6 @@ body{
   padding-top: 92px;
 }
 
-.logo-image{
-  height: 100px;
-  margin-left: -45px;
-}
-
-.logo-image-small{
-  height: 50px;
-  margin-right: -60px;
-}
 
 /*Navbar styling*/
 .navbar-background{
@@ -91,9 +82,23 @@ body{
   color: #0B6532;
 }
 
+.logo-image{
+  height: 100px;
+  margin-left: -45px;
+}
+
+.logo-image-small{
+  height: 50px;
+  margin-right: -60px;
+}
+
 /*Mobile Navbar*/
 .mobile-navbar{
   margin-bottom: -5px;
+}
+
+.no-border-radius{
+  border-radius: 0;
 }
 
 /*Text styling*/
@@ -439,6 +444,7 @@ body{
   padding-right: 20px;
 }
 
+
 @media (min-width: 768px) {
   .products-view{
     margin: 0 3rem;
@@ -466,14 +472,20 @@ body{
     padding-top: 182px;
   }
 
-  .message-container{
+  .main-navigation{
+    justify-content: center;
+  }
 
+  .align-navbar-margin{
+    margin-left: -50px;
+  }
+
+  .message-container{
     top: 100px;
     right: 30px;
 
   }
   
-
   .products-view{
     margin: 0 5rem;
   }
@@ -481,6 +493,8 @@ body{
   .bag-quantity-input{
     padding: 0 30px;  
   }
+
+
 }
 
 @media (min-width: 1200px) {
