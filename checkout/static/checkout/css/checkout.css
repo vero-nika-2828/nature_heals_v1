@@ -1,3 +1,4 @@
+/*Stripe syling*/
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -25,6 +26,8 @@
     color: #aab7c4;
 }
 
+
+/*Form styling*/
 .fieldset-label {
     position: relative;
     right: .5rem;
@@ -36,7 +39,7 @@
     border: 1px solid #000;
 }
 
-
+/*Overlay and spinner*/
 #loading-overlay {
 	display: none;
 	position: fixed;
@@ -56,7 +59,7 @@
     height: 100%;
   }
 
-
+/*Checkout success page*/
 .checkout-confirmation-box{
   padding: 0
 }
@@ -68,6 +71,9 @@
 
 .light-green-background{
   background-color: #C8DDD2;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  padding: 10px 20px;
 }
 
 select, select option{
@@ -77,4 +83,27 @@ select, select option{
 
 select:invalid, select option[value=""]{
   color: #aab7c4!important;
+}
+
+
+.checkout-summary-box{
+  min-height: 200px;
+  min-width: 225px;
+  box-shadow: 0 0 4px 4px #C8DDD2 inset;
+  border-radius: 25px;
+
+}
+
+.checkout-bottom-margin{
+  margin-bottom: 50px;
+}
+
+.checkout-sucess-header{
+
+  padding: 0!important;
+}
+
+
+.orderno-margin{
+  margin-top: 10px;
 }

@@ -478,12 +478,14 @@ body{
   min-width: 225px;
   box-shadow: 0 0 4px 4px #C8DDD2 inset;
   border-radius: 25px;
-  padding: 2rem;
+
 }
 
 .checkout-bottom-margin{
   margin-bottom: 50px;
 }
+
+
 
 
 
