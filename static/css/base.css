@@ -17,6 +17,12 @@ body{
   color:red;
 }
 
+.btn:disabled{
+  border-color: white!important;
+}
+  
+
+
 /*Navbar styling*/
 .navbar-background{
   background-color: #0B6532;

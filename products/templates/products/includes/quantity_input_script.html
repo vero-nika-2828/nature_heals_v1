@@ -7,7 +7,7 @@
             var plusDisabled = currentValue > 98;
             $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
             $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
-            console.log(currentValue)
+            console.log(" Current value:" + currentValue)
             
         };
 
@@ -45,9 +45,9 @@
         $(closestInput).val(currentValue - 1);
         var itemId = $(this).data('item_id');
         handleEnableDisable(itemId);
-        console.log(itemId);
-        console.log(closestInput);
-        console.log(currentValue);
+        console.log("Decrement ID:" + itemId);
+        console.log("Closest input:" + closestInput);
+        console.log("Current vlaue" + currentValue);
     }); 
 </script>
 
