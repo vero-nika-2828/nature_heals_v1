@@ -320,6 +320,20 @@ body{
   color: red;
 }
 
+.edit-icon{
+  color: #0B6532!important;
+}
+
+.delete-icon{
+  color: red;
+  margin-left: -15px;
+}
+
+.edit-delete-review{
+  margin-top: -15px;
+  margin-left: -10px;
+}
+
 /*Form styling*/
 .input-group-wrapper{
   background-color: #ffff;
@@ -455,6 +469,19 @@ body{
   margin-left: 15px;
 }
 
+.header-margins{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.date{
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.reviewer-name{
+  line-height: 0;
+}
 
 @media (min-width: 768px) {
   .products-view{
@@ -489,12 +516,12 @@ body{
 
   .align-navbar{
     margin-left: -50px;
-    padding-left: 0;
   }
 
   .main-nav-left-margin{
     margin-left: unset;
   }
+
 
   .message-container{
     top: 100px;

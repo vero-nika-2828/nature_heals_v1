@@ -22,7 +22,7 @@
                <h2>{{product.friendly_name|title}} {{product.size}}</h2>  
                <p>Star rating placeholder<span>review count:(xx reviews) | write a review</span></p>
                <hr>
-               <p>{{product.description}}</p>
+               <p class="me-3">{{product.description}}</p>
                <p class="highlighted-text">£{{product.price}}</p> 
                
                 <div class="container quantity-container ps-auto ">
@@ -95,15 +95,13 @@
            </div>
  
         </div>
-
-        <hr>
         
         <!--Information dropdowns-->
         <div class="row margin-bottom">
             <h3 class="margin-bottom">More about the product</h3>
             <div class="col-sm-12 col-md-6">
                 <!--Healing properties list-->
-                <div>
+                <div class="pe-3">
                     <h6><strong>Health benefits</strong> </h6>
                     <ul>
                         {% for healing_property in healing_properties_list %}
@@ -154,17 +152,16 @@
                     </div>
                 </div>
             </div>
-            <hr>
-
+    
         <!--Reviews-->
         <div class="row margin-top">
-            <h3> Customer reviews</h3>
+            <h3 class="margin-bottom"> Customer reviews</h3>
             <div class="col-sm-12 col-md-6">
                 <!--Show reviews-->
-                <div class="col-12">            
+                <div class="col-12 pe-3">            
                     {% for review in product_reviews %}
                     <div class="row margin-bottom">
-                        <div>
+                        <div class="reviewer-name">
                             <span class="d-inline-flex">
                                 <i class="fa-solid fa-user col"></i>
                             </span>
@@ -172,18 +169,18 @@
                                 <p class="col"><strong>{{review.user_profile}}</strong></p>
                             </span>
                         </div>
+                        <p class="date">{{review.review_date}}</p>
                         
                         <p>{{review.review}}</p>
-                        <p>{{review.review_date}}</p>
-                        
+                                                
                         {% if request.user.is_superuser or request.user.username == review.user_profile.user.username %}
-                        <div>
+                        <div class="edit-delete-review">
                             <span>
 
                                 <!-- Edit Review modal trigger -->
                                 
-                                <button type="button" class="btn main-btn" data-bs-toggle="modal" data-bs-target="#modal2-{{ review.id }}">
-                                    <i class="fa-solid fa-pencil"></i>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal2-{{ review.id }}">
+                                    <i class="fa-solid fa-pencil edit-icon"></i>
                                 </button>
                     
                                 <!-- Edit Review Modal -->
@@ -211,8 +208,8 @@
                             <span>
                                 
                                 <!-- Delete Review modal trigger -->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal3-{{ review.id }}">
-                                    <i class="fa-solid fa-xmark"></i>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal3-{{ review.id }}">
+                                    <i class="fa-solid fa-xmark delete-icon"></i>
                                 </button>
                     
                                 <!-- Delete Review Modal -->
