@@ -14,7 +14,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-9">
                 {% if bag_items %}
                     <div>
                         <table class="table text-center">
@@ -75,7 +75,7 @@
                                         <h6>Delivery: £{{ delivery|floatformat:2}}</h6>
                                         <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h4>
                                         {% if free_delivery_delta > 0%}
-                                            <P>Spend £{{ free_delivery_delta }} more for free delivery</P>
+                                            <p class="small-text">Spend £{{ free_delivery_delta }} more for free delivery</p>
                                         {% endif %}
 
                                         <a href="{% url 'products' %}" class="btn continue-btn w-25 col-sm-6"><strong>Continue Shopping</strong></a>
@@ -93,16 +93,19 @@
                 {% endif %}
             </div>
 
-            <div class="col-md-4 mb-3 ps-5">
-                <h5>Summary</h5>
-                <div>
-                    <span class="float-start">Bag Total:</span> <span class="float-end">£{{ total|floatformat:2 }}</span>
-                    <span class="float-start">Delivery:</span> <span class="float-end">£{{ delivery|floatformat:2}}</span>
-                    <span class="float-start">Grand Total:</span><span class="float-end" >£{{ grand_total|floatformat:2 }}</span>
-                    {% if free_delivery_delta > 0%}
-                        <P>Spend £{{ free_delivery_delta }} more for free delivery</P>
-                    {% endif %}
+            <div class="col-sm-12 col-md-3 mb-3 ps-5">
+                <div class="checkout-summary-box">
+                    <h5><strong>Summary</strong></h5>
+                    <hr>
+                    <div>
+                        <span class="float-start w-50"><small>Bag Total:</small></span> <span class="float-end w-50 text-end"><small>£{{ total|floatformat:2 }}</small></span>
+                        <span class="float-start w-50"><small>Delivery:</small></span> <span class="float-end  w-50 text-end"><small>£{{ delivery|floatformat:2}}</small></span>
+                        <span class="float-start w-50 red-text"><strong><small>Grand Total:</small></strong></span> <span class="float-end  w-50 text-end red-text" ><strong><small>£{{ grand_total|floatformat:2 }}</small></strong></span>
+                        {% if free_delivery_delta > 0%}
+                            <p class="smaller-text">Spend £{{ free_delivery_delta }} more for free delivery</p>
+                        {% endif %}
 
+                    </div>
                 </div>
             </div>
         </div>

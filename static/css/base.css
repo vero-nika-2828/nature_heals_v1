@@ -1,7 +1,21 @@
+/*General site styling*/
 body{
   padding-top: 92px;
 }
 
+.small-text{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.smaller-text{
+  font-size: 10px;
+  
+}
+
+.red-text{
+  color:red;
+}
 
 /*Navbar styling*/
 .navbar-background{
@@ -421,6 +435,7 @@ body{
 }
 
 
+
 /* Checkout and bag image styling*/
 
 .checkout-image-container{
@@ -446,6 +461,13 @@ body{
 
 #div_id_country{
   margin-bottom: 10px;
+}
+
+.checkout-summary-box{
+
+  box-shadow: 0 0 4px 4px #C8DDD2 inset;
+  border-radius: 25px;
+  padding: 2rem;
 }
 
 
