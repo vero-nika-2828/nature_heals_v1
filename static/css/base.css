@@ -444,6 +444,10 @@ body{
   padding-right: 20px;
 }
 
+.main-nav-left-margin{
+  margin-left: 15px;
+}
+
 
 @media (min-width: 768px) {
   .products-view{
@@ -480,6 +484,10 @@ body{
     margin-left: -50px;
   }
 
+  .main-nav-left-margin{
+    margin-left: unset;
+  }
+
   .message-container{
     top: 100px;
     right: 30px;
@@ -514,9 +522,7 @@ body{
   }
 
 @media (max-width: 332px) {
-  .logo-image-small{
-    height: 30px;
-  }
+
 
   .input-group-amount{
     width: 100%!important;
@@ -533,3 +539,8 @@ body{
   }
 
 
+  @media (max-width: 339px) {
+    .logo-image-small{
+      height: 30px;
+    }
+  }
