@@ -31,15 +31,15 @@
                         <div class="row ms-1 mb-3 small-device-margin input-group-container">
                             <div class="input-group input-group-wrapper input-group-amount w-50 mb-3 justify-content-center align-items-center">
                                 <div class="input-group-prepend">
-                                    <div class="btn decrement-qty" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <div class="btn decrement-qty decrement-qty_{{ product.id }}" data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                         <i class="fa-solid fa-minus"></i>
                                     </div>
                                 </div>
 
-                                <input type="number" class="form-control text-center quantity-input qty_input" id="quantity" name="quantity"  value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" aria-describedby="emailHelp">
+                                <input type="number" class="form-control text-center quantity-input qty_input"  name="quantity"  value="{{ product.id }}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" aria-describedby="emailHelp">
                            
                                 <div class="input-group-append">
-                                    <div  class="btn increment-qty" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <div  class="btn increment-qty increment-qty_{{ product.id }}" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                         <i class="fa-solid fa-plus"></i>
                                     </div>
                                 </div>

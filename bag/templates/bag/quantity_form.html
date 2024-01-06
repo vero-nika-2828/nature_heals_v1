@@ -8,7 +8,7 @@
                 </button>
             </div>
 
-            <input type="number" class="form-control text-center quantity-input qty_input" id="quantity" name="quantity"  value="{{ item.quantity }}" min="1" max="99 " data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" aria-describedby="emailHelp">
+            <input type="number" class="form-control text-center quantity-input qty_input" name="quantity"  value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" aria-describedby="emailHelp">
        
             <class="input-group-append">
                 <button  class="btn increment-qty" data-item_id="{{ item.item_id }}" id="id_qty_{{ item_item.id }}">

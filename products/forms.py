@@ -96,7 +96,7 @@ class ProductForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
-        subcategories =Subategory.objects.all()
+        subcategories =Subcategory.objects.all()
         
 
         friendly_names = [ (c.id, c.get_friendly_name()) for c in categories]
