@@ -92,6 +92,8 @@ body{
   margin-right: -60px;
 }
 
+
+
 /*Mobile Navbar*/
 .mobile-navbar{
   margin-bottom: -5px;
@@ -193,13 +195,13 @@ body{
 
 /*Product cards styling*/
 .card-outline{
-  box-shadow: 0 0 8px 8px #C8DDD2;
+  box-shadow: 0 0 2px 2px #C8DDD2;
   border: none;
   margin: 0 2rem;
 }
 
 .card-outline:hover{
-  box-shadow: 0 0 8px 8px #0B6532;
+  box-shadow: 0 0 2px 2px #0B6532;
 }
 
 .all-products-card{
@@ -216,6 +218,12 @@ body{
   position: relative;
 }
 
+.card-footer{
+  background-color: white!important;
+  border: none!important;
+}
+
+/*Wishlist styling*/
 .wishlist-toggle{
   position: absolute;
   right: 8px;
@@ -435,7 +443,6 @@ body{
   margin-right: 20px;
 }
 
-
 .extra-padding{
   padding-top: 30px;
 }
@@ -480,8 +487,9 @@ body{
     justify-content: center;
   }
 
-  .align-navbar-margin{
+  .align-navbar{
     margin-left: -50px;
+    padding-left: 0;
   }
 
   .main-nav-left-margin{
