@@ -422,15 +422,32 @@ body{
 
 
 /* Checkout and bag image styling*/
+
+.checkout-image-container{
+  min-width: 80px;
+  margin-right: 20px;
+}
+
+
 .checkout-image{
   height: 80px;
   object-fit: cover;
+  min-width: 80px;
 }
 
 .bag-image{
   height: 150px;
   object-fit: cover;
 }
+
+.checkout-form .form-group{
+  margin-bottom: -10px;
+}
+
+#div_id_country{
+  margin-bottom: 10px;
+}
+
 
 /* Margins and padding*/
 .margin-bottom{
@@ -473,6 +490,8 @@ body{
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+/*Review section styling*/
 
 .date{
   font-size: 12px;

@@ -12,16 +12,16 @@
     <div class="container h-100">
         <div class="row">
             <div class="col">
-                <h1>Checkout </h1>
+                <h1 class="margin-bottom margin-top ps-3">Checkout </h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-6 order-lg-last">
+            <div class="col-sm-12 col-md-6 order-md-last ps-4 mb-5">
                 <p><strong> Order Summary ({{ product_count }})</strong></p>
                 {% for item in bag_items %}
                 <div class="row">
-                    <div class="col-2 mb-1">
+                    <div class="col-2 mb-1 checkout-image-container">
                         <a href="{% url 'product_details' item.product.id %}">
                             {% if item.product.image %}
                                 <img class="w-100 checkout-image" src="{{ item.product.image.url }}" alt="{{ item.product.friendly_name }}">
@@ -30,28 +30,28 @@
                             {% endif %}
                         </a>
                     </div>
-                    <div class="col-7">
+                    <div class="col-6">
                         <p class="my-0"><strong>{{ item.product.friendly_name }}</strong></p>
                         <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                     </div>
-                    <div class="col-3 text-right">
-                        <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    <div class="col-2 text-right">
+                        <p class="my-0 small text-muted"><strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
                     </div>
                 </div>
             {% endfor %}
             </div>
 
             <div class="col-md-6">
-                    <p>Please fill out the form below to complete your order</p>
+                    <p class="ps-3">Please fill out the form below to complete your order.</p>
                     <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                         {% csrf_token %}
-                        <fieldset class="rounded px-3 mb-5 ">
+                        <fieldset class="rounded px-3 mb-5 checkout-form">
                             <legend class="fieldset-label small px-2 w-auto ">Details</legend>
                             {{ order_form.full_name | as_crispy_field }}
                             {{ order_form.email | as_crispy_field }}
                         </fieldset>
 
-                        <fieldset class="rounded px-3 mb-5">
+                        <fieldset class="rounded px-3 mb-5 checkout-form">
                             <legend class="fieldset-label small px-2 w-auto">Delivery</legend>
                             {{ order_form.phone_number | as_crispy_field }}
                             {{ order_form.country | as_crispy_field }}
@@ -86,21 +86,21 @@
                         </fieldset>
 
                         
-                    <div class="submit-button text-right mt-5 mb-2 ms-3">                    
-                        <a href="{% url 'bag' %}" class="btn continue-btn">
+                    <div class="submit-button text-right mt-3 mb-2 ms-3">                    
+                        <a href="{% url 'bag' %}" class="btn continue-btn me-2">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Return to Bag</span>
 						</a>
-						<button id="submit-button" class="btn main-btn ">
+						<button id="submit-button" class="btn main-btn">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>
 						</button>
 
-						<p class="small text-danger my-0">
+						<p class="small text-danger my-0 mt-3">
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
