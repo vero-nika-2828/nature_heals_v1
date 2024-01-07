@@ -61,10 +61,14 @@ def remove_bag_item(request, item_id):
     """
     Remove the product product quantity in shopping bag.
     """
-
-    product = get_object_or_404(Product, pk=item_id)
+    print("Posted to add to bag")
+    print(item_id)
+    # product = get_object_or_404(Product, pk=item_id)
 
     try:
+        bag = request.session.get('bag', {})
+        product = get_object_or_404(Product, pk=item_id)
+        print(product)
         bag.pop(item_id)
         messages.success(
             request,

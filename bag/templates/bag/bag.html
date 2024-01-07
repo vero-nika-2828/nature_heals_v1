@@ -59,9 +59,8 @@
                                             </div>
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                           </form>
-                                        
-                                            <a class="update-link btn"><small>Update</small></a>
-                                            <a class="remove-link btn" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                                      
+                                            <a class="remove-link btn red-text" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                         
                                       </div>
                                     </td>
@@ -130,12 +129,6 @@
 </script>
 
 <script type="text/javascript">
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    });
-
     // Remove item and reload on click
     $('.remove-link').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
@@ -147,6 +140,9 @@
         .done(function() {
             location.reload();
         });
+        console.log(itemId)
+        // console.log(urlMM)
+
     });
 </script>
 

@@ -17,6 +17,10 @@ body{
   color:red;
 }
 
+.white{
+  color:white;
+}
+
 .btn:disabled{
   border-color: white!important;
 }
@@ -355,6 +359,11 @@ body{
   margin-left: -10px;
 }
 
+.remove-link{
+  margin-top: -50px;
+  margin-left: 20px;
+}
+
 /*Form styling*/
 .input-group-wrapper{
   background-color: #ffff;
@@ -386,13 +395,14 @@ body{
 .message-container{
   position: fixed;
   top: 90px;
-  right: 20px;
+  right: 5px;
   z-index: 999999;
   font-weight: bolder;
   min-width: 250px;
 }
 
 
+/*Messages styling*/
 .toast{
   max-width: 250px;
   background-color: white;
@@ -645,6 +655,12 @@ body{
   .bag-quantity-input{
     padding: 0 30px;  
   }
+
+  .message-container{
+    top: 125px;
+    right: 45px;
+  }
+  
 
 }
 
