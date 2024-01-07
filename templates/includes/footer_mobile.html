@@ -1,27 +1,40 @@
 <div class="row w-100 footer mx-0 pb-5 d-lg-none mx-auto">
-    <div class="d-flex row w-100">
-        <div class="col-12">
+    <div class="d-flex row text-center">
+    <div class="justify-content-center">
+        <div class="col-12 px-auto text-center">
             <div class="logo col-12">
               <!--Logo-->
               <a class="navbar-brand col-3 white-text" href="{% url 'home' %}">
                 <span><img class="footer-logo" src="/media/logo_nature_heals_small.jpg" alt="nature heals logo"></span>
-       
               </a>
+
+              <p class="pt-3 ps-4 smaller-text no-margin-small-print">©copyright<span id="copyright-year-current"></span></p>
+              <p class="ps-4 smaller-text no-margin-small-print"><span></span>Developed by Veronika Nemergutova
+                  <a href="https://github.com/vero-nika-2828/" class="text-decoration-none" target="_blank" rel="noopener" aria-label="Joy Zadan's GitHub profile">
+                      <i class="fa-brands fa-github white"></i>
+                  </a>  
+                  <a href="https://www.linkedin.com/in/veronika-nemergutova-57232b264/" class="text-decoration-none" target="_blank" rel="noopener" aria-label="Joy Zadan's GitHub profile">
+                      <i class="fa-brands fa-linkedin white"></i>
+                  </a>  
+              </p>
+              <p class="ps-4 smaller-text no-margin-small-print">Full Stack E-commerce project (Django)</p>
+              <p class="ps-4 smaller-text">For Educational Purposes Only</p>
+     
             </div>
 
         </div>
     
 
         <div class="col-12">
-            <div class="col-6">
-                <div class="row">
-                    <div class="row ps-3 pt-3 mb-2 footer-small-text">
+            <div class="col-12">
+                <div class="row ">
+                    <div class="row ps-3 pt-3 mb-2 footer-small-text text-center">
                         Contact:
                     </div>
 
                     <!--Social media-->
                     <div class="row">
-                        <div class="d-inline-flex">
+                        <div class="">
                             <div class="row d-inline-flex">
                                 <div class="col-1">
                                     <a href="https://www.facebook.com/" class="" target="_blank" rel="noopener">
@@ -92,7 +105,8 @@
          </div>
         </div>
 
-        <div class="col-12">
+        <div class="row d-flex justify-content-end">
+            <div>
             <div class="row footer-small-text pt-3 mb-2">
                 Product categories
             </div>
@@ -111,8 +125,18 @@
                     <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=sensitive_skin">Sensitive Skin</a></li>
                 </ul>
             </div>
+             </div>
         </div>
-
     </div>
+    </div>
+
 </div>
 
+
+{% block postloadjs %}
+<script>
+    // Updates copyright year in the footer
+    const currentYear = document.querySelector("#copyright-year-current");
+    currentYear.innerText = new Date().getFullYear();
+</script>
+{% endblock %}

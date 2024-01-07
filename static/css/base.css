@@ -598,6 +598,14 @@ body{
 }
 
 
+.no-margin-small-print{
+  margin-bottom: 0;
+}
+
+.adjusted-padding{
+  padding-left: 20%;
+}
+
 @media (min-width: 768px) {
   .products-view{
     margin: 0 3rem;

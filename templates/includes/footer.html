@@ -2,11 +2,23 @@
     <div class="d-inline-flex">
         <div class="col-md-3">
             <div class="logo col-12">
-              <!--Logo-->
-              <a class="navbar-brand col-3 white-text" href="{% url 'home' %}">
-                <span><img class="footer-logo" src="/media/logo_nature_heals_small.jpg" alt="nature heals logo"></span>
+                <!--Logo-->
+                <a class="navbar-brand col-3 white-text" href="{% url 'home' %}">
+                     <span><img class="footer-logo" src="/media/logo_nature_heals_small.jpg" alt="nature heals logo"></span>
+                </a>
+                <p class="pt-3 ps-4 smaller-text no-margin-small-print">©copyright <span id="copyright-year-current"></span></p>
+                <p class="ps-4 smaller-text no-margin-small-print"><span></span>Developed by Veronika Nemergutova
+                    <a href="https://github.com/vero-nika-2828/" class="text-decoration-none" target="_blank" rel="noopener" aria-label="Joy Zadan's GitHub profile">
+                        <i class="fa-brands fa-github white"></i>
+                    </a>  
+                    <a href="https://www.linkedin.com/in/veronika-nemergutova-57232b264/" class="text-decoration-none" target="_blank" rel="noopener" aria-label="Joy Zadan's GitHub profile">
+                        <i class="fa-brands fa-linkedin white"></i>
+                    </a>  
+                </p>
+                <p class="ps-4 smaller-text no-margin-small-print">Full Stack E-commerce project (Django)</p>
+                <p class="ps-4 smaller-text">For Educational Purposes Only</p>
        
-              </a>
+             
             </div>
 
         </div>
@@ -114,3 +126,10 @@
     </div>
 </div>
 
+{% block postloadjs %}
+<script>
+    // Updates copyright year in the footer
+    const currentYear = document.querySelector("#copyright-year-current");
+    currentYear.innerText = new Date().getFullYear();
+</script>
+{% endblock %}
