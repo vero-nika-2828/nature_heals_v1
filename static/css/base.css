@@ -159,6 +159,7 @@ body{
 /*Login, Register, Logout styling*/
 .allauth-form-inner-content{
   margin-top: 60px;
+  margin-bottom: 60px;
   padding: 2rem;
   box-shadow: 0 0 2px 2px #C8DDD2 inset;
   border: #C8DDD2;
@@ -546,6 +547,46 @@ body{
 .reviewer-name{
   line-height: 0;
 }
+
+/*Footer styling*/
+
+.footer{
+  background-color: #0B6532;
+  color:white;
+}
+
+.footer-product-links {
+    list-style: none;
+    margin-left: -10px;
+}
+
+.footer-product-links a{
+  color: white;
+}
+
+.footer-logo{
+  height: 50px;
+  margin-top: 20px;
+}
+
+.footer-smaller-text{
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.footer-small-text{
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+
+.footer-smaller-text-links{
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
 
 @media (min-width: 768px) {
   .products-view{
