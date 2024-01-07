@@ -106,6 +106,6 @@ class ProductForm(forms.ModelForm):
         self.fields['subcategory'].choices = friendly_names_subcategory
 
 
-        self.fields['friendly_name'].widget.attrs['autofocus'] = True
+        self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'

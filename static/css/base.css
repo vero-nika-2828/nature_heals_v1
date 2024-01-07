@@ -160,7 +160,7 @@ body{
 .allauth-form-inner-content{
   margin-top: 60px;
   padding: 2rem;
-  box-shadow: 0 0 2px 2px #C8DDD2;
+  box-shadow: 0 0 2px 2px #C8DDD2 inset;
   border: #C8DDD2;
 }
 
@@ -473,11 +473,16 @@ body{
   margin-bottom: 10px;
 }
 
+#div_id_category, #div_id_subcategory, #div_id_description, #div_id_price, #div_id_image_url, #div_id_featured {
+  margin-bottom: 20px;
+}
+
 .checkout-summary-box{
   min-height: 200px;
   min-width: 225px;
   box-shadow: 0 0 4px 4px #C8DDD2 inset;
   border-radius: 25px;
+  padding: 2rem;
 
 }
 
