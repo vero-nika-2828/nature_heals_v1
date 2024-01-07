@@ -108,4 +108,4 @@ class ProductForm(forms.ModelForm):
 
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
+            self.fields[field].widget.attrs['class'] = 'product-input-styling'

@@ -119,8 +119,8 @@ def product_details(request, product_id):
             
             return redirect(reverse('product_details', args=[product_id]))
       
-        else:
-            review_form = ReviewForm()
+    else:
+        review_form = ReviewForm()
 
 
     context = {

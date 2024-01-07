@@ -9,7 +9,7 @@ class ReviewForm(forms.ModelForm):
 
         review = forms.CharField(
             widget=forms.Textarea(attrs={
-                            'rows': '4',
+                            'rows': '5',
                             'placeholder': 'Write your review here'})
         )
 
@@ -21,7 +21,13 @@ class ReviewForm(forms.ModelForm):
   
         # Customize fields
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].widget.attrs['class'] = 'review-area'
+            self.fields[field].widget=forms.Textarea(attrs={
+                            'rows': '5',
+                            'placeholder': 'Write your review here'})
+
+            if 'required' in self.fields[field].widget.attrs:
+                self.fields[field].widget.attrs.pop('required')
             
            
 

@@ -364,6 +364,7 @@ body{
   margin-left: 20px;
 }
 
+
 /*Form styling*/
 .input-group-wrapper{
   background-color: #ffff;
@@ -497,7 +498,7 @@ body{
 
 }
 
-.checkout-bottom-margin{
+.checkout-bottom-margin, .profile-margin{
   margin-bottom: 50px;
 }
 
@@ -552,6 +553,12 @@ body{
 .date{
   font-size: 12px;
   margin-bottom: 10px;
+}
+
+.review-area{
+  background-color:#C8DDD2;
+  margin-bottom: 20px;
+  
 }
 
 .reviewer-name{
@@ -630,6 +637,7 @@ body{
     margin-bottom: 0;
   }
 
+
 }
 
 @media (min-width: 992px) {
@@ -667,6 +675,10 @@ body{
   .message-container{
     top: 125px;
     right: 45px;
+  }
+
+  .profile-margin{
+    margin-bottom: 0;
   }
   
 
