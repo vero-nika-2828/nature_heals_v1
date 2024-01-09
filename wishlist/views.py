@@ -68,6 +68,7 @@ def remove_from_wishlist(request, product_id):
     wishlist_count = Wishlist.objects.count()
 
     Wishlist.objects.filter(user_profile=user, product=product).delete()
+    messages.success(request, f'{product.friendly_name} has been deleted from your wishlist!')
 
     # get the value for the return redirect from the  referer URL
     previous_url = request.META.get('HTTP_REFERER')
