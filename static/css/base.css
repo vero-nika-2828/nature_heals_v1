@@ -613,6 +613,11 @@ body{
   padding-left: 20%;
 }
 
+.social-links:hover{
+  transform: translateZ(1.5);
+}
+
+
 @media (min-width: 768px) {
   .products-view{
     margin: 0 3rem;
@@ -680,7 +685,7 @@ body{
   .profile-margin{
     margin-bottom: 0;
   }
-  
+
 
 }
 
@@ -717,9 +722,23 @@ body{
   }
   }
 
-
   @media (max-width: 339px) {
     .logo-image-small{
       height: 30px;
     }
   }
+
+  @media (max-width: 496px) {
+    .logo-image-small{
+      height: 30px;
+    }
+
+    body{
+      width: fit-content;
+    }
+  }
+
+
+
+
+  

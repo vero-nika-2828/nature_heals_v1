@@ -3,10 +3,21 @@
     <div class="w-100 toast-capper bg-success"></div> 
     <div class="toast-header">
       <strong class="me-auto">Success!</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close message-btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
       {{ message }}
     </div>
   </div>
+
+  {% block postloadjs %}
+  <script>
+      // Updates copyright year in the footer
+      $('.message-btn-close').click(function(e){
+  
+        $('.toast').hide()
+      })
+  </script>
+  {% endblock %}
+
 

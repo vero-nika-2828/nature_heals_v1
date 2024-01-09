@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row d-lg-flex">
             <div class="col-lg-9">
                 {% if bag_items %}
                     <div>
@@ -31,7 +31,17 @@
                                 {% for item in bag_items %}
                                 <tr>
                                     <td class="w-25">
-                                    <img class="image-fluid w-100 bag-image" src="/media/{{ item.product.image }}">
+                                        <div class="col-4 w-100">
+                                            {% if item.product.image %}
+                                            <div class="image-div w-100">
+                                                <img class="image-fluid w-100 bag-image" src="/media/{{ item.product.image }}" alt="{{ item.product.friendly_name }}">
+                                            </div>  
+                                        {% else %}
+                                        <div class="image-div">                  
+                                            <img class="image-fluid w-100 bag-image" src="/media/noimage.JPG" alt="{{ item.product.friendly_name }}">
+                                        </div>
+                                    {% endif %}
+                                    
                                     </div>
                                     </td>
                                     <td>{{ item.product.friendly_name }} {{ item.product.size }} <br> <span> {{item.product.sku |upper}}</span></td>
