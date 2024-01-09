@@ -48,7 +48,16 @@
 
                 </div>           
             </div>
-            {% endfor %}
+           
+            {% empty %}
+
+            <div class="col-12  margin-bottom product-container text-center">
+                <p>You haven't added any products to your Wishlist yet</p>
+                <div class="margin-bottom-20px pt-5"> 
+                    <a href="{% url 'products' %}" class="btn continue-btn w-25"><strong>Continue shopping</strong></a>
+                 </div> 
+           </div>
+           {% endfor %}
         </div>
     </div>
 

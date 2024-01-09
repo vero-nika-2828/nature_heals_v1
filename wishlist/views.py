@@ -18,11 +18,13 @@ def wishlist(request):
     
     user = get_object_or_404(UserProfile, user=request.user)
     wishlist = Wishlist.objects.filter(user_profile=user)
+    wishlist_count = Wishlist.objects.count()
 
     template = 'wishlist/my_wishlist.html'
 
     context={
         'wishlist': wishlist,
+        'wishlist_count': wishlist_count,
 
     }
       
@@ -64,8 +66,6 @@ def remove_from_wishlist(request, product_id):
 
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
-
-    wishlist_count = Wishlist.objects.count()
 
     Wishlist.objects.filter(user_profile=user, product=product).delete()
     messages.success(request, f'{product.friendly_name} has been deleted from your wishlist!')
