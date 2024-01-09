@@ -108,14 +108,20 @@ def product_details(request, product_id):
     review_form = ReviewForm(request.POST)
     
     if request.method == "POST":
-        user_profile = get_object_or_404(UserProfile, user=request.user)
-        if review_form.is_valid():
-            reviews.create(
-                user_profile=user_profile,
-                product=product,
-                review=request.POST.get('review'),
-                review_date=request.POST.get('review_date'),
-            )
+        
+        if not request.user.is_authenticated:
+            messages.error(request, 'Log in to add your review')
+            
+        else:
+            user_profile = get_object_or_404(UserProfile, user=request.user)
+            if review_form.is_valid():
+                messages.success(request, 'Your review has been added')
+                reviews.create(
+                    user_profile=user_profile,
+                    product=product,
+                    review=request.POST.get('review'),
+                    review_date=request.POST.get('review_date'),
+                )
             
             return redirect(reverse('product_details', args=[product_id]))
       
