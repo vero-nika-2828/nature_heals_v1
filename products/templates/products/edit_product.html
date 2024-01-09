@@ -5,8 +5,9 @@
 
     <div class="container-fluid container-max-width h-100 pink-300">
             <!--Edit product form-->
-            <div class="col-sm-12 col-md-6 offset-md-3">
-                 <div class="all-products-card card card-outline h-100 justify-content-center ">
+            <div class="col-sm-12 col-md-6 offset-md-3 mt-5 mb-5">
+                <h2 class="text-center header-margins">Edit product</h2>
+                 <div class="all-products-card card card-outline h-100 justify-content-center checkout-summary-box ">
                     <form action="{% url 'edit_product' product.id %}" method="POST" id="edit_review">
                         {% csrf_token %}
                         {% for field in form %}
@@ -16,9 +17,33 @@
                                 {{field}}
                             {% endif %}
                         {% endfor %}
-                        <button class="form-control btn btn-outline-success" type="submit">Edit Product</button>
+                        <button class="form-control btn main-btn" type="submit">Edit Product</button>
                    </form>
                     
     </div>
 
+    <div class="float-end me-2 mb-3 back-to-top mt-5">
+        <a class="btn-top">
+            <i class="btn-top-icon fa-solid fa-circle-up"></i>
+        </a>
+    </div>
+
+
+{% endblock %}
+
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script>
+        $('.btn-top').click(function(e) {
+            window.scrollTo(0,0);
+        });
+    </script>
+
+    <script>
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image ${file.name} will be sent to database`);
+        });
+    </script>
 {% endblock %}

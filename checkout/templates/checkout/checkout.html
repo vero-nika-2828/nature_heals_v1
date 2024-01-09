@@ -20,7 +20,7 @@
             <div class="col-sm-12 col-md-5 offset-md-1 order-md-last ps-4 checkout-summary-box checkout-bottom-margin">
                 <p><strong> Order Summary ({{ product_count }})</strong></p>
                 {% for item in bag_items %}
-                <div class="row">
+                <div class="row mb-4">
                     <div class="col-2 mb-1 checkout-image-container">
                         <a href="{% url 'product_details' item.product.id %}">
                             {% if item.product.image %}
@@ -35,7 +35,7 @@
                         <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                     </div>
                     <div class="col-md-2 col-lg-3 text-end">
-                        <p class="my-0 small text-muted"><strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
+                        <p class="my-0 small text-muted checkout-price-small"><strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
                     </div>
                 </div>
             {% endfor %}
@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <div class="float-end me-2 mb-3 back-to-top">
+    <div class="float-end me-2 mb-3 back-to-top mt-5">
         <a class="btn-top">
             <i class="btn-top-icon fa-solid fa-circle-up"></i>
         </a>

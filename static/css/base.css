@@ -738,6 +738,12 @@ body{
     }
   }
 
+  @media (max-width: 767px) {
+    .checkout-price-small{
+      float: left;
+      margin-bottom: 20px!important;
+    }
+  }
 
 
 
