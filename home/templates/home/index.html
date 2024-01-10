@@ -15,12 +15,34 @@
 
         <div class="row margin-bottom popular-products-box">
             <div class="col text-center margin-bottom">
-                <h2>Popular products</h2>
+                <h2 class="margin-bottom margin-top-20px ">Popular products</h2>
                 <div>
-                    <div class=" row">
-                        <div class="col">
-                            {% for product in popular_products %}
-                            <p> {{ product.friendly_name }}</p>
+                    <div class=" row d-flex">
+                        <div class="col d-flex">
+                         
+                                {% for product in popular_products %}
+                                
+                                    <div class="col-sm-3 col-md-2 margin-bottom product-container d-flex">
+                                        <div class="all-products-card card card-outline h-100 justify-content-center">
+                                            {% if product.image %}
+                                            <div class="image-div">
+                                                     <img src="/media/{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}">  
+                                            </div>  
+                                            {% else %}
+                                            <div class="image-div">
+                                          
+                                                <img src="/media/noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
+                                            </div>
+                                            {% endif %}
+                       
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">{{product.friendly_name|title}}</h5>
+                                                <p class="card-text">Star rating placeholder</p>
+                        
+                                            </div>                      
+                                        </div>   
+                                        
+                                    </div>
                             {% endfor %}
                         </div>
                     </div>
