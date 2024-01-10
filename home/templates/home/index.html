@@ -16,7 +16,20 @@
         <div class="row margin-bottom popular-products-box">
             <div class="col text-center margin-bottom">
                 <h2>Popular products</h2>
-                <a href="{% url 'products' %}" class="btn main-btn">View ALL Products</a>
+                <div>
+                    <div class=" row">
+                        <div class="col">
+                            {% for product in popular_products %}
+                            <p> {{ product.friendly_name }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class=" row">
+                        <div class="col">
+                            <a href="{% url 'products' %}" class="btn main-btn">View ALL Products</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
