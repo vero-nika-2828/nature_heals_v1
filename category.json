@@ -1,0 +1,1 @@
+[{"model": "products.category", "pk": 1, "fields": {"name": "herbal_remedies", "friendly_name": "Herbal Remedies"}}, {"model": "products.category", "pk": 2, "fields": {"name": "aromatherapy", "friendly_name": "Aromatherapy"}}, {"model": "products.category", "pk": 3, "fields": {"name": "skin_care", "friendly_name": "Skin care"}}]
