@@ -48,22 +48,13 @@
     "pk": 6,
     "model": "products.subcategory",
     "fields": {
-      "name": "candles",
-      "friendly_name": "Candles",
-      "category": 2
-    }
-  },
-  {
-    "pk": 7,
-    "model": "products.subcategory",
-    "fields": {
       "name": "dry_skin",
       "friendly_name": "Dry Skin",
       "category": 3
     }
   },
   {
-    "pk": 8,
+    "pk": 7,
     "model": "products.subcategory",
     "fields": {
       "name": "oily_skin",
@@ -72,7 +63,7 @@
     }
   },
   {
-    "pk": 9,
+    "pk": 8,
     "model": "products.subcategory",
     "fields": {
       "name": "mixed skin",
@@ -82,7 +73,7 @@
   },
 
   {
-    "pk": 10,
+    "pk": 9,
     "model": "products.subcategory",
     "fields": {
       "name": "sensitive_skin",

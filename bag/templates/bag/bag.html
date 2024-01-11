@@ -53,7 +53,7 @@
                                             <div class="row ms-1 mb-3 bag-input-group-container">
                                                 <div class="input-group bag-input-group-wrapper w-100 mb-3 justify-content-center align-items-center bag-quantity-input">
                                                     <div class="input-group-prepend">
-                                                        <button class="btn decrement-qty decrement{{ item.item_id }}" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        <button class="btn update-link  decrement-qty decrement{{ item.item_id }}" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                             <i class="fa-solid fa-minus"></i>
                                                         </button>
                                                     </div>
@@ -61,7 +61,7 @@
                                                     <input type="number" class="form-control text-center quantity-input qty_input" name="quantity"  value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" aria-describedby="emailHelp">
                                                
                                                     <class="input-group-append">
-                                                        <button  class="btn increment-qty increment-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        <button  class="btn update-link increment-qty increment-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                             <i class="fa-solid fa-plus"></i>
                                                         </button>
                                                     </button>
@@ -69,7 +69,7 @@
                                             </div>
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                           </form>
-                                                      
+         
                                             <a class="remove-link btn red-text" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                         
                                       </div>
@@ -139,6 +139,14 @@
 </script>
 
 <script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+
+        //var form = $(this).('.update-form').find('.qty_input')[0];
+        var form = $(this).closest('.update-form')
+        form.submit();
+    });
+    
     // Remove item and reload on click
     $('.remove-link').click(function(e) {
         var csrfToken = "{{ csrf_token }}";

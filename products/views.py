@@ -193,7 +193,7 @@ def edit_product(request, product_id):
 
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Product deleted succesfully!')
+            messages.success(request, 'Product edited succesfully!')
             return redirect(reverse('product_details', args=[product.id]))
         else:
             messages.error(request, 'Failed to edit product. \
