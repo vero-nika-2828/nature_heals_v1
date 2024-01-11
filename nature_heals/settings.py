@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fj5&b2*lw+_yq-)odqf@reag%@l&svhx$$@qhuycl)$=4)b07t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['nature-heals.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['nature-heals-89c8f732e59d.herokuapp.com', 'localhost']
 
 
 # Application definition
