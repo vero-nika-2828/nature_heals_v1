@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fj5&b2*lw+_yq-)odqf@reag%@l&svhx$$@qhuycl)$=4)b07t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vnnh2810-nature-heals.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['nature-heals.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -178,7 +178,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+    ]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
