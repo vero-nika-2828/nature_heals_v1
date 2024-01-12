@@ -686,6 +686,10 @@ body{
     margin-bottom: 0;
   }
 
+  .center-content-lg{
+    justify-content: center!important;
+  }
+
 
 }
 
