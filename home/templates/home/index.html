@@ -57,7 +57,7 @@
         <div class="row margin-bottom">
             <div class="col text-center margin-bottom ">
                 <h2 class="margin-bottom margin-top-20px">Our promise</h2>
-                <div>
+                <div class="d-flex justify-content-center">
                     <div>
                         <i class="fa-solid fa-leaf"></i>
                         <br>
@@ -81,7 +81,40 @@
         <div class="row">
             <div class="col text-center">
                 <h2> Help with a variety of health issues </h2>
-                <div></div>
+                <div class="row">
+                    <div>
+                        <div class="all-products-card h-100 justify-content-center"> 
+                            <img src="/media/noimage.JPG" class="card-img-top" alt="">
+    
+                            <div class="card-footer text-center">
+                                <a href="{% url 'products' %}?subcategory=imunity_boosters">Cold and Flu</a>
+                            </div>
+                        </div>          
+                    </div>
+
+                    <div>
+                        <div class="all-products-card h-100 justify-content-center"> 
+                            <img src="/media/noimage.JPG" class="card-img-top" alt="">
+    
+                            <div class="card-footer text-center">
+                                <a href="{% url 'products' %}?subcategory=anti-inflammatory">Pain relief</a>
+                            </div>
+                        </div>  
+                        
+                    </div>
+
+                    <div>
+                        <div class="all-products-card h-100 justify-content-center"> 
+                                <img src="/media/noimage.JPG" class="card-img-top" alt="">
+        
+                                <div class="card-footer text-center">
+                                    <a href="{% url 'products' %}?subcategory=inner_comfort_enhancers">Stress relief</a>
+                                </div>
+        
+                        </div>  
+
+                    </div>
+                </div>
                 <a class="btn main-btn">Shop now</a>
             </div>
         </div>
