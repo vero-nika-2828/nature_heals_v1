@@ -122,6 +122,7 @@
         <div class="row d-lg-none d-flex">
             <div class="col">
                 {% if bag_items %}
+                {% for item in bag_items %}
                     <div class="row">
                         <div class="col justify-content-center">
                             <div class="header-name row"> {{ item.product.friendly_name }} {{ item.product.size }} <br> <span> {{item.product.sku |upper}} </div>
@@ -164,6 +165,7 @@
                         </div>
 
                     </div>
+                {% endfor %}    
                 {% else %}
                     <p>Your bag is empty.</p>
                     <a href="{% url 'products' %}" class="btn continue-btn">Continue shopping</a>
