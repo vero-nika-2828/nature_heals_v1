@@ -103,7 +103,7 @@
                 {% endif %}
             </div>
 
-            <div class="col-sm-12 col-md-12 col-lg-3 mb-3 ps-5">
+            <div class="col-sm-12 col-md-12 col-lg-3 mb-3 ps-5 d-none d-lg-flex">
                 <div class="checkout-summary-box">
                     <h5><strong>Summary</strong></h5>
                     <hr>
@@ -137,7 +137,7 @@
                                             <form class="form update-form quantity-form-margin" action="{% url 'edit_bag' item.item_id %}" method="POST">
                                                 {% csrf_token %}
                                                 <div class="row ms-1 mb-3 bag-input-group-container">
-                                                    <div class="input-group bag-input-group-wrapper w-100 mb-3 justify-content-center align-items-center bag-quantity-input">
+                                                    <div class="input-group bag-input-group-wrapper w-50 mb-3 justify-content-center align-items-center bag-quantity-input">
                                                         <div class="input-group-prepend">
                                                             <button class="btn update-link  decrement-qty decrement{{ item.item_id }}" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                                 <i class="fa-solid fa-minus"></i>
@@ -158,8 +158,7 @@
                                             <a class="remove-link btn red-text" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                         </div>
 
-                                        
-                                        <div class="row">Remove btn</div>
+                                
                                         <div class="row">£{{item.product.price | calc_subtotal:item.quantity }}</div>
 
                         
@@ -173,7 +172,7 @@
                         </div>
                     {% endfor %}   
                     
-                    <div class="row">
+                    <div class="row mt-5">
                         <h6>Bag Total: £{{ total|floatformat:2 }}</h6>
                         <h6>Delivery: £{{ delivery|floatformat:2}}</h6>
                         <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h4>
