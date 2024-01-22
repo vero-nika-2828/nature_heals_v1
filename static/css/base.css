@@ -360,8 +360,7 @@ body{
 }
 
 .remove-link{
-  margin-top: -50px;
-  margin-left: 20px;
+  margin-top: -40px;
 }
 
 
@@ -381,11 +380,6 @@ body{
 .input-group-container{
   padding: 40px 0 40px 1px;
   line-height: 50px;
-}
-
-.bag-input-group-container{
-  padding-left: 20%;
-
 }
 
 .highlighted-text{
@@ -690,6 +684,15 @@ body{
     justify-content: center!important;
   }
 
+  .bag-input-group-container{
+    padding-left: 20%;
+  
+  }
+
+  
+.remove-link{
+  margin-top: -50px;
+}
 
 }
 
