@@ -148,12 +148,6 @@ else:
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 
-
-
-
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 

@@ -1,3 +1,81 @@
+
+# *Nature heals Cosmetics and Essential Oils* 
+
+![Overview]()
+
+
+Link to the page: [Nature Heals](https://nature-heals-89c8f732e59d.herokuapp.com/)
+
+
+# Project Overview 
+Nature heals cosmetics and essential oils is devoted to improving people's health and state of wellbeing through nature. They strongly believe in its healing power and their aim is to use it for the benefit of others. Therefore their products are made of natural ingredients and range from creams to syrups and essential oils which are enriched with the extracts from herbs, flowers and fruits.
+All of the ingredients are selected carefully to combat a variety of problems such as inflammation, immunity, stress, concentration, sleep or skin problems.
+Their high quality products can be used not only to help with the existing problems but as a prevention of a variety of diseases.
+
+
+
+# Table of Content  //update
+
+- [Project Overview](#project-overview)
+- [Project objectives](#project-objectives)
+   - [User Goals](#user-goals)
+   - [Site Owner Goals](#site-owner-goals)  
+- [User Experience](#user-experience)
+   - [Target user](#target-user)  
+   - [First Time Visitor Goals](#first-time-visitor-goals)
+   - [Returning Visitor Goals](#returning-visitor-goals)
+   - [Returning Visitor Goals](#site-owner's-goals)      
+- [Design](#design)  
+   - [Design choices](#design-choicesr)  
+   - [Color Scheme](#color-scheme)
+   - [Typography](#typography)  
+   - [Imagery](#imagery)    
+- [Database Scheme & User Journey](#database-scheme-&-user-journey)
+   - [User Journey](#user-journey) 
+   - [Database Scheme](#database-scheme) 
+- [Wireframes](#wireframes)
+- [Features](#features)
+   - [Register page](#register-page)
+   - [Log in page](#log-in-page)
+   - [My projects](#my-projects)
+   - [Home page](#home-page)
+   - [Search](#search)
+   - [Card](#card)
+   - [Add Project Form](#add-project-form)
+   - [Edit Project Form](#edit-project-form)
+   - [Project page](#project-page)
+   - [Comment](#cooment)
+   - [Categories (admin only)](#categories)
+   - [About page](#about-page)
+   - [Log out](#log-out)
+   - [404 and 505 error page](#404-and-505-error-page)
+   - [Logo and Navigations Bar](#logo-and-navigations-bar)
+- [Technologies Used](#technologies-used)
+   - [Languages Used](#languages-used)
+   - [Frameworks, libraries and programs used](#frameworks,-libraries-and-programs-used)
+- [Testing](#testing)
+- [Deployment & local development](#deployment-&-local-development)
+   - [Deployment](#deployment)
+   - [Local Development](#local-development)
+      - [How to Fork](#how-to-fork)
+      - [How to Clone](#how-to-clone)
+- [Credits](#credits)
+- [Aknowledgement](#aknowledgement)
+
+# Project objectives 
+
+
+## User Goals 
+
+### Target user 
+
+* People seeking natural remedies to their problems 
+* People who want to improve their health 
+* People who want to use cosmetics based on natural ingredients
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Veronika Nemergutova,

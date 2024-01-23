@@ -136,7 +136,7 @@
                                         <div class="row">
                                             <form class="form update-form quantity-form-margin" action="{% url 'edit_bag' item.item_id %}" method="POST">
                                                 {% csrf_token %}
-                                                <div class="row ms-1 mb-3 bag-input-group-container">
+                                                <div class="row mt-2 mb-3 bag-input-group-container">
                                                     <div class="input-group bag-input-group-wrapper w-50 mb-3 justify-content-center align-items-center bag-quantity-input">
                                                         <div class="input-group-prepend">
                                                             <button class="btn update-link  decrement-qty decrement{{ item.item_id }}" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
