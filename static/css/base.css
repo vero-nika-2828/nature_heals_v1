@@ -218,6 +218,16 @@ body{
   padding-top: 20px;
 }
 
+.quote{
+  height: 100px;
+  background:  url("/media/quote_background") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 /*Product cards styling*/
 .card-outline{
   box-shadow: 0 0 2px 2px #C8DDD2;
