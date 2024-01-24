@@ -21,6 +21,12 @@ body{
   color:white;
 }
 
+.large{
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
 .btn:disabled{
   border-color: white!important;
 }
@@ -220,8 +226,8 @@ body{
 }
 
 .quote{
-  height: 100px;
-  background:  url("/media/quote_background.jpg") no-repeat center center;
+  height: 200px;
+  background:  url("/media/quote-background.jpg") no-repeat center center;
   background-size: cover;
   width: 100%;
   position: relative;
