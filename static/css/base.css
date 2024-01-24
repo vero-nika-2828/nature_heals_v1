@@ -229,6 +229,12 @@ body{
   justify-content: center;
 }
 
+.promise-icon{
+  color:#0B6532;
+  font-size: 30px;
+
+}
+
 /*Product cards styling*/
 .card-outline{
   box-shadow: 0 0 2px 2px #C8DDD2;
