@@ -19,7 +19,7 @@
                     <div class="col text-center margin-bottom ">
                         <h2 class="margin-bottom margin-top-20px">Our promise</h2>
                         <div class="d-flex justify-content-center">
-                            <div class="px-3">
+                            <div class="px-0">
                                 <i class="fa-solid fa-leaf promise-icon"></i>
                                 <br>
                                 <p>100% natural ingredients</p>
@@ -29,7 +29,7 @@
                                 <br>
                                 <p>Cruelty free</p>
                             </div>
-                            <div class="px-3">
+                            <div class="pt-3 pr-5">
                                 <i class="fa-solid fa-mountain-sun promise-icon"></i>
                                 <br>
                                 <p>Eco Friendly</p>
@@ -40,11 +40,47 @@
 
 
                         
-                <div class="row margin-bottom quote">
+                <div class="row margin-bottom">
                     <div class="col text-center margin-bottom pt-5 quote">
                         <div class="d-flex justify-content-center white large">
                             "I firmly believe that nature brings solace in all troubles." <br> Anne Frank  
                         </div> 
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="mb-3">
+                        <div class="all-products-card h-100 justify-content-center"> 
+                            <img src="breathing.jpg" class="card-img-top" alt="Breathing">
+    
+                            <div class="card-footer text-center">
+                                <a href="{% url 'products' %}?subcategory=essential_oils">Breathing</a>
+                            </div>
+                        </div>  
+                        
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="all-products-card h-100 justify-content-center"> 
+                                <img src="oily-skin.jpg" class="card-img-top" alt="Oily skin">
+        
+                                <div class="card-footer text-center">
+                                    <a class="dropdown-item" href="{% url 'products' %}?subcategory=oily_skin">Oily Skin</a>
+                                </div>
+        
+                        </div>  
+
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="all-products-card h-100 justify-content-center"> 
+                            <img src="dry-skin.jpg" class="card-img-top" alt="Dry skin">
+    
+                            <div class="card-footer text-center">
+                                <a class="dropdown-item" href="{% url 'products' %}?subcategory=dry_skin">Dry Skin</a>
+                            </div>
+                        </div>  
                     </div>
                 </div>
 
