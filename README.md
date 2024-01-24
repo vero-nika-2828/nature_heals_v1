@@ -14,7 +14,7 @@ Their high quality products can be used not only to help with the existing probl
 
 
 
-# Table of Content  //update
+# Table of Content
 
 - [Project Overview](#project-overview)
 - [Project objectives](#project-objectives)
@@ -22,11 +22,13 @@ Their high quality products can be used not only to help with the existing probl
    - [Site Owner Goals](#site-owner-goals)  
 - [User Experience](#user-experience)
    - [Target user](#target-user)  
-   - [First Time Visitor Goals](#first-time-visitor-goals)
-   - [Returning Visitor Goals](#returning-visitor-goals)
-   - [Returning Visitor Goals](#site-owner's-goals)      
+   - [Navigation ](#navigation)
+   - [Product viewing, searching and selecting](#product-viewing-searching-and-selecting)
+   - [Selecting, Purchasing products and checkout](#selecting-purchasing-products-and-checkout)
+   - [Product management (admin only)](#product-management-admin-only)
+   - [User’s activity  management (admin only)](#users-activity-management-admin-only)      
 - [Design](#design)  
-   - [Design choices](#design-choicesr)  
+   - [Design choices](#design-choices)  
    - [Color Scheme](#color-scheme)
    - [Typography](#typography)  
    - [Imagery](#imagery)    
@@ -72,6 +74,69 @@ Their high quality products can be used not only to help with the existing probl
 * People seeking natural remedies to their problems 
 * People who want to improve their health 
 * People who want to use cosmetics based on natural ingredients
+
+
+### Navigation 
+
+1.	I want it to be easy to register, login and logout 
+2.	I want it to be easy to access my profile 
+3.	I want it to be easy to access my Wishlist
+4.	I want to be notified when I click on something and the action is successful
+5.	I want to be notified when I select something 
+6.	I want to be able to navigate site easily and that links and buttons to work
+7.	I want to access some specific products easily  
+
+
+### Product viewing, searching and selecting  
+
+8.	I want to see all available products
+9.	I want to be able to quickly access a specific product (categories, Wishlist) 
+10.	I want to be able to search product directly
+11.	I want to be able to sort product based on price, category name or size
+12.	I want be able to find out more about the product 
+13.	I want to see what other people think about the product
+14.	I want to see what the product consists of 
+15.	I want to be able to write my opinion about the product
+16.	I want to be able to edit my review
+17.	I want to be able to delete review 
+18.	I want to be able to add items to my wishlist 
+19.	I want to be able to delete items from my wishlisth
+
+### Selecting, Purchasing products and checkout
+
+20.	I want to be able to see what products I have selected for payment
+21.	I want to be able to see the total payment amount of  selected  products easily at any time
+22.	I want to be able to add or remove items from my shopping bag easily
+23.	I want to see the summary of the total payment amount for items I have selected
+24.	I want confirmation whether my requests on the website were completed
+25.	I want to see if there are any discounts 
+26.	I want to see my previous purchases
+27.	I want to be able to save my delivery information
+28.	I want to be able to save products so I can buy them later
+29.	I want to be able to see my products before I confirm the payment 
+30.	I want the payment to be secure
+31.	I want confirmation whether my purchase has been successful
+32.	I want to be able to buy products even when I am not registered 
+
+### Product management (admin only)
+
+33.	I want to be able to add products on the website itself.
+34.	I want to be able to edit products on the website itself.
+35.	I want to be able to delete products on the website itself.
+
+### User’s activity  management (admin only)
+
+36.	I want users to register and create their account. 
+37.	I want to be able to view, edit or delete user’s comments.
+38.	I want only logged in users to be able to add the comment 
+39.	I want to receive a warning if when I unintentionally click delete button.
+40.	I want only logged in users to be able to user their Wishlist
+41.	I want users to have pleasant experience on my site and make it easy for them to purchase product.
+42.	I want users to be able to access my site on variety of devices 
+43.	I want users to be able to access my site on variety of browsers
+44.	I want users to provide they delivery address before they complete the purchase
+45.	I want the user to be notified when the payment details, they provide, are not correct 
+46.	Prevent errors with payment (e.g. prevent placing order but stopping payment, or charging the customer twice)
 
 
 

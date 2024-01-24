@@ -624,6 +624,17 @@ body{
 
 
 @media (min-width: 768px) {
+  .quantity-input-width{
+    min-width: 30px;
+    margin-left: 5px;
+  }
+  .input-group-display{
+    display: inline;
+    max-width: 20%!important;
+  }
+}
+
+@media (min-width: 768px) {
   .products-view{
     margin: 0 3rem;
   }
@@ -645,6 +656,15 @@ body{
   
   .checkout-bottom-margin{
     margin-bottom: 0;
+  }
+
+  .quantity-input-width{
+    min-width: unset;
+    margin-left: unset;
+  }
+  .input-group-display{
+    display: unset;
+    max-width: unset!important;
   }
 
 
