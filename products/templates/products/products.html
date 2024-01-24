@@ -17,7 +17,7 @@
                                 <a href="{% url 'remove_from_wishlist' product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart" alt="remove"></i></a>
                             {% endif %}
 
-                            <img src="/media/{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}">  
+                            <img src="/media/{{product.image.url}}" class="card-img-top" alt="{{product.friendly_name}}">  
                         </div>  
                     {% else %}
                         <div class="image-div">

@@ -220,7 +220,7 @@ body{
 
 .quote{
   height: 100px;
-  background:  url("/media/quote_background") no-repeat center center;
+  background:  url("/media/quote_background.jpg") no-repeat center center;
   background-size: cover;
   width: 100%;
   position: relative;
@@ -623,9 +623,9 @@ body{
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 360px) {
   .quantity-input-width{
-    min-width: 30px;
+    min-width: 50px;
     margin-left: 5px;
   }
   .input-group-display{
@@ -664,7 +664,6 @@ body{
   }
   .input-group-display{
     display: unset;
-    max-width: unset!important;
   }
 
 
