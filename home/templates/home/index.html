@@ -15,42 +15,7 @@
                     </div>
                 </div>
 
-                <div class="row margin-bottom popular-products-box">
-                    <div class="col-12 text-center margin-bottom">
-                        <div calss="row">
-                            <div class="col text-center">
-                                <h2 class="margin-bottom margin-top-20px">Popular products</h2>
-                            </div>
 
-                        </div>
-
-                        <div class=" row">
-                            {% for product in popular_products %}
-                            <div class="col-sm-3 col-md-2 margin-bottom product-container">
-                                <div class="all-products-card card card-outline h-100 justify-content-center">
-                                    {% if product.image %}
-                                        <div class="image-div">
-                                                <img src="{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}">  
-                                        </div>  
-                                    {% else %}
-                                        <div class="image-div">
-                                    
-                                            <img src="noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
-                                        </div>
-                                    {% endif %}
-               
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">{{product.friendly_name|title}}</h5>
-                                        <p class="card-text">Star rating placeholder</p>
-                
-                                    </div>                      
-                                </div>   
-                                
-                            </div>
-                            {% endfor %}
-                        </div>   
-                    </div>
-                </div>
 
                 <div class="row margin-bottom o">
                     <div class="col text-center margin-bottom">

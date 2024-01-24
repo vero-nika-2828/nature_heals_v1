@@ -553,6 +553,14 @@ body{
   margin-right: 30px;
 }
 
+.negative-margin-top{
+  margin-top: -25px;
+}
+
+.position-center{
+  justify-content: center!important;
+}
+
 .extra-padding{
   padding-top: 30px;
 }
