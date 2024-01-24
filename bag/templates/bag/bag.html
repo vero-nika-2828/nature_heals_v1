@@ -128,7 +128,13 @@
                     {% for item in bag_items %}
                         <div class="row">
                             <div class="col justify-content-center">
-                                <div class="header-name row"> <span>{{ item.product.friendly_name }} {{ item.product.size }}</span> <br> <span> {{item.product.sku |upper}} </div>
+                                <div class="header-name row"> 
+                                    <div class="text-center">
+                                        {{ item.product.friendly_name }} {{ item.product.size }}
+                                        <br>{{item.product.sku |upper}} 
+                                    </div> 
+
+                                    </div>
                                 <div class="row image-price-subtotal">
                                     <div class="image col-6"> {{item.product.image}} </div>
                                     <div class="other info col-6">                           
