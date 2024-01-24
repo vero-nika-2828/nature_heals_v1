@@ -190,6 +190,7 @@ body{
   position: relative;
   display: flex;
   justify-content: center;
+  top: -25px;
 }
 
 .text-box{
