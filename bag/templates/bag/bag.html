@@ -35,7 +35,7 @@
                                         <div class="col-4 w-100">
                                             {% if item.product.image %}
                                             <div class="image-div w-100">
-                                                <img class="image-fluid w-100 bag-image" src="/media/{{ item.product.image.url }}" alt="{{ item.product.friendly_name }}">
+                                                <img class="image-fluid w-100 bag-image" src="{{ item.product.image.url }}" alt="{{ item.product.friendly_name }}">
                                             </div>  
                                         {% else %}
                                         <div class="image-div">                  
