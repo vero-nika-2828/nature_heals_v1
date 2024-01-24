@@ -20,7 +20,7 @@
                                 <a href="{% url 'remove_from_wishlist' wish.product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart" alt="remove"></i></a>
                              {% endif %}
 
-                            <img src="/media/{{wish.product.image}}" class="card-img-top" alt="{{wish.product.friendly_name}}">
+                            <img src="{{wish.product.image.url}}" class="card-img-top" alt="{{wish.product.friendly_name}}">
       
                         </div>  
                     {% else %}
@@ -31,7 +31,7 @@
                              <a href="{% url 'remove_from_wishlist' wish.product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart" alt="remove"></i></a>
                         {% endif %}
                         
-                        <img src="/media/noimage.JPG" class="card-img-top" alt="{{wish.product.friendly_name}}">
+                        <img src="noimage.JPG" class="card-img-top" alt="{{wish.product.friendly_name}}">
                             
                     </div>
                     {% endif %}
