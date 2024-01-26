@@ -128,15 +128,18 @@
                     {% for item in bag_items %}
                         <div class="row">
                             <div class="col justify-content-center">
-                                <div class="header-name row"> 
+                                <div class="header-name row mb-3"> 
                                     <div class="text-center">
-                                        {{ item.product.friendly_name }} {{ item.product.size }}
-                                        <br>{{item.product.sku |upper}} 
+                                        <strong>
+                                            {{ item.product.friendly_name }} {{ item.product.size }}
+                                            <br>{{item.product.sku |upper}} 
+                                        </strong>
                                     </div> 
 
                                     </div>
                                 <div class="row image-price-subtotal">
-                                    <div class="image col-6"> <img src="{{item.product.image.url}} " alt="product image"></div>
+                                    <div class="image col-6 w-100"> 
+                                        <img src="{{item.product.image.url}}" class="bag-image" alt="product image"></div>
                                     <div class="other info col-6">                           
                                         <div class="row">{{ item.product.price }}/per unit</div>
                                         <div class="row">
