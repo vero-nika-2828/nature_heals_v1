@@ -138,9 +138,9 @@
 
                                     </div>
                                 <div class="row image-price-subtotal">
-                                    <div class="image col-sm-12 col-md-6 w-50 d-flex justify-content-center"> 
+                                    <div class="image col-sm-12 col-md-6 w-100 d-flex justify-content-center"> 
                                         <img src="{{item.product.image.url}}" class="bag-image" alt="product image"></div>
-                                    <div class="other info col-sm-12 col-md-6 w-50">                           
+                                    <div class="other info col-sm-12 col-md-6 w-100 text-center">                           
                                         <div class="col">{{ item.product.price }}/per unit</div>
                                         <div class="col">
                                             <form class="form update-form quantity-form-margin" action="{% url 'edit_bag' item.item_id %}" method="POST">
