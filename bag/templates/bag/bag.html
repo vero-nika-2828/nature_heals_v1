@@ -138,15 +138,15 @@
 
                                     </div>
                                 <div class="row image-price-subtotal">
-                                    <div class="image col-6 w-50"> 
+                                    <div class="image col-sm-12 col-md-6 w-50 d-flex"> 
                                         <img src="{{item.product.image.url}}" class="bag-image" alt="product image"></div>
-                                    <div class="other info col-6">                           
+                                    <div class="other info col-sm-12 col-md-6 w-50">                           
                                         <div class="row">{{ item.product.price }}/per unit</div>
                                         <div class="row">
                                             <form class="form update-form quantity-form-margin" action="{% url 'edit_bag' item.item_id %}" method="POST">
                                                 {% csrf_token %}
                                                 <div class="row mt-2 mb-3 bag-input-group-container">
-                                                    <div class="input-group bag-input-group-wrapper w-50 mb-3 justify-content-center align-items-center bag-quantity-input input-group-display">
+                                                    <div class="input-group bag-input-group-wrapper w-100 mb-3 justify-content-center align-items-center bag-quantity-input">
                                                         <div class="input-group-prepend">
                                                             <button class="btn update-link  decrement-qty decrement{{ item.item_id }}" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                                 <i class="fa-solid fa-minus"></i>
