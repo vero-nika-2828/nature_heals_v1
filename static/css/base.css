@@ -384,7 +384,7 @@ body{
 
 .remove-link{
   margin-top: -40px;
-  margin-left: -25%;
+  /*margin-left: -25%;*/
 }
 
 
@@ -493,7 +493,7 @@ body{
 .bag-image{
   height: 150px;
   object-fit: cover;
-  
+
 }
 
 
