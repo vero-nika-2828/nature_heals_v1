@@ -181,8 +181,8 @@
                         </div>
                     {% endfor %}   
                     
-                    <div class="row mt-5">
-                        <div class="col justify-content-center">
+                    <div class="row mt-5 ms-2">
+                        <div class="col justify-content-center text-center">
                             <h6>Bag Total: £{{ total|floatformat:2 }}</h6>
                             <h6>Delivery: £{{ delivery|floatformat:2}}</h6>
                             <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h4>
@@ -190,8 +190,8 @@
                                 <p class="small-text">Spend £{{ free_delivery_delta }} more for free delivery</p>
                             {% endif %}
 
-                            <a href="{% url 'products' %}" class="btn continue-btn w-25 col-sm-6"><strong>Continue Shopping</strong></a>
-                            <a href="{% url 'checkout' %}" class="btn main-btn w-25 "><strong>Secure Checkout</strong></a>
+                            <a href="{% url 'products' %}" class="btn continue-btn w-50 mb-3 col-sm-6"><strong>Continue Shopping</strong></a>
+                            <a href="{% url 'checkout' %}" class="btn main-btn w-50 "><strong>Secure Checkout</strong></a>
                         </div>
 
                     </div>

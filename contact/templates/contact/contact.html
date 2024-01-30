@@ -17,7 +17,7 @@
 
         <div class="row">
             <!--Contact Form-->
-            <div class="col-12 col-lg-5 offset-lg-1 checkout-summary-box profile-margin">           
+            <div class="col-10 offset-1 col-lg-6 offset-lg-3 checkout-summary-box profile-margin">           
                 <form class="mt-3" action="{% url 'contact' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
