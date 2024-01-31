@@ -1,6 +1,5 @@
 from django import forms
 from django.http import request, HttpRequest
-from .widgets import CustomClearableFileInput
 from .models import Contact
 
 
