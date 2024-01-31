@@ -20,7 +20,7 @@
             <div class="col-10 offset-1 col-lg-6 offset-lg-3 checkout-summary-box profile-margin">           
                 <form class="mt-3" action="{% url 'contact' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
-                    {{ form|crispy }}
+                    {{ contact_form|crispy }}
                     <button class="btn btn-black continue-btn mt-3">Send message</button>
                 </form>
             </div>
