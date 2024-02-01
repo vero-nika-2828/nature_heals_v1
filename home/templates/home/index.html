@@ -86,20 +86,24 @@
                 <div class="row">
                     <h2 class="text-center mb-5"> Help with a variety of health issues </h2>
                      
-                        <div class="col-sm-12 col-md-4 mb-3">
+                        <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center"> 
-                                    <img src="{{ MEDIA_URL }}flu.jpg" class="card-img-top" alt="Cold and Flu">
-            
+                                    <a href="{% url 'products' %}?subcategory=imunity_boosters">
+                                        <img src="{{ MEDIA_URL }}flu.jpg" class="card-img-top remedies-image" alt="Cold and Flu">
+                                    </a>
+
                                     <div class="card-footer text-center remedy-link">
                                         <a href="{% url 'products' %}?subcategory=imunity_boosters">Cold and Flu</a>
                                     </div>
                                 </div>  
                         </div>
         
-                        <div class="col-sm-12 col-md-4 mb-3 ">
+                        <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center"> 
-                                    <img src="{{ MEDIA_URL }}pain-relief.jpg" class="card-img-top" alt="Pain relief">
-            
+                                    <a href="{% url 'products' %}?subcategory=anti-inflammatory"> 
+                                       <img src="{{ MEDIA_URL }}pain-relief.jpg" class="card-img-top remedies-image" alt="Pain relief">
+                                    </a>
+                    
                                     <div class="card-footer text-center remedy-link">
                                         <a href="{% url 'products' %}?subcategory=anti-inflammatory">Pain relief</a>
                                     </div>
@@ -107,9 +111,11 @@
                                 
                             </div>
         
-                        <div class="col-sm-12 col-md-4 mb-3">
+                        <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center"> 
-                                        <a><img src="{{ MEDIA_URL }}stress-relief.jpg" class="card-img-top" alt="Stress relief"></a>
+                                        <a href="{% url 'products' %}?subcategory=inner_comfort_enhancers">
+                                            <img src="{{ MEDIA_URL }}stress-relief.jpg" class="card-img-top remedies-image" alt="Stress relief">
+                                        </a>
                 
                                         <div class="card-footer text-center remedy-link">
                                             <a href="{% url 'products' %}?subcategory=inner_comfort_enhancers">Stress relief</a>
@@ -121,9 +127,11 @@
                 </div>
         
                 <div class="row">
-                    <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center"> 
-                                    <img src="{{ MEDIA_URL }}breathing.jpg" class="card-img-top" alt="Breathing">
+                                    <a href="{% url 'products' %}?subcategory=essential_oils">
+                                        <img src="{{ MEDIA_URL }}breathing.jpg" class="card-img-top remedies-image" alt="Breathing">
+                                    </a>
             
                                     <div class="card-footer text-center remedy-link">
                                         <a href="{% url 'products' %}?subcategory=essential_oils">Breathing</a>
@@ -132,11 +140,13 @@
                                 
                     </div>
         
-                    <div class="col-sm-12 col-md-4 mb-3 remedy-link">
+                    <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center"> 
-                                        <img src="{{ MEDIA_URL }}oily-skin.jpg" class="card-img-top" alt="Oily skin">
+                                        <a href="{% url 'products' %}?subcategory=oily_skin">
+                                            <img src="{{ MEDIA_URL }}oily-skin.jpg" class="card-img-top remedies-image" alt="Oily skin">
+                                        </a>
                 
-                                        <div class="card-footer text-center">
+                                        <div class="card-footer text-center remedy-link">
                                             <a class="dropdown-item" href="{% url 'products' %}?subcategory=oily_skin">Oily Skin</a>
                                         </div>
                 
@@ -144,9 +154,11 @@
         
                     </div>
         
-                    <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center"> 
-                                    <img src="{{ MEDIA_URL }}dry-skin.jpg" class="card-img-top" alt="Dry skin">
+                                    <a href="{% url 'products' %}?subcategory=dry_skin">
+                                        <img src="{{ MEDIA_URL }}dry-skin.jpg" class="card-img-top remedies-image" alt="Dry skin">
+                                    </a>
             
                                     <div class="card-footer text-center remedy-link">
                                         <a class="dropdown-item" href="{% url 'products' %}?subcategory=dry_skin">Dry Skin</a>

@@ -244,7 +244,7 @@ body{
   font-size: 30px;
 }
 
-.remedy-link{
+.remedy-link a{
   text-decoration: none;
   color: #0B6532;
   font-weight: 600;
