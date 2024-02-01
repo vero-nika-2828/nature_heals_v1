@@ -1,6 +1,11 @@
 /*General site styling*/
 body{
   padding-top: 92px;
+  font-family: 'Lato', sans-serif;
+}
+
+h2,h3{
+  font-family: 'Handlee', cursive;
 }
 
 .small-text{
@@ -248,6 +253,7 @@ body{
   text-decoration: none;
   color: #0B6532;
   font-weight: 600;
+  font-size: 30px;
 }
 
 /*Product cards styling*/
