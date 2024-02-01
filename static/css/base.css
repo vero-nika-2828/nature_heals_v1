@@ -242,7 +242,12 @@ body{
 .promise-icon{
   color:#0B6532;
   font-size: 30px;
+}
 
+.remedy-link{
+  text-decoration: none;
+  color: #0B6532;
+  font-weight: 600;
 }
 
 /*Product cards styling*/

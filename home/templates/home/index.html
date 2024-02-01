@@ -30,12 +30,12 @@
                                 <div class="all-products-card card card-outline h-100">
                                     {% if product.image %}
                                         <div class="image-div">
-                                                <img src="{{product.image}}" class="card-img-top" alt="{{product.friendly_name}}">  
+                                                <img src="{{product.image.url}}" class="card-img-top" alt="{{product.friendly_name}}">  
                                         </div>  
                                     {% else %}
                                         <div class="image-div">
                                     
-                                            <img src="noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
+                                            <img src="{{ MEDIA_URL }}noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
                                         </div>
                                     {% endif %}
                
@@ -85,13 +85,12 @@
 
                 <div class="row">
                     <h2 class="text-center mb-5"> Help with a variety of health issues </h2>
-                    <div class="col text-center d-flex justify-content-center">
-                        
+                     
                         <div class="col-sm-12 col-md-4 mb-3">
                                 <div class="all-products-card h-100 justify-content-center"> 
                                     <img src="{{ MEDIA_URL }}flu.jpg" class="card-img-top" alt="Cold and Flu">
             
-                                    <div class="card-footer text-center">
+                                    <div class="card-footer text-center remedy-link">
                                         <a href="{% url 'products' %}?subcategory=imunity_boosters">Cold and Flu</a>
                                     </div>
                                 </div>  
@@ -101,7 +100,7 @@
                                 <div class="all-products-card h-100 justify-content-center"> 
                                     <img src="{{ MEDIA_URL }}pain-relief.jpg" class="card-img-top" alt="Pain relief">
             
-                                    <div class="card-footer text-center">
+                                    <div class="card-footer text-center remedy-link">
                                         <a href="{% url 'products' %}?subcategory=anti-inflammatory">Pain relief</a>
                                     </div>
                                 </div>  
@@ -110,16 +109,15 @@
         
                         <div class="col-sm-12 col-md-4 mb-3">
                                 <div class="all-products-card h-100 justify-content-center"> 
-                                        <img src="{{ MEDIA_URL }}stress-relief.jpg" class="card-img-top" alt="Stress relief">
+                                        <a><img src="{{ MEDIA_URL }}stress-relief.jpg" class="card-img-top" alt="Stress relief"></a>
                 
-                                        <div class="card-footer text-center">
+                                        <div class="card-footer text-center remedy-link">
                                             <a href="{% url 'products' %}?subcategory=inner_comfort_enhancers">Stress relief</a>
                                         </div>
                 
                                 </div>  
         
                         </div>
-                    </div>
                 </div>
         
                 <div class="row">
@@ -127,14 +125,14 @@
                                 <div class="all-products-card h-100 justify-content-center"> 
                                     <img src="{{ MEDIA_URL }}breathing.jpg" class="card-img-top" alt="Breathing">
             
-                                    <div class="card-footer text-center">
+                                    <div class="card-footer text-center remedy-link">
                                         <a href="{% url 'products' %}?subcategory=essential_oils">Breathing</a>
                                     </div>
                                 </div>  
                                 
                     </div>
         
-                    <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="col-sm-12 col-md-4 mb-3 remedy-link">
                                 <div class="all-products-card h-100 justify-content-center"> 
                                         <img src="{{ MEDIA_URL }}oily-skin.jpg" class="card-img-top" alt="Oily skin">
                 
@@ -150,7 +148,7 @@
                                 <div class="all-products-card h-100 justify-content-center"> 
                                     <img src="{{ MEDIA_URL }}dry-skin.jpg" class="card-img-top" alt="Dry skin">
             
-                                    <div class="card-footer text-center">
+                                    <div class="card-footer text-center remedy-link">
                                         <a class="dropdown-item" href="{% url 'products' %}?subcategory=dry_skin">Dry Skin</a>
                                     </div>
                                 </div>  

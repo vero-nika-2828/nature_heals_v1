@@ -20,7 +20,10 @@
             <!--Product details-->
            <div class="col-sm-12 col-md-6 px-4">
                <h2 class="text-center">{{product.friendly_name|title}} {{product.size}}</h2>  
-               <p>Star rating placeholder<span>review count:(xx reviews) | write a review</span></p>
+                <div>
+                    <i class="fa-regular fa-tag"></i> <p class="card-text">{{ product.category }}</p>
+                </div>
+              
                <hr>
                <p class="me-3">{{product.description}}</p>
                <p class="highlighted-text">£{{product.price}}</p> 

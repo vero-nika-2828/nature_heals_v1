@@ -11,18 +11,18 @@
     <div class="container h-100">
         <div class="row">
             <div class="col">
-                <h2 class="header-margins text-center">Contact us</h2>
+                <h2 class="margin-top text-center">Contact us</h2>
             </div>
         </div>
 
         <div class="row">
             <!--Contact Form-->
-            <div class="col-10 offset-1 col-lg-6 offset-lg- profile-margin mb-3"> 
+            <div class="col-10 offset-1 col-lg-6 offset-lg-3 profile-margin mb-3"> 
                 <p class="px-3">
                     If you would like to know more about Nature Heals or our products please write you message in the box bellow and we will get back to you.
                 </p>
             </div>
-            
+
             <div class="col-10 offset-1 col-lg-6 offset-lg-3 checkout-summary-box profile-margin">           
                 <form class="mt-3" action="{% url 'contact' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}

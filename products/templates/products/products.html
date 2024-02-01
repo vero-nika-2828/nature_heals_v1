@@ -32,7 +32,9 @@
                     {% endif %}
                         <div class="card-body text-center">
                             <h5 class="card-title">{{product.friendly_name|title}} <br>{{product.size}}</h5>
-                            <p class="card-text">Star rating placeholder</p>
+                            <div>
+                                <i class="fa-regular fa-tag"></i> <p class="card-text">{{ product.category }}</p>
+                            </div>
 
                         </div>
 
