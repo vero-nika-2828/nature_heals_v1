@@ -34,5 +34,6 @@ class ContactForm(forms.ModelForm):
             else:
                    placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'contact-form-margin'
             self.fields[field].label = False
 
