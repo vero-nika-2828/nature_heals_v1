@@ -2,6 +2,7 @@
 body{
   padding-top: 92px;
   font-family: 'Lato', sans-serif;
+  font-weight: 900;
 }
 
 h2,h3{
@@ -30,6 +31,7 @@ h2,h3{
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
+  font-family: 'Handlee', cursive;
 }
 
 .btn:disabled{
@@ -253,7 +255,7 @@ h2,h3{
   text-decoration: none;
   color: #0B6532;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 /*Product cards styling*/
