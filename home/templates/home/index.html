@@ -17,7 +17,7 @@
 
                 <div class="row margin-bottom popular-products-box negative-margin-top">
                     <div class="col-12 text-center margin-bottom">
-                        <div calss="row">
+                        <div>
                             <div class="col text-center">
                                 <h2 class="margin-bottom margin-top-20px">Popular products</h2>
                             </div>
@@ -30,26 +30,25 @@
                                 <div class="all-products-card card card-outline h-100">
                                     {% if product.image %}
                                         <div class="image-div">
-                                                <img src="{{product.image.url}}" class="card-img-top" alt="{{product.friendly_name}}">  
+                                                <a href="{% url 'products' %}"><img src="{{product.image.url}}" class="card-img-top" alt="{{product.friendly_name}}">  </a>
                                         </div>  
                                     {% else %}
-                                        <div class="image-div">
-                                    
-                                            <img src="{{ MEDIA_URL }}noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
+                                        <div class="image-div">                                    
+                                            <a href="{% url 'products' %}"><img src="{{ MEDIA_URL }}noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}"></a>
                                         </div>
                                     {% endif %}
                
                                     <div class="card-body text-center">
                                         <h5 class="card-title">{{product.friendly_name|title}}</h5>
-                                        <p class="card-text">Star rating placeholder</p>
+                                        <i class="fa-solid fa-tag green"></i><strong><p class="card-text">{{ product.category }}</p></strong></span>
                 
                                     </div>                      
                                 </div>   
                                 
                             </div>
-                            {% endfor %}
-                            <div class="col-sm-3 col-md-2 margin-bottom product-container justify-content-center"><a href="{% url 'products' %}" class="btn main-btn">View All Products</a></div>
-                        </div>   
+                            {% endfor %}  
+                        </div> 
+                        <div class="col-sm-3 col-md-2 margin-bottom product-container justify-content-center"><a href="{% url 'products' %}" class="btn main-btn">View All Products</a></div>
                     </div>
                 </div>
                 

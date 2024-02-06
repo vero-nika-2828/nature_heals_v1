@@ -2,54 +2,51 @@
         <ul class="navbar-nav w-100 center-content-lg">
           <!--Main nav menu-->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="all products">
               All Products
             </a>
             <!--Sort option-->
             <ul class="dropdown-menu dropdown-background" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="{% url 'products'%}">All Products</a></li>
-              <li><a class="dropdown-item" href="{% url 'products'%}?sort=price&direction=asc">By Price</a></li>
-              <li><a class="dropdown-item" href="{% url 'products'%}?sort=size&direction=asc">By Size</a></li>
-              <li><a class="dropdown-item" href="{% url 'products'%}?sort=category&direction=asc">By Category</a></li>
+              <li><a class="dropdown-item" href="{% url 'products'%}" aria-label="All products page link">All Products</a></li>
+              <li><a class="dropdown-item" href="{% url 'products'%}?sort=price&direction=asc" aria-label="sort by price">By Price</a></li>
+              <li><a class="dropdown-item" href="{% url 'products'%}?sort=size&direction=asc" aria-label="sort by size">By Size</a></li>
+              <li><a class="dropdown-item" href="{% url 'products'%}?sort=category&direction=asc" aria-label="sort by category">By Category</a></li>
             </ul>
           </li>
 
           <!--Subcategory Dropdown 1-->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Herbal Remedies
             </a>
             <!--Subcategory  Dropdown 1 Options-->
-            <ul class="dropdown-menu dropdown-background" aria-labelledby="navbarDropdownMenuLink">
+            <ul class="dropdown-menu dropdown-background" aria-labelledby="navbarDropdownMenuLink1">
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=immunity_boosters">Immunity Boosters</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=anti-inflammatory">Anti-inflammatory</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=inner_comfort_enhancers">Inner Comfort Enhancers</a></li>
-              <!--<li><a class="dropdown-item" href="{% url 'products' %}?subcategory=memory_concentration_boosters">Memory &amp; Concentration Boosters</a></li>-->
             </ul>
           </li>
 
           <!--Subcategory Dropdown 2-->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Aromatherapy
             </a>
             <!--Subcategory 2 Options-->
-            <ul class="dropdown-menu dropdown-background" aria-labelledby="navbarDropdownMenuLink">
+            <ul class="dropdown-menu dropdown-background" aria-labelledby="navbarDropdownMenuLink2">
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=essential_oils">Essential Oils</a></li>
             </ul>
           </li>
 
            <!--Subcategory Dropdown 3-->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Skin Care
             </a>
             <!--Subcategory Dropdown 3 Options-->
-            <ul class="dropdown-menu dropdown-background" aria-labelledby="navbarDropdownMenuLink">
+            <ul class="dropdown-menu dropdown-background" aria-labelledby="navbarDropdownMenuLink3">
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=oily_skin">Oily Skin</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=dry_skin">Dry Skin</a></li>
-              <!--<li><a class="dropdown-item" href="{% url 'products' %}?subcategory=mixed_skin">Mixed Skin</a></li>-->
-              <!--<li><a class="dropdown-item" href="{% url 'products' %}?subcategory=sensitive_skin">Sensitive Skin</a></li>-->
             </ul>
           </li>
 

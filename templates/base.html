@@ -65,7 +65,7 @@
         <nav class="navbar navbar-expand-lg bg-body">
           <div class="container-fluid navbar-background my-auto d-none d-lg-flex">
               <!--Logo-->
-              <a class="navbar-brand col-3 white-text" href="{% url 'home' %}">
+              <a class="navbar-brand col-3 white-text" href="{% url 'home' %}" aria-label="website logo">
                 <span><img class="logo-image" src="{{ MEDIA_URL }}logo_nature_heals.jpg" alt="nature heals logo"></span>
        
               </a>
@@ -85,9 +85,9 @@
           
             <!--Account dropdown-->            
             <ul class="navbar-nav my-auto justify-content-end col-3 extra-padding padding-right-20px">
-              <li class="nav-item dropdown text-center" role="button">
+              <li class="nav-item dropdown text-center">
 
-                <a class="nav-link btn no-border-radius " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link btn no-border-radius " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                 <div><i class="fa-solid fa-user"></i></div>
                   Account
                 </a>
@@ -97,19 +97,19 @@
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
                         <li class="justify-content-center">
-                          <a class="dropdown-item list-inline-item" href="{% url 'add_product' %}">Add product </a>
+                          <a class="dropdown-item list-inline-item" href="{% url 'add_product' %}" aria-label="Add product link">Add product </a>
                         </li>
                       {% endif %}
                       <li class="justify-content-center">
-                        <a class="dropdown-item list-inline-item" href="{% url 'profile' %}">Profile</a>
+                        <a class="dropdown-item list-inline-item" href="{% url 'profile' %}" aria-label="Profile link">Profile</a>
                         <a class="dropdown-item list-inline-item" href="{% url 'account_logout' %}">Logout</a>
                       </li>
                     {% else %}              
                       <li class="justify-content-center">
-                        <a class="dropdown-item list-inline-item" href="{% url 'account_login' %}"> Login </a>
+                        <a class="dropdown-item list-inline-item" href="{% url 'account_login' %}" aria-label="Login link"> Login </a>
                       </li>
                       <li class="justify-content-center">
-                        <a class="dropdown-item" href="{% url 'account_signup' %}">Register </a>
+                        <a class="dropdown-item" href="{% url 'account_signup' %}" aria-label="Register">Register </a>
                       </li>
 
                       {% endif %}
@@ -118,7 +118,7 @@
               
               <!--Wishlist-->  
               <li class="nav-item text-center">                 
-                <a class="nav-link" href="{% url 'wishlist' %}"> 
+                <a class="nav-link" href="{% url 'wishlist' %}" aria-label="Wishlistlink"> 
                   <div><i class="fa-solid fa-heart"></i></div>
                   Wishlist
                 </a>
@@ -126,7 +126,7 @@
             
             <!--Shopping bag--> 
               <li class="nav-item text-center">                 
-              <a class="nav-link" href="{% url 'bag' %}"> 
+              <a class="nav-link" href="{% url 'bag' %}" aria-label="bag link"> 
                 <div><i class="fa-sharp fa-solid fa-bag-shopping"></i></div>
                     <p>
                           <small>
