@@ -93,7 +93,7 @@
 
         <div class="col-md-12 mt-3">
             <div class="opening_hours col">
-                <div clas="row">
+                <div class="row">
                     <p class="pt-3 mb-1 font-weight-bold footer-small-text mb-2">Opening Hours</p>
                     <p class="footer-smaller-text py-0 my-0"><small>Monday - Friday: 09:00 - 17:30</small></p>
                     <p class="footer-smaller-text py-0 my-0"><small>Saturday: 10:00 - 16:00</small></p>
@@ -105,9 +105,12 @@
 
         <div class="row d-flex mt-5">
             <div>
+                <div class="row footer-small-text pt-3 mb-2">
+                    Product categories
+                </div>
+
                 <div class="row footer-smaller-text-links">
                     <ul class="footer-product-links ms-3">
-                        <p class="footer-small-text">Product categories</p>
                         <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=imunity_boosters" aria-label="Filter for immunity boosters">Immunity Boosters</a></li>
                         <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=anti-inflammatory" aria-label="Filter for anti-inflammatory products">Anti-inflammatory</a></li>
                         <li><a class="dropdown-item" href="{% url 'products' %}?subcategory=inner_comfort_enhancers" aria-label="Filter for inner comfort enhancers">Inner Comfort Enhancers</a></li>
@@ -119,9 +122,8 @@
              </div>
         </div>
     </div>
-    </div>
-
 </div>
+
 
 
 {% block postloadjs %}

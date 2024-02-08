@@ -1,4 +1,4 @@
-/*General site styling*/
+/*General site styling*/p
 body{
   padding-top: 92px;
   font-family: 'Lato', sans-serif;
@@ -281,6 +281,10 @@ h2,h3{
 
 .image-div{
   position: relative;
+}
+
+.card-text{
+  font-weight:800;
 }
 
 .card-footer{
