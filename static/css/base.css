@@ -324,6 +324,7 @@ h2,h3{
 
 .quantity-input{
   border: none;
+  padding: 0!important;
   width: max-content;
 }
 

@@ -15,7 +15,7 @@
                     {% if wish.product.image %}
                         <div class="image-div">
                             {% if product.id not in wishlist_product_list or not request.user.is_authenticated %}
-                                <a href="{% url 'add_to_wishlist' wish.product.id %}" class="float-end item-name"><i class="fa-regular fa-heart" alt="add"></i></i></a>
+                                <a href="{% url 'add_to_wishlist' wish.product.id %}" class="float-end item-name"><i class="fa-regular fa-heart" alt="add"></i></a>
                              {% else %}                          
                                 <a href="{% url 'remove_from_wishlist' wish.product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart" alt="remove"></i></a>
                              {% endif %}
@@ -31,7 +31,7 @@
                              <a href="{% url 'remove_from_wishlist' wish.product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart" alt="remove"></i></a>
                         {% endif %}
                         
-                        <img src="noimage.JPG" class="card-img-top" alt="{{wish.product.friendly_name}}">
+                        <img src="noimage.png" class="card-img-top" alt="{{wish.product.friendly_name}}">
                             
                     </div>
                     {% endif %}

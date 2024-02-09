@@ -12,9 +12,9 @@
                     {% if product.image %}
                         <div class="image-div">
                             {% if product.id not in wishlist_product_list or not request.user.is_authenticated %}
-                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-end wishlist-toggle"><i class="fa-regular fa-heart" ></i></i></a>
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-end wishlist-toggle"><i class="fa-regular fa-heart" ></i></a>
                             {% else %}
-                                <a href="{% url 'remove_from_wishlist' product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart" </i></a>
+                                <a href="{% url 'remove_from_wishlist' product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart"></i></a>
                             {% endif %}
 
                             <img src="{{product.image.url}}" class="card-img-top" alt="{{product.friendly_name}}">  
@@ -22,18 +22,18 @@
                     {% else %}
                         <div class="image-div">
                             {% if product.id not in wishlist_product_list or not request.user.is_authenticated %}
-                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-self-end wishlist-toggle"><i class="fa-regular fa-heart" ></i></i></a>
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="float-self-end wishlist-toggle"><i class="fa-regular fa-heart" ></i></a>
                             {% else %}
                                 <a href="{% url 'remove_from_wishlist' product.id %}" class="float-end wishlist-toggle"><i class="fa-solid fa-heart"></i></a>
                             {% endif %}
                         
-                            <img src="{{ MEDIA_URL }}noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}">
+                            <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="{{product.friendly_name}}">
                         </div>
                     {% endif %}
                         <div class="card-body text-center">
                             <h5 class="card-title">{{product.friendly_name|title}} <br>{{product.size}}</h5>
                             <div>
-                                <span><i class="fa-solid fa-tag green"></i></i></span> 
+                                <span><i class="fa-solid fa-tag green"></i></span> 
                                 <span><strong><p class="card-text">{{ product.category }}</p></strong></span>
                             </div>
 
