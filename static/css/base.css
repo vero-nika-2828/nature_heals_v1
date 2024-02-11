@@ -166,7 +166,7 @@ h2,h3{
   border: 1px solid white;
   color: #0B6532;
   font-weight: bolder;
-  background-color:white;
+  background-color: white;
 }
 
 .search-btn-mobile{
@@ -675,7 +675,7 @@ h2,h3{
 }
 
 .social-links:hover{
-  transform: translateZ(1.5);
+  transform: scale(1.5);
 }
 
 
@@ -839,6 +839,11 @@ h2,h3{
     }
   }
 
+@media (min-height: 800px) {
+  .set-min-height{
+    min-height: 60vh;
+  }
 
+}
 
   

@@ -31,7 +31,11 @@ SECRET_KEY='sznea$2jw_judae+#g+l3h245+(o*26pm0nz^*23)t8r311$y+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEVELOPMENT" in os.environ
 
-ALLOWED_HOSTS = ['nature-heals-89c8f732e59d.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    'nature-heals-89c8f732e59d.herokuapp.com',
+    'localhost',
+    '8000-veronika282-natureheals-2dp854eh6xv.ws-eu108.gitpod.io',
+]
 
 
 # Application definition
@@ -147,10 +151,11 @@ else:
     }
 
 
+
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 
 # Password validation

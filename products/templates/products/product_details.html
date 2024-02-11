@@ -21,7 +21,7 @@
            <div class="col-sm-12 col-md-6 px-4">
                <h2 class="text-center">{{product.friendly_name|title}} {{product.size}}</h2>  
                <div class="text-center">
-                    <i class="fa-solid fa-tag green"></i><strong>{{ product.category }}</p></strong>
+                    <i class="fa-solid fa-tag green"></i><strong>{{ product.category }}</strong>
                 </div>
               
                <hr>
@@ -39,7 +39,7 @@
                                     </button>
                                 </div>
 
-                                <input type="number" class="form-control text-center quantity-input qty_input"  name="quantity"  value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" aria-describedby="emailHelp">
+                                <input type="number" class="form-control text-center quantity-input qty_input"  name="quantity"  value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                            
                                 <div class="input-group-append">
                                     <button  class="btn increment-qty increment-qty_{{ product.id }}" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
@@ -169,7 +169,7 @@
                                 <i class="fa-solid fa-user col"></i>
                             </span>
                             <span class="d-inline-flex">
-                                <p class="col"><strong>{{review.user_profile}}</strong></p>
+                                <strong>{{review.user_profile}}</strong>
                             </span>
                         </div>
                         <p class="date">{{review.review_date}}</p>
