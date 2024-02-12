@@ -225,7 +225,7 @@
     $('.update-link').click(function(e) {
 
         //var form = $(this).('.update-form').find('.qty_input')[0];
-        var form = $(this).closest('.update-form')
+        var form = $(this).closest('.update-form');
         form.submit();
     });
     
@@ -240,8 +240,6 @@
         .done(function() {
             location.reload();
         });
-        console.log(itemId)
-        // console.log(urlMM)
 
     });
 </script>

@@ -44,11 +44,15 @@
                                     </div> 
                                     
                                     <div class="card-footer text-center">
-                                        <a href="{% url 'products' %}" class="btn main-btn">View All Products</a>
+                                        <a href="{% url 'product_details' product.id %}" class="btn main-btn">View Product</a>
                                     </div>
                                 </div>                                   
                             </div>
                             {% endfor %}  
+
+                            <div>
+                                <a href="{% url 'products %}" class="btn main-btn">View All Products</a>
+                            </div>
                         </div>                        
                     </div>
                 </div>
