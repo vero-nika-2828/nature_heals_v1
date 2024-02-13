@@ -1,1 +1,1 @@
-Nature Heals for Order Number {{ order.order_number }}
+Nature Heals Order Confimration for Order Number {{ order.order_number }}

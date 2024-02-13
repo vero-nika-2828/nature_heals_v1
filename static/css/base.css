@@ -182,7 +182,7 @@ h2,h3{
 
 /*Login, Register, Logout styling*/
 .allauth-form-inner-content{
-  margin-top: 60px;
+  margin-top: 120px;
   margin-bottom: 60px;
   padding: 2rem;
   box-shadow: 0 0 2px 2px #C8DDD2 inset;
@@ -203,7 +203,7 @@ h2,h3{
 }
 
 .hero-image{
-  background:  url("/media/hero_image3.jpeg") no-repeat center center;
+  background:  url("/media/hero_image3.jpg") no-repeat center center;
   height: 60vh;
   background-size: cover;
   width: 100%;
@@ -316,6 +316,7 @@ h2,h3{
   object-position: center;
   overflow: hidden;
   float: left;
+  margin-top: 90px;
 }
 
 
@@ -438,7 +439,7 @@ h2,h3{
 
 .message-container{
   position: fixed;
-  top: 90px;
+  top: 80px;
   right: 5px;
   z-index: 999999;
   font-weight: bolder;
@@ -601,7 +602,7 @@ h2,h3{
 }
 
 .header-margins{
-  margin-top: 50px;
+  margin-top: 120px;
   margin-bottom: 50px;
 }
 
@@ -742,6 +743,10 @@ h2,h3{
     margin-left: unset;
   }
 
+  .allauth-form-inner-content{
+    margin-top: 60px;
+  }
+
 
   .message-container{
     top: 100px;
@@ -775,12 +780,19 @@ h2,h3{
   
   }
 
-  
-.remove-link{
-  margin-top: -50px;
-  margin-left: 10%;
-}
+  .product-details-img img{
+    margin-top: unset;
+  }
 
+  
+  .remove-link{
+    margin-top: -50px;
+    margin-left: 10%;
+  }
+
+  .header-margins{
+    margin-top: 50px;
+  }
 }
 
 @media (min-width: 1200px) {
