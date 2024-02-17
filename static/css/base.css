@@ -610,6 +610,10 @@ h2,h3{
   margin-top: 15px;
 }
 
+.margin-top-mobile{
+  margin-top: 80px;
+}
+
 /*Review section styling*/
 
 .date{
@@ -747,7 +751,9 @@ h2,h3{
     margin-top: 60px;
   }
 
-
+  .margin-top-mobile{
+    margin-top: unset;
+  }
   .message-container{
     top: 100px;
     right: 30px;

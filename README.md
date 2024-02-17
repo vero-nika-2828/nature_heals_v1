@@ -39,7 +39,7 @@ Their high quality products can be used not only to help with the existing probl
 - [Features](#features)
    - [Header](#header)
    - [Footer](#footer)
-   - [Regidter page](#register-page)
+   - [Register page](#register-page)
    - [Log in/ Log out page](#log-in-log-out-page)
    - [Home page](#home-page)
    - [All products page](#all-products-page)
@@ -52,14 +52,12 @@ Their high quality products can be used not only to help with the existing probl
    - [Checkout success](#checkout-success)
    - [Message section](#messagesection)
    - [Add product (admin only)](#add-product-(admin-only))
-   - [Edit product (admin only)](#edit-product-(admin-only))
-   - [Checkout](#checkout)
-   - [Checkout](#checkout)   
+   - [Edit product (admin only)](#edit-product-(admin-only))  
 - [Technologies Used](#technologies-used)
    - [Languages Used](#languages-used)
    - [Frameworks, libraries and programs used](#frameworks,-libraries-and-programs-used)
 - [Testing](#testing)
-- [Deployment & local development](#deployment-&-local-development)
+- [Deployment & local development](#Deployment-&-local-development)
    - [Deployment](#deployment)
    - [Local Development](#local-development)
       - [How to Fork](#how-to-fork)
@@ -412,4 +410,24 @@ Find the full testing documented in [TESTING.md](TESTING.md)
 
 # Deployment & local development
 
-## Deployment 
+Please refer to [DEPLOYMENT.md](DEPLOYMENT.md) file for:
+
+* Deployment 
+   * Install the project requirements 
+   * Set up Heroku
+   * Create an external database on ElephantSQL.com
+   * Connect the external database to GitPod
+   * Fixtures
+   * Deploy to Heroku
+   * Generate SECRET_KEY
+   * Set DEBUG to be True
+   * Set up Amazon Web Services
+   * Connect Django to S3
+   * Set up Stripe
+
+
+* Local Deployment
+  * How to Fork 
+  * How to clone
+
+
