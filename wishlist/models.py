@@ -3,6 +3,7 @@ from django.db import models
 from profiles.models import UserProfile
 from products.models import Product
 
+
 class Wishlist(models.Model):
     """
     Wishlist model to show products shortlisted by a user

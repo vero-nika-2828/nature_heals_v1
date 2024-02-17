@@ -14,7 +14,7 @@ import dj_database_url
 from pathlib import Path
 
 if os.path.exists("env.py"):
-    import env # noqa
+    import env  # noqa
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECRET_KEY = os.environ.get('SECRET_KEY', '')
-SECRET_KEY='sznea$2jw_judae+#g+l3h245+(o*26pm0nz^*23)t8r311$y+'
+SECRET_KEY = 'sznea$2jw_judae+#g+l3h245+(o*26pm0nz^*23)t8r311$y+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEVELOPMENT" in os.environ
@@ -93,7 +93,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -151,11 +151,7 @@ else:
     }
 
 
-
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
-
-
 
 
 # Password validation
@@ -195,11 +191,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-#if DEBUG:
+# if DEBUG:
 #    STATICFILES_DIRS = [
 #        os.path.join(BASE_DIR, 'static')
 #    ]
-#else:
+# else:
 #    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
@@ -234,7 +230,6 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -260,5 +255,3 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-
-

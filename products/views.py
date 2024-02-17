@@ -67,7 +67,7 @@ def all_products(request):
     wishlist = None
     wishlist_product = None
     wishlist_product_list = None
-    
+
     if request.user.is_authenticated:
         user = get_object_or_404(UserProfile, user=request.user)
         wishlist = Wishlist.objects.filter(user_profile=user)
@@ -76,20 +76,17 @@ def all_products(request):
 
     wishlist_count = Wishlist.objects.count()
 
-
     context = {
         'products': products,
         'search_word': search_word,
         'selected_subcategories': subcategories,
         'current_sorting': current_sorting,
         'category_list': category_list,
-        'wishlist_count':wishlist_count,
+        'wishlist_count': wishlist_count,
         'wishlist_product_list': wishlist_product_list,
     }
 
     return render(request, 'products/products.html', context)
-
-
 
 
 def product_details(request, product_id):
@@ -101,17 +98,17 @@ def product_details(request, product_id):
 
     # Display product review
     product_reviews = Review.objects.filter(product=product_id)
-    reviews=None
+    reviews = None
     reviews = Review.objects.all()
 
-    # Add product review 
+    # Add product review
     review_form = ReviewForm(request.POST)
-    
+
     if request.method == "POST":
-        
+
         if not request.user.is_authenticated:
             messages.error(request, 'Log in to add your review')
-            
+
         else:
             user_profile = get_object_or_404(UserProfile, user=request.user)
             if review_form.is_valid():
@@ -122,17 +119,16 @@ def product_details(request, product_id):
                     review=request.POST.get('review'),
                     review_date=request.POST.get('review_date'),
                 )
-            
+
             return redirect(reverse('product_details', args=[product_id]))
-      
+
     else:
         review_form = ReviewForm()
-
 
     context = {
         'product': product,
         'healing_properties_list': healing_properties_list,
-        'reviews':reviews,
+        'reviews': reviews,
         'product_reviews': product_reviews,
         'review_form': review_form,
     }
@@ -173,7 +169,6 @@ def add_product(request):
     return render(request, template, context)
 
 
-
 @login_required()
 def edit_product(request, product_id):
     """
@@ -182,7 +177,7 @@ def edit_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can add products.')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     form = ProductForm(request.POST, request.FILES, instance=product)
 
@@ -214,7 +209,7 @@ def delete_product(request, product_id):
     """
     View to enable admin to delete product
     """
-   
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can delete products.')
         return redirect(reverse('home'))
@@ -224,6 +219,7 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
 
+
 def edit_review(request, review_id):
     """
     View to enable admin or author to edit review
@@ -232,14 +228,13 @@ def edit_review(request, review_id):
         messages.error(request,
                        'Sorry, you need to be logged in to add a review.')
         return redirect(reverse('account_login'))
-   
 
     review = get_object_or_404(Review, pk=review_id)
     product = Product.objects.filter(review=review)
-    product_id =product[0].id
+    product_id = product[0].id
 
     review_form = ReviewForm(request.POST, request.FILES, instance=review)
-   
+
     if request.method == 'POST':
         review = get_object_or_404(Review, pk=review_id)
         product = Product.objects.filter(review=review)
@@ -252,16 +247,14 @@ def edit_review(request, review_id):
     else:
         review_form = ReviewForm(instance=review)
 
-    context={
+    context = {
         'review_form': review_form,
-        
     }
-   
+
     return redirect(reverse('product_details', args=[product_id]))
 
 
-
-def delete_review(request, review_id): 
+def delete_review(request, review_id):
     """
     View to enable admin or author to edit review
     """
@@ -270,12 +263,11 @@ def delete_review(request, review_id):
                        'Sorry, you need to be logged in to add a review.')
         return redirect(reverse('account_login'))
 
-
     review = get_object_or_404(Review, pk=review_id)
     product = Product.objects.filter(review=review)
-    product_id =product[0].id
-    
-    review.delete()  
-    
+    product_id = product[0].id
+
+    review.delete()
+
     messages.success(request, f'Review deleted!')
     return redirect(reverse('product_details', args=[product_id]))

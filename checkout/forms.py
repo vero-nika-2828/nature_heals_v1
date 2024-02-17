@@ -20,7 +20,7 @@ class OrderForm(forms.ModelForm):
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'town_or_city': 'Town or City',
-            'county': 'County', 
+            'county': 'County',
             'postcode': 'Postal Code',
             'phone_number': 'Phone Number',
         }
@@ -31,7 +31,7 @@ class OrderForm(forms.ModelForm):
         for field in self.fields:
             # Exclude country from the required fields
             if field != 'country':
-            # Add asterisk to required fields
+                # Add asterisk to required fields
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:
@@ -39,6 +39,6 @@ class OrderForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 # Other fields customization
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-                
+
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-            self.fields[field].label = False     
+            self.fields[field].label = False

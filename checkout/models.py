@@ -9,6 +9,7 @@ from django_countries.fields import CountryField
 from products.models import Product
 from profiles.models import UserProfile
 
+
 class Order(models.Model):
     """
     Order model  to store orders
@@ -32,7 +33,7 @@ class Order(models.Model):
         max_digits=12, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(
         max_digits=12, decimal_places=2, null=False, default=0)
-    # Below properties distinguis between an intended purchase or 
+    # Below properties distinguis between an intended purchase or
     # if there was a duplicated purchase in error
     original_bag = models.TextField(
         null=False, blank=False, default='')

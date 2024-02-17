@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Review
 
+
 class ReviewAdmin(admin.ModelAdmin):
     display = {
         'user_profile',
@@ -12,5 +13,5 @@ class ReviewAdmin(admin.ModelAdmin):
 
     ordering = ('review_date',)
 
-admin.site.register(Review, ReviewAdmin)
 
+admin.site.register(Review, ReviewAdmin)

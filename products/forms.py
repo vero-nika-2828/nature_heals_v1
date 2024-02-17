@@ -15,7 +15,7 @@ class CategoryForm(forms.ModelForm):
         fields = '__all__'
 
         image = forms.ImageField(label='Image', required=False,
-                             widget=CustomClearableFileInput)
+                                 widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         """
@@ -31,11 +31,11 @@ class CategoryForm(forms.ModelForm):
 
         self.fields['friendly_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-    
+
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
             else:
-                   placeholder = placeholders[field]
+                placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
             self.fields[field].label = False
@@ -52,7 +52,7 @@ class SubcategoryForm(forms.ModelForm):
         fields = '__all__'
 
         image = forms.ImageField(label='Image', required=False,
-                             widget=CustomClearableFileInput)
+                                 widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         """
@@ -68,11 +68,11 @@ class SubcategoryForm(forms.ModelForm):
 
         self.fields['friendly_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-    
+
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
             else:
-                   placeholder = placeholders[field]
+                placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
             self.fields[field].label = False
@@ -96,15 +96,13 @@ class ProductForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
-        subcategories =Subcategory.objects.all()
-        
+        subcategories = Subcategory.objects.all()
 
-        friendly_names = [ (c.id, c.get_friendly_name()) for c in categories]
-        friendly_names_subcategory = [ (s.id, s.get_friendly_name()) for s in subcategories]
+        friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
+        friendly_names_subcategory = [(s.id, s.get_friendly_name()) for s in subcategories]
 
         self.fields['category'].choices = friendly_names
         self.fields['subcategory'].choices = friendly_names_subcategory
-
 
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:

@@ -16,18 +16,13 @@ class ReviewForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         # Call default django form
         super().__init__(*args, **kwargs)
-  
 
-  
         # Customize fields
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'review-area'
-            self.fields[field].widget=forms.Textarea(attrs={
+            self.fields[field].widget = forms.Textarea(attrs={
                             'rows': '5',
                             'placeholder': 'Write your review here'})
 
             if 'required' in self.fields[field].widget.attrs:
                 self.fields[field].widget.attrs.pop('required')
-            
-           
-
