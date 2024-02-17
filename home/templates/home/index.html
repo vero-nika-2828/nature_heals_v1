@@ -10,7 +10,7 @@
                     <div class="col-12 hero-image d-felx">
                         <div class="text-center text-box">
                             <h1 class="text-center">Surrender to <br><small>the healing power of </small><br> Nature </h1>
-                            <a href="{% url 'products' %}" class="btn main-btn">Shop now</a>
+                            <a href="{% url 'products' %}" class="btn main-btn" aria-label="shop now">Shop now</a>
                         </div>
                     </div>
                 </div>
@@ -30,11 +30,11 @@
                                 <div class="all-products-card card card-outline h-100">
                                     {% if product.image %}
                                         <div class="image-div">
-                                                <a href="{% url 'product_details' product.id %}"><img src="{{product.image.url}}" class="card-img-top" alt="{{product.friendly_name}}">  </a>
+                                                <a href="{% url 'product_details' product.id %}"><img src="{{product.image.url}}" class="card-img-top" alt="{{product.friendly_name}}" aria-label="go to product details page">  </a>
                                         </div>  
                                     {% else %}
                                         <div class="image-div">                                    
-                                            <a href="{% url 'product_details' product.id %}"><img src="{{ MEDIA_URL }}noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}"></a>
+                                            <a href="{% url 'product_details' product.id %}"><img src="{{ MEDIA_URL }}noimage.JPG" class="card-img-top" alt="{{product.friendly_name}}" aria-label="go to product details page"></a>
                                         </div>
                                     {% endif %}
                
@@ -44,14 +44,14 @@
                                     </div> 
                                     
                                     <div class="card-footer text-center">
-                                        <a href="{% url 'product_details' product.id %}" class="btn main-btn">View Product</a>
+                                        <a href="{% url 'product_details' product.id %}" class="btn main-btn" aria-label="view product">View Product</a>
                                     </div>
                                 </div>                                   
                             </div>
                             {% endfor %}  
 
                             <div>
-                                <a href="{% url 'products' %}" class="btn main-btn">View All Products</a>
+                                <a href="{% url 'products' %}" class="btn main-btn" aria-label="view all products">View All Products</a>
                             </div>
                         </div>                        
                     </div>
@@ -93,24 +93,24 @@
                      
                         <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center card-outline"> 
-                                    <a href="{% url 'products' %}?subcategory=imunity_boosters">
+                                    <a href="{% url 'products' %}?subcategory=imunity_boosters" aria-label="filter for immnunity boosters">
                                         <img src="{{ MEDIA_URL }}flu.jpg" class="card-img-top remedies-image" alt="Cold and Flu">
                                     </a>
 
                                     <div class="card-footer text-center remedy-link mt-3">
-                                        <a href="{% url 'products' %}?subcategory=imunity_boosters">Cold and Flu</a>
+                                        <a href="{% url 'products' %}?subcategory=imunity_boosters" aria-label="filter for immnunity boosters">Cold and Flu</a>
                                     </div>
                                 </div>  
                         </div>
         
                         <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center card-outline"> 
-                                    <a href="{% url 'products' %}?subcategory=anti-inflammatory"> 
+                                    <a href="{% url 'products' %}?subcategory=anti-inflammatory" aria-label="filter for anti-inflammatory"> 
                                        <img src="{{ MEDIA_URL }}pain-relief.jpg" class="card-img-top remedies-image" alt="Pain relief">
                                     </a>
                     
                                     <div class="card-footer text-center remedy-link mt-3">
-                                        <a href="{% url 'products' %}?subcategory=anti-inflammatory">Pain relief</a>
+                                        <a href="{% url 'products' %}?subcategory=anti-inflammatory" aria-label="filter for anti-inflammatory">Pain relief</a>
                                     </div>
                                 </div>  
                                 
@@ -118,12 +118,12 @@
         
                         <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center card-outline"> 
-                                        <a href="{% url 'products' %}?subcategory=inner_comfort_enhancers">
+                                        <a href="{% url 'products' %}?subcategory=inner_comfort_enhancers" aria-label="filter for inner comfort enhancers">
                                             <img src="{{ MEDIA_URL }}stress-relief.jpg" class="card-img-top remedies-image" alt="Stress relief">
                                         </a>
                 
                                         <div class="card-footer text-center remedy-link mt-3">
-                                            <a href="{% url 'products' %}?subcategory=inner_comfort_enhancers">Stress relief</a>
+                                            <a href="{% url 'products' %}?subcategory=inner_comfort_enhancers" aria-label="filter for anti-inflammatory">Stress relief</a>
                                         </div>
                 
                                 </div>  
@@ -134,12 +134,12 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center card-outline"> 
-                                    <a href="{% url 'products' %}?subcategory=essential_oils">
+                                    <a href="{% url 'products' %}?subcategory=essential_oils" aria-label="filter for essential oils">
                                         <img src="{{ MEDIA_URL }}breathing.jpg" class="card-img-top remedies-image" alt="Breathing">
                                     </a>
             
                                     <div class="card-footer text-center remedy-link mt-3">
-                                        <a href="{% url 'products' %}?subcategory=essential_oils">Breathing</a>
+                                        <a href="{% url 'products' %}?subcategory=essential_oils" aria-label="filter for essential oils">Breathing</a>
                                     </div>
                                 </div>  
                                 
@@ -147,12 +147,12 @@
         
                     <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center card-outline"> 
-                                        <a href="{% url 'products' %}?subcategory=oily_skin">
+                                        <a href="{% url 'products' %}?subcategory=oily_skin" aria-label="filter for oily skin products">
                                             <img src="{{ MEDIA_URL }}oily-skin.jpg" class="card-img-top remedies-image" alt="Oily skin">
                                         </a>
                 
                                         <div class="card-footer text-center remedy-link mt-3">
-                                            <a class="dropdown-item" href="{% url 'products' %}?subcategory=oily_skin">Oily Skin</a>
+                                            <a class="dropdown-item" href="{% url 'products' %}?subcategory=oily_skin" aria-label="filter for oily skin products">Oily Skin</a>
                                         </div>
                 
                                 </div>  
@@ -161,12 +161,12 @@
         
                     <div class="col-sm-12 col-md-4 mb-3 text-center">
                                 <div class="all-products-card h-100 justify-content-center card-outline"> 
-                                    <a href="{% url 'products' %}?subcategory=dry_skin">
+                                    <a href="{% url 'products' %}?subcategory=dry_skin" aria-label="filter for dry skin products">
                                         <img src="{{ MEDIA_URL }}dry-skin.jpg" class="card-img-top remedies-image" alt="Dry skin">
                                     </a>
             
                                     <div class="card-footer text-center remedy-link mt-3">
-                                        <a class="dropdown-item" href="{% url 'products' %}?subcategory=dry_skin">Dry Skin</a>
+                                        <a class="dropdown-item" href="{% url 'products' %}?subcategory=dry_skin" aria-label="filter for dry skin products">Dry Skin</a>
                                     </div>
                                 </div>  
                     </div>

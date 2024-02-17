@@ -93,11 +93,11 @@
     <div class="row my-5">
         <div class="col-12 text-center mt-3">
             {% if from_profile %}
-            <a href="{% url 'profile' %}" class="btn continue-btn my-2">
+            <a href="{% url 'profile' %}" class="btn continue-btn my-2" aria-label="back to profile">
                  Back to profile
             </a>
             {% else %}
-                <a href="{% url 'products' %}" class="btn main-btn my-2 text-center">
+                <a href="{% url 'products' %}" class="btn main-btn my-2 text-center" aria-label="view more products">
                     View more products 
                 </a>
             {% endif %}

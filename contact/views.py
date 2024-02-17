@@ -4,9 +4,10 @@ from django.contrib import messages
 from .models import Contact
 from .forms import ContactForm
 
+
 def contact(request):
     """Render contact page"""
-    
+
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
@@ -27,5 +28,5 @@ def contact(request):
     context = {
         'contact_form': contact_form,
     }
-    
+
     return render(request, template, context)

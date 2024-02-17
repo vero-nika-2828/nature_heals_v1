@@ -71,7 +71,7 @@
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                           </form>
          
-                                            <a class="remove-link btn red-text" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                            <a class="remove-link btn red-text" id="remove_{{ item.item_id }}" aria-label="remove from bag"><small>Remove</small></a>
                                         
                                       </div>
                                     </td>
@@ -88,8 +88,8 @@
                                             <p class="small-text">Spend £{{ free_delivery_delta }} more for free delivery</p>
                                         {% endif %}
 
-                                        <a href="{% url 'products' %}" class="btn continue-btn w-25 col-sm-6"><strong>Continue Shopping</strong></a>
-                                        <a href="{% url 'checkout' %}" class="btn main-btn w-25 "><strong>Secure Checkout</strong></a>
+                                        <a href="{% url 'products' %}" class="btn continue-btn w-25 col-sm-6" aria-label="continue shopping"><strong>Continue Shopping</strong></a>
+                                        <a href="{% url 'checkout' %}" class="btn main-btn w-25 " aria-label="secure checkout"><strong>Secure Checkout</strong></a>
 
                                     </td>
                                 </tr>
@@ -99,7 +99,7 @@
                     </div>
                 {% else %}
                     <p>Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn continue-btn">Continue shopping</a>
+                    <a href="{% url 'products' %}" class="btn continue-btn" aria-label="continue shopping">Continue shopping</a>
                 {% endif %}
             </div>
 
@@ -164,7 +164,7 @@
                                                 </div>
                                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                             </form>
-                                            <a class="remove-link btn red-text" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                            <a class="remove-link btn red-text" id="remove_{{ item.item_id }}" aria-label="remove from bag"><small>Remove</small></a>
                                         </div>
 
                                 
@@ -188,14 +188,14 @@
                                 <p class="small-text">Spend £{{ free_delivery_delta }} more for free delivery</p>
                             {% endif %}
 
-                            <a href="{% url 'products' %}" class="btn continue-btn w-50 mb-3 col-sm-6 py-1"><strong>Continue Shopping</strong></a>
-                            <a href="{% url 'checkout' %}" class="btn main-btn w-50 py-2"><strong>Secure Checkout</strong></a>
+                            <a href="{% url 'products' %}" class="btn continue-btn w-50 mb-3 col-sm-6 py-1" aria-label="continue shopping"><strong>Continue Shopping</strong></a>
+                            <a href="{% url 'checkout' %}" class="btn main-btn w-50 py-2" aria-label="secure checkout"><strong>Secure Checkout</strong></a>
                         </div>
 
                     </div>
                 {% else %}
                     <p>Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn continue-btn">Continue shopping</a>
+                    <a href="{% url 'products' %}" class="btn continue-btn" aria-label="continue shopping">Continue shopping</a>
                 {% endif %}
             </div>
         </div>

@@ -72,21 +72,25 @@ def checkout(request):
 
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database."
+                        "One of the products in your bag wasn't found \
+                            in our database."
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            message.error(request, "Add items to your bag in order to proceed to checkout")
+            message.error(
+                request, "Add items to your bag \
+                    in order to proceed to checkout")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -119,12 +123,13 @@ def checkout(request):
 
         if not stripe_public_key:
             message.warning(
-                request, 'Stripe public key is missing. Did you forget to set it in your enviroment?')
+                request, 'Stripe public key is missing. \
+                    Did you forget to set it in your enviroment?')
 
         template = 'checkout/checkout.html'
         context = {
             'order_form': order_form,
-            'stripe_public_key': 'pk_test_51OEUoTAFeUdFtYnWR4FaYZzkcirCDOPIKQBVjWM95VQUL4tGZRfMObfYSUEKKYkEABcLelhIYFvigrd6yCh82Jfe00ixbxnyoE',
+            'stripe_public_key': stripe_public_key,
             'client_secret': intent.client_secret,
         }
         return render(request, template, context)

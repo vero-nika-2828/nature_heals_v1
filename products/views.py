@@ -211,7 +211,8 @@ def delete_product(request, product_id):
     """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can delete products.')
+        messages.error(
+            request, 'Sorry, only store owners can delete products.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)

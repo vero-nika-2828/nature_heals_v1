@@ -6,7 +6,9 @@ from products.models import Product
 def index(request):
     """Returns index page"""
     popular_products = (
-        Product.objects.filter(featured=True).exclude(image='').order_by('?')[:4])
+        Product.objects.filter(
+            featured=True).exclude(
+                image='').order_by('?')[:4])
 
     context = {
         'popular_products': popular_products,
