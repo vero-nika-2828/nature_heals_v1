@@ -95,7 +95,8 @@ class StripeWH_Handler:
             self._send_confirmation_email(order)
             # Notify that order exists
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} | SUCCESS: Verified \
+                    order already in database',
                 status=200)
         else:
             # Create a new order
